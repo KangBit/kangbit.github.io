@@ -4,6 +4,8 @@ titleTemplate: VitePress & Github Pages
 outline: deep
 ---
 
+# VitePress + Github Pages로 블로그 만들기 - 생성
+
 ## 설치 환경
 
 ```
@@ -136,13 +138,15 @@ $ npm run docs:dev
 
 <img src='https://velog.velcdn.com/images/kang-bit/post/55076a7d-fc8d-474f-8642-2c4966408bf1/image.png' width="50%" style="margin: 1rem 0;"/>
 
-페이지의 폴더 구조가 변경되었음을 프로젝트에 알려주어야 합니다.
-설정 파일인 `/.viteprss/config.mjs` 에 srcDir을 추가해 주면,
+페이지의 위치가 변경되었음을 프로젝트에 알려주어야 합니다.
+설정 파일인 `/.viteprss/config.mjs` 에 `rewrites`을 추가해 주면,
 
 ```js
 export default defineConfig({
 ...
-  srcDir: "./pages",
+  rewrites: {
+    "pages(/:path)*/(.*)": "(/:path)*/(.*)",
+  },
 ...
 })
 ```

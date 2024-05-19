@@ -4,6 +4,8 @@ titleTemplate: VitePress & Github Pages
 outline: deep
 ---
 
+# VitePress + Github Pages로 블로그 만들기 - 소개
+
 ## VitePress
 
 2024년 3월 21일 [VitePress](https://vitepress.vuejs.kr/)가 release 되었습니다.  
