@@ -38,7 +38,25 @@ export default defineConfig({
   rewrites: {
     "pages(/:path)*/(.*)": "(/:path)*/(.*)",
   },
+
   sitemap: {
     hostname: "https://kangbit.github.io/bitpage/",
   },
+  head: [
+    [
+      "script",
+      {
+        async: "",
+        src: "https://www.googletagmanager.com/gtag/js?id=G-P9FSHHKTBN",
+      },
+    ],
+    [
+      "script",
+      {},
+      `window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-P9FSHHKTBN');`,
+    ],
+  ],
 });
