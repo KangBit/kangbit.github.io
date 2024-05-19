@@ -35,6 +35,9 @@ export default defineConfig({
     lastUpdated: true,
   },
 
-  srcDir: "./pages",
+  srcExclude: ["**/README.md"],
   base: "/bitpage/",
+  rewrites: {
+    "pages(/:path)*/(.*)": "(/:path)*/(.*)",
+  },
 });
