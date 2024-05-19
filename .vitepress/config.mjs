@@ -38,4 +38,7 @@ export default defineConfig({
   rewrites: {
     "pages(/:path)*/(.*)": "(/:path)*/(.*)",
   },
+  sitemap: {
+    hostname: "https://kangbit.github.io/bitpage/",
+  },
 });
