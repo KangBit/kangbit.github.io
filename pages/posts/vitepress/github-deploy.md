@@ -34,24 +34,17 @@ jobs:
 
 우선 새로운 저장소를 생성해 줍니다.
 
-이 때 저장소의 이름은 홈페이지의 하위 경로가 됩니다. (`https://{username}.github.io/{RepositoryName}/`)
+이 때 저장소의 이름을 `{username}.github.io/` 로 해주지 않으면,
 
-<img src="https://velog.velcdn.com/images/kang-bit/post/42e06e0b-3d41-476d-8ed7-f3f54c0d1121/image.png" width="50%" style="margin: 1rem 0;">
+블로그의 주소가 `https://{username}.github.io/{RepositoryName}` 이 됩니다.
+
+주소에 `RepositoryName`이 포함되게 되면 SEO 설정 시에 어려움이 있을 수 있습니다.
+
+<img src="https://velog.velcdn.com/images/kang-bit/post/66ba1e99-b344-49d4-ac55-1c5c2f911493/image.png" width="50%" style="margin: 1rem 0;">
 
 생성된 저장소의 설정을 수정해 줍니다.
 
 <img src="https://velog.velcdn.com/images/kang-bit/post/b1f13d11-7692-42bc-8680-d7d701a745bc/image.png" width="80%" style="margin: 1rem 0;">
-
-위에서, 저장소의 이름이 홈페이지의 하위 경로가 된다고 했습니다.
-프로젝트로 돌아가서 기본 경로 설정을 추가해 주어야 합니다.
-`.vitepress/config.mjs` 파일을 수정합니다.
-
-```
-export default defineConfig({
-  ...,
-  base: "/RepositoryName/",
-});
-```
 
 이제 터미널을 통해 저장소에 소스 코드를 업로드합니다.
 
@@ -69,12 +62,9 @@ $ git push -u origin main
 
 <img src="https://velog.velcdn.com/images/kang-bit/post/f2eef239-99ee-4334-a6ec-ebd106869268/image.png" width="80%" style="margin: 1rem 0;">
 
-위와 같이 배포가 성공적으로 완료되었다면,
-`https://{username}.github.io/{RepositoryName}/`로 접근해서 홈페이지를 확인할 수 있습니다.
+위와 같이 배포가 성공적으로 완료되었다면
 
-## 전체 코드
-
-전체 코드는 https://github.com/KangBit/kangbit.github.io 에서 확인할 수 있습니다.
+`https://{username}.github.io/`로 접근해서 홈페이지를 확인할 수 있습니다.
 
 ---
 
