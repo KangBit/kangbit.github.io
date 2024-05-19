@@ -74,7 +74,7 @@ $ git push -u origin main
 
 ## 전체 코드
 
-전체 코드는 https://github.com/KangBit/bitpage 에서 확인할 수 있습니다.
+전체 코드는 https://github.com/KangBit/kangbit.github.io 에서 확인할 수 있습니다.
 
 ---
 

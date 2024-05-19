@@ -34,13 +34,12 @@ export default defineConfig({
   },
 
   srcExclude: ["**/README.md"],
-  base: "/bitpage/",
   rewrites: {
     "pages(/:path)*/(.*)": "(/:path)*/(.*)",
   },
 
   sitemap: {
-    hostname: "https://kangbit.github.io/bitpage/",
+    hostname: "https://kangbit.github.io/",
   },
   head: [
     [
