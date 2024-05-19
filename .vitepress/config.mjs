@@ -57,5 +57,12 @@ export default defineConfig({
       gtag('js', new Date());
       gtag('config', 'G-P9FSHHKTBN');`,
     ],
+    [
+      "meta",
+      {
+        name: "naver-site-verification",
+        content: "5912e8936a16866a425cfefd2311f36745d4f9f1",
+      },
+    ],
   ],
 });
