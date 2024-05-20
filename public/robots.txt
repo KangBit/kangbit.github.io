@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kangbit.github.io/sitemap.xml
