@@ -24,6 +24,10 @@ export default defineConfig({
               text: "Github Pages에 배포하기",
               link: "/posts/vitepress/github-deploy",
             },
+            {
+              text: "검색엔진에 Blog 등록하기",
+              link: "/posts/vitepress/seo",
+            },
           ],
         },
       ],
