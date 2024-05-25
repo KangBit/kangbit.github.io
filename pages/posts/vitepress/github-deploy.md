@@ -1,6 +1,7 @@
 ---
 title: 블로그 배포하기
 titleTemplate: VitePress & Github Pages
+description: VitePress로 생성한 프로젝트를 Github Pages를 통해 배포하는 방법을 소개합니다
 outline: deep
 ---
 
