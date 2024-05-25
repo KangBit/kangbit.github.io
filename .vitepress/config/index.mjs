@@ -1,38 +1,17 @@
 import { defineConfig } from "vitepress";
 
+import nav from "./nav";
+import sidebar from "./sidebar";
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "BitPage",
   description: "Bit Dev Blog",
-  themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
-    nav: [{ text: "Home", link: "/" }],
-    sidebar: {
-      "/posts/vitepress/": [
-        {
-          text: "VitePres + Github Pages",
-          items: [
-            {
-              text: "왜 VitePress인가",
-              link: "/posts/vitepress/why-vitepress",
-            },
-            {
-              text: "프로젝트 생성하기",
-              link: "/posts/vitepress/create-project",
-            },
-            {
-              text: "Github Pages에 배포하기",
-              link: "/posts/vitepress/github-deploy",
-            },
-            {
-              text: "검색엔진에 Blog 등록하기",
-              link: "/posts/vitepress/seo",
-            },
-          ],
-        },
-      ],
-    },
 
+  // https://vitepress.dev/reference/default-theme-config
+  themeConfig: {
+    nav: nav,
+    sidebar: sidebar,
     socialLinks: [{ icon: "github", link: "https://github.com/KangBit" }],
     lastUpdated: true,
   },
