@@ -126,18 +126,18 @@ $ npm run docs:dev
 
 생성된 프로젝트의 폴더 구조를 보면, 다음과 같습니다.
 
-<img src='https://velog.velcdn.com/images/kang-bit/post/75017d06-b3b6-4dbb-989d-4cc18151ee9a/image.png' width="40%" style="margin: 1rem 0;"/>
+<img src="/assets/images/vitepress/create-project-1.jpeg" width="40%"></img>
 
 `.md` 확장자의 파일들은 블로그에 추가될 페이지들입니다.
 최상위 디렉토리에 위치할 경우 페이지가 늘어날수록 관리하기 힘들 수 있습니다.
 폴더를 만들어 넣어주도록 하겠습니다.
 저는 pages로 폴더를 만들었습니다.
 
-<img src='https://velog.velcdn.com/images/kang-bit/post/9ff0e0f2-e703-4b8c-b3c1-32ce88c37de3/image.png' width="40%" style="margin: 1rem 0;"/>
+<img src="/assets/images/vitepress/create-project-2.jpeg" width="40%"></img>
 
 하지만 폴더 구조를 수정하니, 페이지에 접근할 수 없습니다.
 
-<img src='https://velog.velcdn.com/images/kang-bit/post/55076a7d-fc8d-474f-8642-2c4966408bf1/image.png' width="50%" style="margin: 1rem 0;"/>
+<img src="/assets/images/vitepress/create-project-3.jpeg" width="50%"></img>
 
 페이지의 위치가 변경되었음을 프로젝트에 알려주어야 합니다.
 설정 파일인 `/.viteprss/config.mjs` 에 `rewrites`을 추가해 주면,
@@ -154,7 +154,7 @@ export default defineConfig({
 
 페이지에 다시 접근할 수 있습니다.
 
-<img src='https://velog.velcdn.com/images/kang-bit/post/06b011ae-6015-4fe6-9af2-a6d30564c234/image.png' width="50%" style="margin: 1rem 0;"/>
+<img src="/assets/images/vitepress/create-project-4.jpeg" width="50%"></img>
 
 ---
 

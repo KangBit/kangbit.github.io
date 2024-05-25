@@ -35,7 +35,7 @@ Vue3에 익숙한 개발자라면 손쉽게 테마를 커스텀 할 수 있고,
 ### 검색
 
 검색 기능을 쉽게 추가할 수 있습니다.
-![](https://velog.velcdn.com/images/kang-bit/post/ec750c20-b40f-4b39-a1b4-9836ea78dc07/image.png)
+<img src="/assets/images/vitepress/why-vitepress-1.jpeg" width="100%"></img>
 
 ### 코드 블록 기능
 
