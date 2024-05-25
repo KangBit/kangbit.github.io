@@ -24,6 +24,25 @@ const vitePressPages = {
   ],
 };
 
+const linksPages = {
+  "/posts/links/": [
+    {
+      text: "링크 저장소",
+      items: [
+        {
+          text: "Vue",
+          link: "/posts/links/vue",
+        },
+        {
+          text: "React",
+          link: "/posts/links/react",
+        },
+      ],
+    },
+  ],
+};
+
 export default {
   ...vitePressPages,
+  ...linksPages,
 };
