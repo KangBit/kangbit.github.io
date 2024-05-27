@@ -10,3 +10,13 @@ next: false
 ## Vue 링크 저장소
 
 [Vue 공식 문서](https://v3-docs.vuejs-korea.org/)
+
+[Vue Router](https://router.vuejs.org/)
+
+[Pinia](https://pinia.vuejs.kr/)
+
+[Vueuse](https://vueuse.org/)
+
+---
+
+[awesome-vue](https://github.com/vuejs/awesome-vue)

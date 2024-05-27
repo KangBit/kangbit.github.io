@@ -30,12 +30,28 @@ const linksPages = {
       text: "링크 저장소",
       items: [
         {
+          text: "JS",
+          link: "/posts/links/javascript",
+        },
+        {
+          text: "CSS",
+          link: "/posts/links/css",
+        },
+        {
           text: "Vue",
           link: "/posts/links/vue",
         },
         {
           text: "React",
           link: "/posts/links/react",
+        },
+        {
+          text: "IOS",
+          link: "/posts/links/ios",
+        },
+        {
+          text: "etc",
+          link: "/posts/links/etc",
         },
       ],
     },
