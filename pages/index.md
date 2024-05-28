@@ -5,10 +5,40 @@ layout: home
 hero:
   name: "BitPage"
   text: "Bit Dev Blog"
-  tagline: 안녕하세요 프론트엔드 개발자 강빛찬입니다.
-
-features:
-  - title: VitePress + Github Pages로 블로그 만들기
-    details: VitePress와 Github Pages를 이용해 블루그를 구성하는 방법을 소개합니다.
-    link: /posts/vitepress/why-vitepress
+  actions:
+    - theme: alt
+      text: HTML
+    - theme: alt
+      text: CSS
+    - theme: alt
+      text: Javascript
+    - theme: alt
+      text: Vue
+    - theme: alt
+      text: React
 ---
+
+<div style="font-size:1.4rem; color:var(--vp-c-text-2); margin-bottom:64px">
+  <p>안녕하세요</p>
+  <p>5년차 개발자 강빛찬입니다</p>
+  <p>Native 앱 개발과 Node 백엔드 개발, 프론트엔드 개발 경험이 있습니다</p>
+  <p>지금은 프론트엔드 개발에 집중하고 있습니다</p>
+</div>
+
+<div style="display:flex;">
+  <div style="flex:1;">
+    <h3> Links </h3>
+    <p>
+      <a href="https://github.com/KangBit">Github Profile</a> |
+      <a href="https://velog.io/@kang-bit/posts">Velog</a>
+    </p>
+  </div>
+
+  <div style="flex:1;">
+    <h3> Contact </h3>
+    <p>
+      <a href="https://open.kakao.com/o/svuLVaug">kakaotalk</a> |
+      <a href="mailto:user@example.com">email</a>
+    </p>
+  </div>
+</div>
