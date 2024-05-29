@@ -9,14 +9,39 @@ next: false
 
 # Markdown Snippet
 
-## Code block
+## VitePress Frontmatter
+
+::: code-group
+
+```json [markdown.json]
+{
+  "Insert Vitepress Frontmatter": {
+    "prefix": "vitepress frontmatter",
+    "body": [
+      "---",
+      "title: $1",
+      "titleTemplate: $2",
+      "description: $3",
+      "outline: ${4:deep}",
+      "prev: ${5:true}",
+      "next: ${5:true}",
+      "---"
+    ],
+    "description": "Insert vitepress frontmatter"
+  }
+}
+```
+
+:::
+
+## Vitepress Code block
 
 ### Code Block
 
 ::: code-group
 
 <!-- prettier-ignore -->
-````json [markdown.json]
+```json [markdown.json]
 {
   "Insert fenced code block": {
     "prefix": "code",
@@ -28,7 +53,7 @@ next: false
     "description": "Insert fenced code block"
   }
 }
-````
+```
 
 :::
 
@@ -71,6 +96,25 @@ next: false
     ],
     "description": "Insert code block with highlight"
   }
+}
+```
+
+:::
+
+## VitePress Badge
+
+::: code-group
+
+<!-- prettier-ignore -->
+```json [markdown.json]
+{
+  "Insert Vitepress Badge": {
+		"prefix": "vitepress badge",
+		"body": [
+			"<Badge type='${1|info,tip,warning,danger|}' text='$2' />" 
+		],
+		"description": "Insert Vitepress Badge"
+	}
 }
 ```
 

@@ -45,7 +45,7 @@ next: false
     "body": [
       "import { ref } from 'vue';\n",
 
-      "export const use${1:Some} = () => {",
+      "export const ${TM_FILENAME_BASE} = () => {",
       "\treturn {};",
       "};"
     ],
