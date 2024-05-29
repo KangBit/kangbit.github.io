@@ -26,5 +26,13 @@ const linkMenu = {
     },
   ],
 };
+const devMenu = {
+  text: "Dev",
+  items: [
+    {
+      items: [{ text: "Snippet", link: "/posts/snippet" }],
+    },
+  ],
+};
 
-export default [homeMenu, postMenu, linkMenu];
+export default [homeMenu, postMenu, devMenu, linkMenu];

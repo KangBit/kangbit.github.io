@@ -58,7 +58,26 @@ const linksPages = {
   ],
 };
 
+const snippetPages = {
+  "/posts/snippet/": [
+    {
+      text: "Snippets",
+      items: [
+        {
+          text: "Vue",
+          link: "/posts/snippet/vue",
+        },
+        {
+          text: "Markdown",
+          link: "/posts/snippet/markdown",
+        },
+      ],
+    },
+  ],
+};
+
 export default {
   ...vitePressPages,
   ...linksPages,
+  ...snippetPages,
 };
