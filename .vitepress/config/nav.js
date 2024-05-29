@@ -30,7 +30,10 @@ const devMenu = {
   text: "Dev",
   items: [
     {
-      items: [{ text: "Snippet", link: "/posts/snippet" }],
+      items: [
+        { text: "Component", link: "/posts/component" },
+        { text: "Snippet", link: "/posts/snippet" },
+      ],
     },
   ],
 };

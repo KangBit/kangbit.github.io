@@ -76,8 +76,18 @@ const snippetPages = {
   ],
 };
 
+const componentPages = {
+  "/posts/component/": [
+    {
+      text: "Components",
+      items: [],
+    },
+  ],
+};
+
 export default {
   ...vitePressPages,
   ...linksPages,
   ...snippetPages,
+  ...componentPages,
 };
