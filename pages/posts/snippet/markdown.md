@@ -16,7 +16,7 @@ next: false
 ```json [markdown.json]
 {
   "Insert Vitepress Frontmatter": {
-    "prefix": "vitepress frontmatter",
+    "prefix": "frontmatter",
     "body": [
       "---",
       "title: $1",
@@ -109,7 +109,7 @@ next: false
 ```json [markdown.json]
 {
   "Insert Vitepress Badge": {
-		"prefix": "vitepress badge",
+		"prefix": "badge",
 		"body": [
 			"<Badge type='${1|info,tip,warning,danger|}' text='$2' />" 
 		],
