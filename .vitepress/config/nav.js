@@ -1,10 +1,24 @@
-const homeMenu = { text: "Home", link: "/" };
+const homeMenu = { text: "홈", link: "/" };
+
 const postMenu = {
-  text: "Post",
+  text: "게시글",
   link: "/posts",
 };
+
+const devMenu = {
+  text: "개발",
+  items: [
+    {
+      items: [
+        { text: "Component", link: "/posts/component" },
+        { text: "Snippet", link: "/posts/snippet" },
+      ],
+    },
+  ],
+};
+
 const linkMenu = {
-  text: "Links",
+  text: "링크 모음",
   items: [
     {
       items: [
@@ -23,17 +37,6 @@ const linkMenu = {
     },
     {
       items: [{ text: "etc", link: "/posts/links/etc" }],
-    },
-  ],
-};
-const devMenu = {
-  text: "Dev",
-  items: [
-    {
-      items: [
-        { text: "Component", link: "/posts/component" },
-        { text: "Snippet", link: "/posts/snippet" },
-      ],
     },
   ],
 };
