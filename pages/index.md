@@ -31,15 +31,15 @@ hero:
   <div style="flex:1;">
     <h3> Links </h3>
     <p>
-      <a href="https://github.com/KangBit">Github Profile</a> |
-      <a href="https://velog.io/@kang-bit/posts">Velog</a>
+      <a href="https://github.com/KangBit" target="_blank">Github Profile</a> |
+      <a href="https://velog.io/@kang-bit/posts" target="_blank">Velog</a>
     </p>
   </div>
 
   <div style="flex:1;">
     <h3> Contact </h3>
     <p>
-      <a href="https://open.kakao.com/o/svuLVaug">kakaotalk</a> |
+      <a href="https://open.kakao.com/o/svuLVaug" target="_blank">kakaotalk</a> |
       <a href="mailto:kangbit@kakao.com">email</a>
     </p>
   </div>
