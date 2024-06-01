@@ -16,6 +16,8 @@ hero:
       text: Vue
     - theme: alt
       text: React
+    - theme: alt
+      text: Git
 ---
 
 <div style="font-size:1.4rem; color:var(--vp-c-text-2); margin-bottom:64px">
