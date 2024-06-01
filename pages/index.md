@@ -40,7 +40,7 @@ hero:
     <h3> Contact </h3>
     <p>
       <a href="https://open.kakao.com/o/svuLVaug">kakaotalk</a> |
-      <a href="mailto:user@example.com">email</a>
+      <a href="mailto:kangbit@kakao.com">email</a>
     </p>
   </div>
 </div>
