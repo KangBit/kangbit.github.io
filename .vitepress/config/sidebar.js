@@ -34,6 +34,10 @@ const linksPages = {
           link: "/posts/links/javascript",
         },
         {
+          text: "TS",
+          link: "/posts/links/typescript",
+        },
+        {
           text: "CSS",
           link: "/posts/links/css",
         },
