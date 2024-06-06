@@ -1,5 +1,7 @@
 const homeMenu = { text: "홈", link: "/" };
 
+const bitMenu = { text: "소개", link: "/kangbit" };
+
 const postMenu = {
   text: "게시글",
   link: "/posts",
@@ -41,4 +43,4 @@ const linkMenu = {
   ],
 };
 
-export default [homeMenu, postMenu, devMenu, linkMenu];
+export default [homeMenu, bitMenu, postMenu, devMenu, linkMenu];

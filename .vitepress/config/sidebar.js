@@ -24,6 +24,24 @@ const vitePressPages = {
   ],
 };
 
+const bitPages = {
+  "/kangbit/": [
+    {
+      text: "강빛찬",
+      items: [
+        {
+          text: "소개",
+          link: "/kangbit/",
+        },
+        {
+          text: "경력",
+          link: "/kangbit/career",
+        },
+      ],
+    },
+  ],
+};
+
 const linksPages = {
   "/posts/links/": [
     {
@@ -91,6 +109,7 @@ const componentPages = {
 
 export default {
   ...vitePressPages,
+  ...bitPages,
   ...linksPages,
   ...snippetPages,
   ...componentPages,
