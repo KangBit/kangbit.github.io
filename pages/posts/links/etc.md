@@ -13,6 +13,8 @@ next: false
 
 [디자인 및 성능 패턴에 대한 최신 정보들을 제공합니다 - ko](https://patterns-dev-kr.github.io/)
 
+[RegexLearn Cheatsheet](https://regexlearn.com/ko/cheatsheet)
+
 [Here are some cheatsheets and quick references contributed by open source angels](https://quickref.me/)
 
 [Node.js animated: Event Loop](https://dev.to/nodedoctors/an-animated-guide-to-nodejs-event-loop-3g62)
