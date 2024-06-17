@@ -1,6 +1,6 @@
 const homeMenu = { text: "홈", link: "/" };
 
-const bitMenu = { text: "소개", link: "/kangbit" };
+const bitMenu = { text: "소개", link: "/kangbit/" };
 
 const postMenu = {
   text: "게시글",
