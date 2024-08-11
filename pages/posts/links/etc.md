@@ -43,3 +43,6 @@ next: false
 
 [세분화된 반응형(Fine-Grained Reactivity)에 대한 핸즈온 소개](https://junghan92.medium.com/%EB%B2%88%EC%97%AD-%EC%84%B8%EB%B6%84%ED%99%94%EB%90%9C-%EB%B0%98%EC%9D%91%ED%98%95-fine-grained-reactivity-%EC%97%90-%EB%8C%80%ED%95%9C-%ED%95%B8%EC%A6%88%EC%98%A8-%EC%86%8C%EA%B0%9C-57242ec61e08)
 
+[UI/UX 디자인을 위한 101가지 심리학 모음](https://slashpage.com/cyberstaradam/1q3vdn2pk63j1mxy49pr)
+
+[가벼운 UX 심리학](https://brunch.co.kr/brunchbook/lightux)
