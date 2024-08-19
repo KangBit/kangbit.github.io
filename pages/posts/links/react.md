@@ -13,4 +13,6 @@ next: false
 
 [Tanstack Query](https://tanstack.com/query/latest/docs/framework/react/overview)
 
+[State of React 2023](https://2023.stateofreact.com/ko-KR/)
+
 [React 19 출시와 새로운 기능](https://modulabs.co.kr/blog/react-19/)
