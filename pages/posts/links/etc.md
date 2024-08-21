@@ -9,6 +9,8 @@ next: false
 
 ## 기타 링크 저장소
 
+[Good Refactoring vs Bad Refactoring](https://www.builder.io/blog/good-vs-bad-refactoring)
+
 [디자인 및 성능 패턴에 대한 최신 정보들을 제공합니다 - en](https://www.patterns.dev/#patterns)
 
 [디자인 및 성능 패턴에 대한 최신 정보들을 제공합니다 - ko](https://patterns-dev-kr.github.io/)
