@@ -1,12 +1,22 @@
 import { defineConfig } from "vitepress";
+import path from "path";
 
 import nav from "./nav";
 import sidebar from "./sidebar";
 
 // https://vitepress.dev/reference/site-config
+
 export default defineConfig({
   title: "BitPage",
   description: "Bit Dev Blog",
+
+  vite: {
+    resolve: {
+      alias: {
+        "@": path.resolve(__dirname, "../../"),
+      },
+    },
+  },
 
   // https://vitepress.dev/reference/default-theme-config
   themeConfig: {
