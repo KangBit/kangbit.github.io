@@ -9,8 +9,8 @@ outline: deep
 
 ## VitePress
 
-2024년 3월 21일 [VitePress](https://vitepress.vuejs.kr/)가 release 되었습니다.  
-[VitePress](https://vitepress.vuejs.kr/guide/what-is-vitepress#vitepress%E1%84%85%E1%85%A1%E1%86%AB-%E1%84%86%E1%85%AE%E1%84%8B%E1%85%A5%E1%86%BA%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%80%E1%85%A1)는 빠르고 컨텐츠 중심의 웹사이트를 구축하기 위해 설계된 '정적 사이트 생성기' 입니다.  
+2024년 3월 21일 [VitePress](https://vitepress.dev/)가 release 되었습니다.  
+[VitePress](https://vitepress.dev/guide/what-is-vitepress)는 빠르고 컨텐츠 중심의 웹사이트를 구축하기 위해 설계된 '정적 사이트 생성기' 입니다.  
 개인 블로그 뿐 아니라 팀 블로그를 구성하거나 가이드 문서로 사용하기에도 아주 좋은 도구로 보입니다.
 
 ## 왜 VitePress인가
