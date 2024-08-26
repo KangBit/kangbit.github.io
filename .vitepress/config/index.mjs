@@ -8,6 +8,7 @@ import sidebar from "./sidebar";
 
 export default defineConfig({
   title: "BitPage",
+  lang: "ko",
   description: "Bit Dev Blog",
 
   vite: {
