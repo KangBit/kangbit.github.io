@@ -159,6 +159,13 @@ img {
   line-height: 1.5rem;
 }
 
+.mt-0 {
+  margin-bottom: 0;
+}
+.mb-0 {
+  margin-bottom: 0;
+}
+
 .mt-8 {
   margin-top: 8px;
 }

@@ -13,4 +13,8 @@ features:
   - title: 프론트 개발자의 안드로이드 컨퍼런스 후기
     details: 친한 네이티브 개발자를 꼬셔서 안드로이드 컨퍼런스에 다녀왔습니다.
     link: "/posts/conference-kmp"
+
+  - title: Marquee
+    details: marquee에 대해 소개하고, 구현 방법을 설명합니다.
+    link: "/posts/marquee"
 ---
