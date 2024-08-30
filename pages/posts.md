@@ -14,6 +14,10 @@ features:
     details: 친한 네이티브 개발자를 꼬셔서 안드로이드 컨퍼런스에 다녀왔습니다.
     link: "/posts/conference-kmp"
 
+  - title: 가속합성으로 인한 화면 깜빡임 해결
+    details: 가속합성으로 인한 화면 깜빡임 현상을 해결한 경험을 공유합니다.
+    link: "/posts/hardware-acceleration"
+
   - title: Marquee
     details: marquee에 대해 소개하고, 구현 방법을 설명합니다.
     link: "/posts/marquee"
