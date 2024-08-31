@@ -37,6 +37,10 @@ const bitPages = {
           text: "경력",
           link: "/kangbit/career",
         },
+        {
+          text: "프로젝트",
+          link: "/kangbit/career-detail",
+        },
       ],
     },
   ],
