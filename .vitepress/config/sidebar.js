@@ -111,10 +111,29 @@ const componentPages = {
   ],
 };
 
+const updatesPages = {
+  "/posts/updates/": [
+    {
+      text: "Whats New In",
+      items: [
+        {
+          text: "ECMAScript",
+          link: "/posts/updates/ecmascript",
+        },
+        {
+          text: "Vue",
+          link: "/posts/updates/vue",
+        },
+      ],
+    },
+  ],
+};
+
 export default {
   ...vitePressPages,
   ...bitPages,
   ...linksPages,
   ...snippetPages,
   ...componentPages,
+  ...updatesPages,
 };
