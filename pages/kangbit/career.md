@@ -11,6 +11,8 @@ next: false
 
 <b>전국의 골퍼들을 위한 모바일 서비스와 골프장을 위한 클럽 솔루션을 개발했습니다.</b>
 
+<b>Vue를 이용해 웹/ 앱 서비스의 프론트엔드를 개발했습니다.</b>
+
 <Badge type='tip' text='Vue2'/>
 <Badge type='tip' text='Vue3' />
 <Badge type='info' text='Vuex' />
@@ -25,6 +27,8 @@ next: false
 ## (주)아이앤비앰 ( 2019-06 ~ 2022-03 )
 
 <b>클라이언트의 요구사항에 맞춰 모바일 서비스와 웹 서비스를 개발했습니다.</b>
+
+<b>풀스택 개발자로 하이브리드 앱과 대시보드를 개발했습니다.</b>
 
 <Badge type='tip' text='React' />
 <Badge type='info' text='ejs' />
