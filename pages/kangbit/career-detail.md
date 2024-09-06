@@ -7,7 +7,7 @@ prev: false
 next: false
 ---
 
-## 스마트스코어 <span class="text-sm"> ( 2022-08 ~ ) </span>
+## 스마트스코어 ( 2022-08 ~ )
 
 <Badge type='tip' text='Vue2'/>
 <Badge type='tip' text='Vue3' />
@@ -20,20 +20,7 @@ next: false
 <Badge type='info' text='Jira' />
 <Badge type='info' text='Zeplin' />
 
-스마트스코어 앱의 웹뷰 프로젝트는 여러 서비스가 모놀리식으로 구성되어 있는 Vue2 프로젝트입니다.<br>
-이 프로젝트에서 기존 서비스의 개선/운영 개발과 신규 서비스의 개발/ 운영 개발을 담당했습니다.<br>
-또한, Vue3를 이용해 신규 웹 서비스의 프론트엔드 개발을 진행햇습니다.
-
-### 선물하기 <span class="text-sm"> ( 2022-08 ~ ) </span>
-
-<div class="mt-8">
-  <Badge type='info' text='Vue2'/>
-  <Badge type='info' text='Vuex'/>
-</div>
-
-스마트스코어 회원과 연락처의 지인들간에 선물을 주고 받을 수 있는 서비스입니다.
-
-### 골프썸 <span class="text-sm"> ( 2024-07 ~ 2024-08 ) </span>
+### 스마트스코어 앱 <span class="text-sm"> ( 2022-08 ~ ) </span>
 
 <div class="mt-8">
   <Badge type='info' text='Vue2'/>
@@ -41,20 +28,16 @@ next: false
   <Badge type='info' text='Sendbird'/>
 </div>
 
-골프라는 취미를 공유하는 이성을 찾고, 대화할 수 있는 서비스를 제공합니다.
+스마트스코어 앱의 웹뷰 프로젝트는 여러 서비스가 모놀리식으로 구성되어 있는 Vue2 프로젝트입니다.<br>
+이 프로젝트에서 기존 서비스의 개선/운영 개발과 신규 서비스의 개발/ 운영 개발을 담당했습니다.<br>
 
-### 골프매거진 <span class="text-sm"> ( 2024-04 ~ 2024-08 ) </span>
-
-<div class="mt-8">
-  <Badge type='info' text='Vue2'/>
-  <Badge type='info' text='Vuex'/>
-</div>
-
-골프 매거진 코리아의 컨텐츠를 스마트스코어 앱에 보여주는 서비스입니다.
+- 운영, 개선 개발 : 선물하기, 골프 매거진
+- 신규 개발 : 골프썸, 스마트캐디, 커뮤니티
 
 ### 클럽 페이지 <span class="text-sm"> ( 2023-05 ~ 2023-12 ) </span>
 
 <div class="mt-8">
+  <Badge type='info' text='Vite'/>
   <Badge type='info' text='Vue3'/>
   <Badge type='info' text='VueUse'/>
   <Badge type='info' text='Pinia'/>
@@ -63,49 +46,47 @@ next: false
 
 골프장 관리자들을 위한 페이지입니다. <br>
 내장객에게 노출하고 싶은 다양한 정보를 입력하고 관리할 수 있는 서비스를 제공합니다. <br>
-골프장에서 진행되었던 라운드에 대한 다양한 데이터와 통계를 제공합니다.
+골프장에서 진행되었던 라운드에 대한 다양한 데이터와 통계를 제공합니다.<br>
+메인 개발자로서 프로젝트 구조 설계 및 각종 컴포넌트 개발을 담당했습니다.
+
+- 초기 개발 환경 구축 ( Vite / Pinia, Router )
+- AccountLayout, DashboardLayout 구현
+- 회원가입/ 로그인 로직 구현
+- 핀 포지션 위치 조회, 수정 화면 구현 ( Canvas + Composable )
+- 차트 구현 ( Highcharts )
 
 ### 조인/양도 매니저 관리자 <span class="text-sm"> ( 2023-12 ~ 2024-03 ) </span>
 
 <div class="mt-8">
+  <Badge type='info' text='Vite'/>
   <Badge type='info' text='Vue3'/>
   <Badge type='info' text='VueUse'/>
   <Badge type='info' text='Pinia'/>
 </div>
 
 부킹 매니저들을 위한 페이지입니다. <br>
-조인과 양도를 손쉽게 관리할 수 있는 서비스를 제공합니다.
+조인과 양도를 손쉽게 관리할 수 있는 서비스를 제공합니다. <br>
+메인 개발자로서 프로젝트 구조 설계 및 각종 컴포넌트 개발을 담당했습니다.
 
-### 스마트 캐디 <span class="text-sm"> ( 2023-08 ~ 2023-10 ) </span>
-
-<div class="mt-8">
-  <Badge type='info' text='Vue2'/>
-  <Badge type='info' text='Vuex'/>
-</div>
-
-캐디 구인 구직을 지원하는 서비스입니다.
+- 초기 개발 환경 구축 ( Vite / Pinia, Router )
+- 차트 구현 ( Highcharts )
+- 이용권 상태에 따른 페이지별 접근 권한 구현
+- 이용권 구매 페이지 구현
 
 ### 글로벌 홈페이지 <span class="text-sm"> ( 2023-08 ~ 2023-09 ) </span>
 
 <div class="mt-8">
+  <Badge type='info' text='Vite'/>
   <Badge type='info' text='Vue3'/>
   <Badge type='info' text='VueUse'/>
   <Badge type='info' text='Pinia'/>
   <Badge type='info' text='i18n'/>
 </div>
 
-스마트스코어 글로벌 홈페이지입니다.
+스마트스코어 글로벌 홈페이지입니다. <br>
+메인 개발자로서 초기 개발 환경을 구축하고, 다국어 처리를 담당했습니다.
 
-### 커뮤니티 <span class="text-sm"> ( 2023-06 ~ 2023-12 ) </span>
-
-<div class="mt-8">
-  <Badge type='info' text='Vue2'/>
-  <Badge type='info' text='Vuex'/>
-</div>
-
-게시판 형태의 커뮤니티입니다.
-
-## (주)아이앤비앰 <span class="text-sm"> ( 2019-06 ~ 2022-03 ) </span>
+## (주)아이앤비앰 ( 2019-06 ~ 2022-03 )
 
 <Badge type='tip' text='React' />
 <Badge type='info' text='ejs' />
@@ -133,7 +114,7 @@ React로 웹/ 앱 서비스의 프론트엔드를 개발했으며,<br>
 ejs/jquery 로 이루어진 웹 프로젝트의 리팩토링 및 개선 개발을 했습니다.<br>
 Swift와 Java를 이용해 네이티브 앱 개발을, Express를 이용해 백엔드 서버를 개발했습니다.
 
-### - Fantoo <span class="text-sm"> ( 2019-06 ~ 2021-04) </span>
+### Fantoo <span class="text-sm"> ( 2019-06 ~ 2021-04) </span>
 
 <div class="mt-8">
   <Badge type='info' text='Swift' />

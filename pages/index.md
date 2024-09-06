@@ -3,8 +3,9 @@
 layout: home
 
 hero:
-  name: "BitPage"
-  text: "Bit Dev Blog"
+  name: " "
+  text: "BitPage"
+  tagline: ""
   actions:
     - theme: alt
       text: HTML
