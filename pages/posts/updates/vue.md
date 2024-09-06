@@ -9,9 +9,19 @@ next: false
 
 # Vue Updates
 
-## Vue 3.5 ( - )
+## Vue 3.5 ( 2024년 9월 )
 
-[Whats Comming in Vue 3.5?](https://vueschool.io/articles/vuejs-tutorials/whats-coming-in-vue-3-5/)
+[VueJS Blog / Announcing Vue 3.5](https://blog.vuejs.org/posts/vue-3-5)
+
+- Reactive Props Destructure
+- SSR
+  - Lazy Hydration
+  - useId
+  - data-allow-mismatch
+- defineCustomElements
+- useTemplateRef
+- Deferred Teleport
+- onWatcherCleanup
 
 ## Vue 3.4 (2023년 12월)
 

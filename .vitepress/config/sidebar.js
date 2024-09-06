@@ -124,6 +124,10 @@ const updatesPages = {
           text: "Vue",
           link: "/posts/updates/vue",
         },
+        {
+          text: "react",
+          link: "/posts/updates/react",
+        },
       ],
     },
   ],
