@@ -26,3 +26,5 @@ next: false
 [22 Useful CSS Tips and Tricks Every Developer Should Know](https://dev.to/devsyedmohsin/22-useful-css-tips-and-tricks-every-developer-should-know-13c6?utm_source=oneoneone)
 
 [The truth about CSS selector performance](https://blogs.windows.com/msedgedev/2023/01/17/the-truth-about-css-selector-performance/)
+
+[css-grid-area](https://ishadeed.com/article/css-grid-area)
