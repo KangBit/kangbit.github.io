@@ -5,6 +5,7 @@ titleTemplate: ECMAScript
 # outline:
 prev: false
 next: false
+comment: true
 ---
 
 # ECMAScript

@@ -5,6 +5,7 @@ titleTemplate: Vue
 # outline:
 prev: false
 next: false
+comment: true
 ---
 
 # Vue Updates

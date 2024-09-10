@@ -3,6 +3,7 @@ title: Marquee
 # titleTemplate:
 # description:
 # outline: false
+comment: true
 ---
 
 <style module>

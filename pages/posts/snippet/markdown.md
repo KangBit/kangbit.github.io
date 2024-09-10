@@ -5,6 +5,7 @@ description: Markdown Snippet 코드
 outline: deep
 prev: false
 next: false
+comment: true
 ---
 
 # Markdown Snippet

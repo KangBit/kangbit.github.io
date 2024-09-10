@@ -2,6 +2,7 @@
 title: 프론트 개발자의 안드로이드 컨퍼런스 후기
 description: 프론트 개발자의 안드로이드 컨퍼런스 후기
 outline: 2
+comment: true
 ---
 
 # 프론트 개발자의 안드로이드 컨퍼런스 후기

@@ -5,6 +5,7 @@ titleTemplate: React
 # outline:
 prev: false
 next: false
+comment: true
 ---
 
 # React Updates

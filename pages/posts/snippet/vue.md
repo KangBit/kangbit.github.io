@@ -4,6 +4,7 @@ titleTemplate: Vue
 description: Vue Snippet 코드
 prev: false
 next: false
+comment: true
 ---
 
 # Vue Snippet
