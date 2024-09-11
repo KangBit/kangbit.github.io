@@ -16,7 +16,7 @@ comment: true
 
 ### Sitemap 생성
 
-Vitepress에서는 [사이트맵 생성](https://vitepress.vuejs.kr/guide/sitemap-generation)을 지원합니다.
+Vitepress에서는 [사이트맵 생성](https://vitepress.dev/ko/guide/sitemap-generation)을 지원합니다.
 
 아래와 같이 `/.viteprss/config.mjs`에 sitemap을 작성합니다.
 

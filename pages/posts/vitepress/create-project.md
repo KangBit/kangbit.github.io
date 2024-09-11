@@ -159,4 +159,4 @@ export default defineConfig({
 
 ---
 
-> [VitePress | Vite & Vue로 구동되는 정적 사이트 생성기](https://vitepress.vuejs.kr/)
+> [VitePress | Vite & Vue로 구동되는 정적 사이트 생성기](https://vitepress.dev/ko/)

@@ -14,7 +14,7 @@ comment: true
 
 <img src="/assets/images/vitepress/github-deploy-1.jpeg" width="40%">
 
-`deploy.yml` 파일에 [공식 문서](https://vitepress.vuejs.kr/guide/deploy#github-pages)에 있는 샘플 워크플로우를 복사해서 붙여줍니다.
+`deploy.yml` 파일에 [공식 문서](https://vitepress.dev/ko/guide/deploy#github-pages)에 있는 샘플 워크플로우를 복사해서 붙여줍니다.
 
 다만 우리는 공식 문서의 가이드와는 폴더 구조가 다르기 때문에 `Upload artifact` 설정을 수정해 주어야 합니다.
 
@@ -70,4 +70,4 @@ $ git push -u origin main
 
 ---
 
-> [VitePress | Vite & Vue로 구동되는 정적 사이트 생성기](https://vitepress.vuejs.kr/)
+> [VitePress | Vite & Vue로 구동되는 정적 사이트 생성기](https://vitepress.dev/ko/)
