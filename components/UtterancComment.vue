@@ -1,51 +1,49 @@
 <script setup>
-import { onMounted, computed, watch } from "vue";
-import { useData } from "vitepress";
+import { onMounted, watch } from "vue";
 
-const { isDark } = useData();
+// Props
+const props = defineProps(["theme"]);
 
-// computed
-const theme = computed(() => {
-  return isDark.value ? "photon-dark" : "github-light";
-});
-
-// methods
-const appendComments = () => {
+// Methods
+const appendUtteranc = () => {
   let script = document.createElement("script");
+
   script.src = "https://utteranc.es/client.js";
   script.async = true;
   script.crossOrigin = "anonymous";
+
   script.setAttribute("repo", "KangBit/kangbit.github.io");
   script.setAttribute("issue-term", "pathname");
   script.setAttribute("label", "Comment");
-  script.setAttribute("theme", theme.value);
+  script.setAttribute("theme", props.theme);
 
-  document.querySelector("#comment").appendChild(script);
+  document.querySelector("#comments-container").appendChild(script);
 };
 
 // LifeCycle
 onMounted(() => {
-  appendComments();
+  appendUtteranc();
 });
 
 // Watch
-watch(isDark, () => {
-  const iframe = document.querySelector(".utterances-frame");
-  if (!iframe) {
-    return;
+watch(
+  () => props.theme,
+  () => {
+    const iframe = document.querySelector(".utterances-frame");
+
+    const targetOrigin = "https://utteranc.es";
+    const message = {
+      type: "set-theme",
+      theme: props.theme,
+    };
+
+    iframe?.contentWindow?.postMessage(message, targetOrigin);
   }
-
-  const message = {
-    type: "set-theme",
-    theme: theme.value,
-  };
-
-  iframe.contentWindow.postMessage(message, "https://utteranc.es");
-});
+);
 </script>
 
 <template>
-  <div id="comment" class="comments-container"></div>
+  <div id="comments-container" class="comments-container"></div>
 </template>
 
 <style scoped>
