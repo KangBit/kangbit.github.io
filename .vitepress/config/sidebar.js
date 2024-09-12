@@ -19,6 +19,10 @@ const vitePressPages = {
           text: "검색엔진에 Blog 등록하기",
           link: "/posts/vitepress/seo",
         },
+        {
+          text: "댓글 추가하기",
+          link: "/posts/vitepress/append-comments",
+        },
       ],
     },
   ],
