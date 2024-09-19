@@ -9,7 +9,9 @@ next: false
 
 ## Vue 링크 저장소
 
-[Vue 공식 문서](https://v3-docs.vuejs-korea.org/)
+[Vue 공식 문서](https://ko.vuejs.org/)
+
+[Vue 공식 문서 - Style Guide](https://ko.vuejs.org/style-guide/)
 
 [Vue Router](https://router.vuejs.org/)
 
