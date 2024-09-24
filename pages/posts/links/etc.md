@@ -48,3 +48,7 @@ next: false
 [UI/UX 디자인을 위한 101가지 심리학 모음](https://slashpage.com/cyberstaradam/1q3vdn2pk63j1mxy49pr)
 
 [가벼운 UX 심리학](https://brunch.co.kr/brunchbook/lightux)
+
+[전문가도 초보도 필요한 무료 디자인 툴 23](https://magazine.contenta.co/2024/08/%EB%AC%B4%EB%A3%8C-%EB%94%94%EC%9E%90%EC%9D%B8%ED%88%B4-23/?utm_source=oneoneone)
+
+[프로그래머를 위한 카테고리 이론 - 0. 서문](https://evan-moon.github.io/2024/01/30/category-theory-for-programmers-0-preface/)
