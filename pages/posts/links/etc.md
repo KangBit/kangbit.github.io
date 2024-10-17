@@ -9,6 +9,8 @@ next: false
 
 ## 기타 링크 저장소
 
+[How To Create An NPM Package](https://www.totaltypescript.com/how-to-create-an-npm-package#11-initialize-the-repo)
+
 [Good Refactoring vs Bad Refactoring](https://www.builder.io/blog/good-vs-bad-refactoring)
 
 [디자인 및 성능 패턴에 대한 최신 정보들을 제공합니다 - en](https://www.patterns.dev/#patterns)
