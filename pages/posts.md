@@ -21,4 +21,8 @@ features:
   - title: Marquee
     details: marquee에 대해 소개하고, 구현 방법을 설명합니다.
     link: "/posts/marquee"
+
+  - title: Slider
+    details: 간단한 슬라이더를 만드는 방법을 설명합니다.
+    link: "/posts/slider"
 ---
