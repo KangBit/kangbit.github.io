@@ -18,7 +18,7 @@ import BaseSlider from '@/components/BaseSlider.vue'
 
 물론 요구사항이 많을수록 잘 만들어진 라이브러리를 사용하는 게 유리한 경우가 많습니다.
 
-하지만 기본적인 기능을 직접 구현하는 것도 그리 어렵지 않고,
+하지만 기본적인 기능은 직접 구현하는 것도 그리 어렵지 않고,
 
 한번 만들어 두면 여러 프로젝트에서 커스텀하여 사용할 수 있습니다.
 
@@ -180,21 +180,32 @@ const slideTo = (index) => {
 
 여기서는 문제가 생길 수 있다는 것을 보여주기 위해 하드웨어 가속을 이용했습니다.
 
+[여기서](https://kangbit.github.io/posts/slider/#slider%E1%84%85%E1%85%A1%E1%86%AB) 슬라이드 전환 시 깜빡거림이 발생하는 것을 볼 수 있습니다. ( 사파리 )
+
+~~[여기서](https://kangbit.github.io/posts/slider/#slider%E1%84%85%E1%85%A1%E1%86%AB) 5번 - 1번 슬라이드 전환을 하다보면 깜빡거림이 발생하는 것을 볼 수 있습니다. ( 크롬 )~~
+
+> 크롬에서 현재는 깜빡임이 발생하지 않습니다. 같은 환경에서 태스트 했을 때 발생하지 않는다는 점,
+>
+> 크롬의 업데이트가 있었다는 점에서 내부적으로 gpu 가속 합성에 대한 최적화가 있었지 않나 추측합니다.
+
 하드웨어 가속을 이용함으로 얻을 수 있는 장점도 있지만, 해결하기 어려운 문제에 직면할 때도 있습니다.
 
-실제로 [여기서](https://kangbit.github.io/posts/slider/#slider%E1%84%85%E1%85%A1%E1%86%AB) 5번 - 1번 슬라이드 전환을 하다보면 깜빡거림이 발생하는 것을 볼 수 있습니다. ( 크롬 )
+[swiperjs param](https://swiperjs.com/swiper-api#param-maxBackfaceHiddenSlides) 에서도 깜빡거림을 줄이기 위한 구현이 있다는 있다는 것을 확인할 수 있습니다.
 
-[swiperjs param - maxBackfaceHiddenSlides](https://swiperjs.com/swiper-api#param-maxBackfaceHiddenSlides) 에서도 깜빡거림을 줄이기 위해 노력하고 있다는 것과
+> If total number of slides less than specified here value,
+> then Swiper will enable backface-visibility: hidden on slide elements to reduce visual "flicker" in Safari.
 
-일부 해결책에도 한계가 있다는 것을 확인할 수 있습니다.
+또한 일부 해결책에도 한계가 있다는 것을 확인할 수 있습니다.
+
+> It is not recommended to enable it on large amount of slides as it will reduce performance
 
 해결방법을 찾아서 하드웨어 가속을 사용할지, 하드웨어 가속을 사용하지 않을지,
 
-선택적으로 사용할 것인지는 여러분의 판단에 맡기겠습니다.
+선택적으로 사용할 것인지는 각자의 판단에 맡기겠습니다.
 
-<br>
+여기에서의 깜빡임 해결 방법은 아래에서 설명하기로 하고,
 
-다시 구현으로 돌아와서, 버튼 클릭 이벤트 리스너를 추가해주면 완성입니다.
+다시 구현으로 돌아와서 버튼 클릭 이벤트 리스너를 추가해주면 완성입니다.
 
 ::: code-group
 
@@ -347,6 +358,34 @@ const onTransitionEnd = () => {
 
 :::
 
+## Safari 깜빡임 현상 해결
+
+다음 두가지 방법 중 하나를 사용하면 깜빡임 현상을 해결할 수 있습니다.
+
+```css
+.slide-item {
+  will-change: translate;
+}
+```
+
+```css
+.slide-item {
+  transform: translateZ(0);
+}
+```
+
+다만 전환이 자주 발생하는 슬라이더의 특성상 `transform`을 사용하는 게 좋아보입니다.
+
+`will-change`의 경우에는 브라우저에서 전환에 대비하고 있어야 하므로
+
+지속적으로 사용하기보다는 필요할 때만 적용하고, 변화를 마친 후에는 제거해 주어야 합니다.
+
+물론 `transform: translateZ(0)`의 경우에도 너무 많은 요소에 사용하게 되면
+
+성능에 안좋은 영향을 줄 수 있으므로 너무 많은 전환 요소가 있을 경우에는
+
+3d전환은 일부 요소에만 적용하고, 2d전환을 이용하는 것이 더 좋은 선택이 될 수 있습니다.
+
 ## HTML Code
 
 ::: details index.html
@@ -439,7 +478,8 @@ body {
   flex-shrink: 0;
 
   font-size: 2rem;
-  will-change: transform;
+
+  transform: translateZ(0);
 }
 ```
 
