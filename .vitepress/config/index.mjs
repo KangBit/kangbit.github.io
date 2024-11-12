@@ -29,7 +29,7 @@ export default defineConfig({
 
   srcExclude: ["**/README.md"],
   rewrites: {
-    "pages(/:path)*/(.*)": "(/:path)*/(.*)",
+    "pages/:slug*": ":slug*",
   },
 
   sitemap: {
