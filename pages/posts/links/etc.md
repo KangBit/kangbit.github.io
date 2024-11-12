@@ -56,3 +56,5 @@ next: false
 [전문가도 초보도 필요한 무료 디자인 툴 23](https://magazine.contenta.co/2024/08/%EB%AC%B4%EB%A3%8C-%EB%94%94%EC%9E%90%EC%9D%B8%ED%88%B4-23/?utm_source=oneoneone)
 
 [프로그래머를 위한 카테고리 이론 - 0. 서문](https://evan-moon.github.io/2024/01/30/category-theory-for-programmers-0-preface/)
+
+[웹 어플리케이션의 역사](https://tecoble.techcourse.co.kr/post/2023-10-25-HISTORY-OF-WEB-APP/)

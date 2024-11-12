@@ -22,3 +22,5 @@ next: false
 ---
 
 [awesome-vue](https://github.com/vuejs/awesome-vue)
+
+[Vue <Transition> with Tailwind CSS](https://learnvue.co/transitions)
