@@ -23,7 +23,13 @@ export default defineConfig({
   themeConfig: {
     nav: nav,
     sidebar: sidebar,
-    socialLinks: [{ icon: "github", link: "https://github.com/KangBit" }],
+    socialLinks: [
+      // You can add any icon from simple-icons (https://simpleicons.org/)
+      { icon: "github", link: "https://github.com/KangBit" },
+      { icon: "velog", link: "https://velog.io/@kang-bit/posts" },
+      { icon: "kakaotalk", link: "https://open.kakao.com/o/svuLVaug" },
+      { icon: "maildotru", link: "mailto:kangbit@kakao.com" },
+    ],
     lastUpdated: true,
   },
 
