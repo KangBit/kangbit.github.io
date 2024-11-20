@@ -9,6 +9,8 @@ next: false
 
 ## 기타 링크 저장소
 
+[Plain Vanilla](https://plainvanillaweb.com/index.html)
+
 [How To Create An NPM Package](https://www.totaltypescript.com/how-to-create-an-npm-package#11-initialize-the-repo)
 
 [Good Refactoring vs Bad Refactoring](https://www.builder.io/blog/good-vs-bad-refactoring)
