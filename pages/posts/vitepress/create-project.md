@@ -127,18 +127,18 @@ $ npm run docs:dev
 
 생성된 프로젝트의 폴더 구조를 보면, 다음과 같습니다.
 
-<img src="/assets/images/vitepress/create-project-1.jpeg" width="40%"></img>
+<img src="/assets/images/vitepress/create-project-1.jpeg" width="40%" alt="Vitepress 초기 폴더"></img>
 
 `.md` 확장자의 파일들은 블로그에 추가될 페이지들입니다.
 최상위 디렉토리에 위치할 경우 페이지가 늘어날수록 관리하기 힘들 수 있습니다.
 폴더를 만들어 넣어주도록 하겠습니다.
 저는 pages로 폴더를 만들었습니다.
 
-<img src="/assets/images/vitepress/create-project-2.jpeg" width="40%"></img>
+<img src="/assets/images/vitepress/create-project-2.jpeg" width="40%" alt="Vitepress 폴더 설정"></img>
 
 하지만 폴더 구조를 수정하니, 페이지에 접근할 수 없습니다.
 
-<img src="/assets/images/vitepress/create-project-3.jpeg" width="50%"></img>
+<img src="/assets/images/vitepress/create-project-3.jpeg" width="50%" alt="Vitepress 폴더 설정 UI 오류"></img>
 
 페이지의 위치가 변경되었음을 프로젝트에 알려주어야 합니다.
 설정 파일인 `/.viteprss/config.mjs` 에 `rewrites`을 추가해 주면,
@@ -155,7 +155,7 @@ export default defineConfig({
 
 페이지에 다시 접근할 수 있습니다.
 
-<img src="/assets/images/vitepress/create-project-4.jpeg" width="50%"></img>
+<img src="/assets/images/vitepress/create-project-4.jpeg" width="50%" alt="Vitepress 폴더 설정 UI 확인"></img>
 
 ---
 

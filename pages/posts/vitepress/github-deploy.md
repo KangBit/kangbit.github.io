@@ -12,7 +12,7 @@ comment: true
 
 `.github/workflows` 폴더를 생성 후 `deplay.yml` 파일을 생성해 줍니다
 
-<img src="/assets/images/vitepress/github-deploy-1.jpeg" width="40%">
+<img src="/assets/images/vitepress/github-deploy-1.jpeg" width="40%" alt="yml 파일 위치">
 
 `deploy.yml` 파일에 [공식 문서](https://vitepress.dev/ko/guide/deploy#github-pages)에 있는 샘플 워크플로우를 복사해서 붙여줍니다.
 
@@ -42,11 +42,11 @@ jobs:
 
 주소에 `RepositoryName`이 포함되게 되면 SEO 설정 시에 어려움이 있을 수 있습니다.
 
-<img src="/assets/images/vitepress/github-deploy-2.jpeg" width="50%">
+<img src="/assets/images/vitepress/github-deploy-2.jpeg" width="50%" alt="깃허브 설정 - 1">
 
 생성된 저장소의 설정을 수정해 줍니다.
 
-<img src="/assets/images/vitepress/github-deploy-3.jpeg" width="80%">
+<img src="/assets/images/vitepress/github-deploy-3.jpeg" width="80%" alt="깃허브 설정 - 2">
 
 이제 터미널을 통해 저장소에 소스 코드를 업로드합니다.
 
@@ -62,7 +62,7 @@ $ git push -u origin main
 업로드 후에 저장소의 Actions 페이지에 접근해 보면,
 배포 상황을 확인할 수 있습니다.
 
-<img src="/assets/images/vitepress/github-deploy-4.jpeg" width="80%">
+<img src="/assets/images/vitepress/github-deploy-4.jpeg" width="80%" alt="깃허브 배포 완료 UI">
 
 위와 같이 배포가 성공적으로 완료되었다면
 

@@ -36,7 +36,7 @@ Vue3에 익숙한 개발자라면 손쉽게 테마를 커스텀 할 수 있고,
 ### 검색
 
 검색 기능을 쉽게 추가할 수 있습니다.
-<img src="/assets/images/vitepress/why-vitepress-1.jpeg" width="100%"></img>
+<img src="/assets/images/vitepress/why-vitepress-1.jpeg" width="100%" alt="Vitepress 검색 UI"></img>
 
 ### 코드 블록 기능
 

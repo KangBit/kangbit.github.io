@@ -30,7 +30,7 @@ export default defineConfig({
 ```
 
 이후에 빌드를 해보면 다음과 같이 `sitemap.xml` 파일이 포함되어 있는 것을 볼 수 있습니다.
-<img src="/assets/images/vitepress/seo-1.jpeg" width="30%"></img>
+<img src="/assets/images/vitepress/seo-1.jpeg" width="30%" alt="xml 파일 위치"></img>
 
 이 사이트맵을 `Google Search Console`과 `Naver 웹마스터 도구`에 등록하면
 
@@ -40,13 +40,13 @@ export default defineConfig({
 
 [Google Search Console](https://search.google.com/search-console/welcome) 에 점속해서 내 블로그의 URL을 입력합니다.
 
-<img src="/assets/images/vitepress/seo-2.jpeg" width="60%"></img>
+<img src="/assets/images/vitepress/seo-2.jpeg" width="60%" alt="Search Console 설정 - 사이트 등록"></img>
 
 입력 후 계속 버튼을 클릭하면 홈페이지의 소유권을 확인하기 위한 화면이 나타납니다.
 
 저는 Google 애널리틱스를 통해 소유권을 인증하겠습니다.
 
-<img src="/assets/images/vitepress/seo-3.jpeg" width="60%"></img>
+<img src="/assets/images/vitepress/seo-3.jpeg" width="60%" alt="Search Console 설정 - 소유권 인증"></img>
 
 [구글 애널리틱스](https://analytics.google.com/analytics/web)에 접속해서 계정과 속성을 생성 후, 태그 ID를 확인합니다.
 
@@ -82,17 +82,17 @@ export default defineConfig({
 ```
 
 배포를 진행한 후, `Google Search Console`으로 돌아가 확인을 누르면 다음과 같은 팝업을 화인할 수 있습니다.
-<img src="/assets/images/vitepress/seo-4.jpeg" width="60%"></img>
+<img src="/assets/images/vitepress/seo-4.jpeg" width="60%" alt="Search Console 설정 - 소유권 확인"></img>
 
 속성으로 이동 버튼을 클릭해 속성 페이지로 이동합니다.
 
 좌측 메뉴의 Sitemaps 메뉴를 통헤 페이지에 진입한 후, 사이트맵의 주소를 입력합니다.
 
-<img src="/assets/images/vitepress/seo-5.jpeg"></img>
+<img src="/assets/images/vitepress/seo-5.jpeg" alt="Search Console 설정 - 사이트맵 등록"></img>
 
 제출이 완료되면, 제출된 사이트맵에 다음과 같이 노출됩니다.
 
-<img src="/assets/images/vitepress/seo-6.jpeg"></img>
+<img src="/assets/images/vitepress/seo-6.jpeg" alt="Search Console 설정 - 사이트맵 제출 완료"></img>
 
 며칠 기다리면, 구글 검색에 내 블로그가 노출되는 것을 확인할 수 있습니다.
 
@@ -100,10 +100,10 @@ export default defineConfig({
 
 [Naver Search Advisor](https://searchadvisor.naver.com/console/board)에 접속해서 내 블로그의 URL을 입력합니다.
 
-<img src="/assets/images/vitepress/seo-8.jpeg"></img>
+<img src="/assets/images/vitepress/seo-8.jpeg" alt="Search Advisor 설정 - 사이트 등록"></img>
 
 구글과 마찬가지로 홈페이지의 소유권을 확인하기 위한 화면이 나타납니다.
-<img src="/assets/images/vitepress/seo-9.jpeg"></img>
+<img src="/assets/images/vitepress/seo-9.jpeg" alt="Search Advisor 설정 - 소유권 인증"></img>
 
 HTML 태그를 통해 소유권을 확인하도록 하겠습니다.
 
@@ -125,9 +125,9 @@ export default defineConfig({
 ```
 
 배포 후 소유확인 버튼을 누르면 다음과 같은 팝업을 확인할 수 있습니다.
-<img src="/assets/images/vitepress/seo-10.jpeg" width="60%"></img>
+<img src="/assets/images/vitepress/seo-10.jpeg" width="60%" alt="Search Advisor 설정 - 소유권 확인"></img>
 
 요청 > 사이트맵 제출 메뉴로 이동하여 사이트맵 URL을 입력해 줍니다.
-<img src="/assets/images/vitepress/seo-11.jpeg"></img>
+<img src="/assets/images/vitepress/seo-11.jpeg" alt="Search Advisor 설정 - 사이트맵 제출"></img>
 
 며칠 기다리면, 네이버 검색에 내 블로그가 노출되는 것을 확인할 수 있습니다.
