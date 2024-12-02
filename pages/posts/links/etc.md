@@ -17,6 +17,8 @@ next: false
 
 [Patterns for Memory Efficient DOM Manipulation with Modern Vanilla JavaScript](https://frontendmasters.com/blog/patterns-for-memory-efficient-dom-manipulation)
 
+[Algorithm Visualizer](https://algorithm-visualizer.org/)
+
 [디자인 및 성능 패턴에 대한 최신 정보들을 제공합니다 - en](https://www.patterns.dev/#patterns)
 
 [디자인 및 성능 패턴에 대한 최신 정보들을 제공합니다 - ko](https://patterns-dev-kr.github.io/)
