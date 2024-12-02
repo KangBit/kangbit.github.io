@@ -40,6 +40,12 @@ export default defineConfig({
 
   sitemap: {
     hostname: "https://kangbit.github.io/",
+    transformItems: (items) => {
+      return items.map((item) => {
+        item.url = item.url.replace(/\.html$/, "");
+        return item;
+      });
+    },
   },
   head: [
     [
