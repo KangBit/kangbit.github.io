@@ -10,6 +10,24 @@ comment: true
 
 # React Updates
 
+## React 19 (2024년 12월)
+
+[React v19.0](https://react.dev/blog/2024/12/05/react-19)
+
+- useActionState
+- useFormStatus
+- useOptimistic
+- use
+- prerender
+- prerenderToNodeStream
+- Server Components
+- Server Actions
+
+- Preloading Resources
+- Support for Document Metadata
+- Support for stylesheets
+- Support for async scripts
+
 ## React 18 (2022년 3월)
 
 [React v18.0](https://react.dev/blog/2022/03/29/react-v18)
