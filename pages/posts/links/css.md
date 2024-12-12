@@ -28,3 +28,5 @@ next: false
 [The truth about CSS selector performance](https://blogs.windows.com/msedgedev/2023/01/17/the-truth-about-css-selector-performance/)
 
 [css-grid-area](https://ishadeed.com/article/css-grid-area)
+
+[css loaders](https://cssloaders.github.io/)
