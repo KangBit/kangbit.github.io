@@ -25,4 +25,8 @@ features:
   - title: Slider
     details: 간단한 슬라이더를 만드는 방법을 설명합니다.
     link: "/posts/slider"
+
+  - title: Ref vs Reactive
+    details: Vue3에서 ref를 사용할지 reactive를 사용할지 생각해봅시다.
+    link: "/posts/vue-reactivity"
 ---

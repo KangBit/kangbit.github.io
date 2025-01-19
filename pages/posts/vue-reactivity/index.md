@@ -4,7 +4,7 @@ description: ref와 reactive 중 어떤 것을 선택할 것인가
 comment: true
 ---
 
-# Ref vs Reactive ( 작성중 )
+# Ref vs Reactive
 
 ## 들어가며
 
