@@ -9,6 +9,8 @@ next: false
 
 ## 기타 링크 저장소
 
+[The Future of Front-End Development: Trends to Watch in 2025](https://medium.com/@all.technology.stories/9ae18ef06ab2)
+
 [Plain Vanilla](https://plainvanillaweb.com/index.html)
 
 [How To Create An NPM Package](https://www.totaltypescript.com/how-to-create-an-npm-package#11-initialize-the-repo)
