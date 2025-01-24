@@ -15,6 +15,8 @@ next: false
 
 [How To Create An NPM Package](https://www.totaltypescript.com/how-to-create-an-npm-package#11-initialize-the-repo)
 
+[NGINX - Zero To Hero](https://medium.com/@ksaquib/nginx-zero-to-hero-your-ultimate-guide-from-beginner-to-advanced-mastery-57e2dad6a77a)
+
 [Good Refactoring vs Bad Refactoring](https://www.builder.io/blog/good-vs-bad-refactoring)
 
 [Patterns for Memory Efficient DOM Manipulation with Modern Vanilla JavaScript](https://frontendmasters.com/blog/patterns-for-memory-efficient-dom-manipulation)
@@ -66,3 +68,9 @@ next: false
 [프로그래머를 위한 카테고리 이론 - 0. 서문](https://evan-moon.github.io/2024/01/30/category-theory-for-programmers-0-preface/)
 
 [웹 어플리케이션의 역사](https://tecoble.techcourse.co.kr/post/2023-10-25-HISTORY-OF-WEB-APP/)
+
+[Toast UI FE Guide](https://ui.toast.com/fe-guide/ko)
+
+[Beyond Webpack: esbuild, Vite, Rollup, SWC and Snowpack](https://medium.com/ekino-france/beyond-webpack-esbuild-vite-rollup-swc-and-snowpack-97911a7175cf)
+
+[모노레포 인사이트: Nx, Turborepo 그리고 PNPM](https://velog.io/@tap_kim/translate-monorepo-insights-nx-turborepo-and-pnpm#%EB%AA%A8%EB%93%88%ED%99%94-%EB%B0%8F-%EC%BD%94%EB%93%9C-%EA%B3%B5%EC%9C%A0)
