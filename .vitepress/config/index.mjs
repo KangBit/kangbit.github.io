@@ -72,4 +72,16 @@ export default defineConfig({
       },
     ],
   ],
+
+  transformPageData(pageData) {
+    const canonicalUrl = `/${pageData.relativePath}`
+      .replace(/index\.md$/, "")
+      .replace(/\.md$/, ".html");
+
+    pageData.frontmatter.head ??= [];
+    pageData.frontmatter.head.push([
+      "link",
+      { rel: "canonical", href: canonicalUrl },
+    ]);
+  },
 });
