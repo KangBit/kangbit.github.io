@@ -1,6 +1,10 @@
 ---
 title: 가속합성으로 인한 화면 깜빡임 해결
 description: 가속합성으로 인한 화면 깜빡임 현상을 해결한 경험을 공유합니다.
+head:
+  - - meta
+    - name: keywords
+      content: Gpu 가속, 가속 합성, GPU Accelerated, translate3D, vue-awesome-swiper, 깜빡임
 comment: true
 ---
 
