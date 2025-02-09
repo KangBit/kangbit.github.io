@@ -2,6 +2,10 @@
 title: 블로그 배포하기
 titleTemplate: VitePress & Github Pages
 description: 새로운 블로그를 구성하는 데 VitePress를 선택한 이유를 설명합니다.
+head:
+  - - meta
+    - name: keywords
+      content: Vitepress, Vitepress Blog
 outline: deep
 comment: true
 ---

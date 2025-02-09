@@ -2,6 +2,10 @@
 title: 블로그 배포하기
 titleTemplate: VitePress & Github Pages
 description: VitePress로 생성한 프로젝트에 댓글 기능을 추가하는 방법을 소개합니다.
+head:
+  - - meta
+    - name: keywords
+      content: Vitepress, Vitepress Blog, Vitepress comment, Vitepress utterance, utterance
 outline: deep
 comment: true
 ---

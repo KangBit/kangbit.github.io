@@ -2,6 +2,10 @@
 title: 블로그 배포하기
 titleTemplate: VitePress & Github Pages
 description: VitePress를 이용해 블로그 홈페이지를 생성하는 방법을 소개합니다.
+head:
+  - - meta
+    - name: keywords
+      content: Vitepress, Vitepress Blog, Vitepress Github, Blog, Github pages
 outline: deep
 comment: true
 ---
