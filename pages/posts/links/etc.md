@@ -15,6 +15,8 @@ next: false
 
 [How To Create An NPM Package](https://www.totaltypescript.com/how-to-create-an-npm-package#11-initialize-the-repo)
 
+[앱 ・ 웹 사이트 레퍼런스 어디서 찾을까?](https://brunch.co.kr/@fall-spring/21?utm_source=oneoneone)
+
 [NGINX - Zero To Hero](https://medium.com/@ksaquib/nginx-zero-to-hero-your-ultimate-guide-from-beginner-to-advanced-mastery-57e2dad6a77a)
 
 [Good Refactoring vs Bad Refactoring](https://www.builder.io/blog/good-vs-bad-refactoring)
@@ -74,3 +76,5 @@ next: false
 [Beyond Webpack: esbuild, Vite, Rollup, SWC and Snowpack](https://medium.com/ekino-france/beyond-webpack-esbuild-vite-rollup-swc-and-snowpack-97911a7175cf)
 
 [모노레포 인사이트: Nx, Turborepo 그리고 PNPM](https://velog.io/@tap_kim/translate-monorepo-insights-nx-turborepo-and-pnpm#%EB%AA%A8%EB%93%88%ED%99%94-%EB%B0%8F-%EC%BD%94%EB%93%9C-%EA%B3%B5%EC%9C%A0)
+
+[언제, 어떤 DB를 써야 할까? 데이터베이스 개념 정리](https://yozm.wishket.com/magazine/detail/2972/)
