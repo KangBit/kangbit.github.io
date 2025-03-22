@@ -13,6 +13,8 @@ next: false
 
 ---
 
+[CSS Tricks](https://css-tricks.com/guides/)
+
 [Defensive CSS](https://defensivecss.dev/)
 
 [여러 준비된 CSS 애니메이션을 테스트 해 볼 수 있는 페이지](https://animista.net/)
