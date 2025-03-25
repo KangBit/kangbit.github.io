@@ -70,7 +70,7 @@ comment: true
 
 다음과 같이 탭을 변경하면 트랜지션 완료 후 화면 깜빡임이 간헐적으로 발생합니다.
 
-<img src="/assets/gifs/hardware-acceleration1.gif" width="30%" class="mb-0"></img>
+<img src="/assets/gifs/hardware-acceleration/1.gif" width="30%" class="mb-0"></img>
 
 ## 원인
 
@@ -82,7 +82,7 @@ comment: true
 
 결정적으로 아래 GIF에서 확인할 수 있듯이 일부 영역만 가려지는 듯한 현상을 확인할 수 있었습니다.
 
-<img src="/assets/gifs/hardware-acceleration2.gif" width="30%" class="mb-0"></img>
+<img src="/assets/gifs/hardware-acceleration/2.gif" width="30%" class="mb-0"></img>
 
 [배경](/posts/hardware-acceleration/#%E1%84%87%E1%85%A2%E1%84%80%E1%85%A7%E1%86%BC)에서 언급했듯이 여러 페이지가 겹쳐져 있는 상태에서
 
@@ -94,7 +94,7 @@ comment: true
 
 다른 페이지에 가려진 이후에도 슬라이드를 중지하지 않고 있었습니다.
 
-<img src="/assets/gifs/hardware-acceleration3.gif" width="70%" class="mb-0"></img>
+<img src="/assets/gifs/hardware-acceleration/3.gif" width="70%" class="mb-0"></img>
 
 <br>
 
