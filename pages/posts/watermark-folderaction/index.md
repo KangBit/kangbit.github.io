@@ -17,13 +17,13 @@ comment: true
 
 ## 폴더액션이란?
 
-macOS에는 자동화 도구인 Automator를 내장하고 있습니다.
+macOS는 자동화 도구인 Automator를 내장하고 있습니다.
 
-Automator를 복잡한 프로그래밍 지식 없이도 다양한 자동화 작업을 생성할 수 있게 해 주는데,
+Automator를 다양한 자동화 작업을 생성할 수 있게 해 주는데,
 
-폴더액션은 Automator의 주요 기능 중 하나입니다.
+폴더액션은 Automator의 주요 기능 중 하나로,
 
-폴더액션을 이용하면 특정 폴더에 변화가 생길 때 자동으로 작업을 실행할 수 있습니다.
+특정 폴더에 변화가 생길 때 자동으로 작업을 실행하도록 할 수 있습니다.
 
 ## imagemagick 설치하기
 
@@ -37,7 +37,7 @@ Automator에서도 이미지에 대한 일부 작업을 제공하지만,
 
 명령어를 통해 터미널이나 스크립트에서 쉽게 이미지 처리를 할 수 있습니다.
 
-터미널에서 [Homebrew](https://brew.sh/)를 통해 설치할 수 있습니다.
+터미널에서 [Homebrew](https://brew.sh/)를 통해 간단히 설치할 수 있습니다.
 
 ```zsh
 brew install imagemagick
