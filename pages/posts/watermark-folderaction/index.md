@@ -11,6 +11,8 @@ comment: true
 
 # 반복되는 워터마크 작업으로 고생하는 디자이너를 위해 웹페이지를 개발하는 동료 개발자를 위해 만들어본 Watermark FolderAction
 
+<span style="color:gray;">하지만 디자이너의 기기는 macos가 아니었다고 합니다</span> :smiling_face_with_tear:
+
 <img src="/assets/gifs/watermark-folderaction/1.gif" class="mb-0"></img>
 
 ## 폴더액션이란?
