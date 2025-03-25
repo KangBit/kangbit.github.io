@@ -29,4 +29,8 @@ features:
   - title: Ref vs Reactive
     details: Vue3에서 ref를 사용할지 reactive를 사용할지 생각해봅시다.
     link: "/posts/vue-reactivity"
+
+  - title: FolderAction - Watermark
+    details: Mac의 FolderAction을 이용해 이미지에 자동으로 워터마크 적용하기
+    link: "/posts/watermark-folderaction"
 ---
