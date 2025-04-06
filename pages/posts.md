@@ -18,6 +18,10 @@ features:
     details: 가속합성으로 인한 화면 깜빡임 현상을 해결한 경험을 공유합니다.
     link: "/posts/hardware-acceleration"
 
+  - title: Watermark FolderAction
+    details: Mac의 FolderAction을 이용해 이미지에 자동으로 워터마크 적용하기
+    link: "/posts/watermark-folderaction"
+
   - title: Marquee
     details: marquee에 대해 소개하고, 구현 방법을 설명합니다.
     link: "/posts/marquee"
@@ -33,8 +37,4 @@ features:
   - title: Ref vs Reactive
     details: Vue3에서 ref를 사용할지 reactive를 사용할지 생각해봅시다.
     link: "/posts/vue-reactivity"
-
-  - title: Watermark FolderAction
-    details: Mac의 FolderAction을 이용해 이미지에 자동으로 워터마크 적용하기
-    link: "/posts/watermark-folderaction"
 ---
