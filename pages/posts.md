@@ -26,6 +26,10 @@ features:
     details: 간단한 슬라이더를 만드는 방법을 설명합니다.
     link: "/posts/slider"
 
+  - title: CSS Carousel
+    details: Chrome135+ 에서 CSS만으로 캐러셀을 만드는 방법을 소개합니다.
+    link: "/posts/css-carousel"
+
   - title: Ref vs Reactive
     details: Vue3에서 ref를 사용할지 reactive를 사용할지 생각해봅시다.
     link: "/posts/vue-reactivity"
