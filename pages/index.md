@@ -21,11 +21,11 @@ hero:
 
 <div style="font-size:1.2rem; color:var(--vp-c-text-2); margin-bottom:64px">
   <p>안녕하세요</p>
-  <p>5년차 개발자 강빛찬입니다</p>
+  <p>6년차 개발자 강빛찬입니다</p>
   <p>Native 앱 개발과 Node 백엔드 개발, 프론트엔드 개발 경험이 있습니다</p>
   <p>지금은 프론트엔드 개발에 집중하고 있습니다</p>
   <br>
-  <p><a href="/kangbit/" style="font-size:1.2rem; text-decoration: none;">더보기 -></a></p>
+  <p><a href="/kangbit/" style="font-size:1.2rem; text-decoration: none;">더보기 ⮕</a></p>
 </div>
 
 <div style="display:flex;">
