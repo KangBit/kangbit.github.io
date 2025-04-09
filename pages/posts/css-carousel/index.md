@@ -1,6 +1,10 @@
 ---
 title: Chrome135+ 에서 CSS로 캐러셀 만들기
 description: Chrome135+ 에서 CSS만으로 캐러셀을 만드는 방법을 소개합니다.
+head:
+  - - meta
+    - name: keywords
+      content: scroll-marker, scroll-marker-group, scroll-group, CSS, Carousel, 캐러셀
 comment: true
 ---
 
