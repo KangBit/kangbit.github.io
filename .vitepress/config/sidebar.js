@@ -38,13 +38,17 @@ const bitPages = {
           link: "/kangbit/",
         },
         {
-          text: "경력",
-          link: "/kangbit/career",
+          text: "2022~",
+          link: "/kangbit/career2",
         },
         {
-          text: "프로젝트",
-          link: "/kangbit/career-detail",
+          text: "2019~",
+          link: "/kangbit/career1",
         },
+        // {
+        //   text: "프로젝트 이미지",
+        //   link: "/kangbit/career-image",
+        // },
       ],
     },
   ],
