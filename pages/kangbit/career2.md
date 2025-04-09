@@ -63,6 +63,28 @@ Vue를 이용해 웹/ 앱 서비스의 프론트엔드를 개발했습니다.
 
 :::
 
+### 조인/양도 매니저 관리자 <span class="text-sm"> ( 2023-12 ~ 2024-03 ) </span>
+
+<div class="mt-8">
+  <Badge type='info' text='Vite'/>
+  <Badge type='info' text='Vue3'/>
+  <Badge type='info' text='VueUse'/>
+  <Badge type='info' text='Pinia'/>
+</div>
+
+:::details 상세 {open}
+
+부킹 매니저들을 위한 페이지입니다. <br>
+조인과 양도를 손쉽게 관리할 수 있는 서비스를 제공합니다. <br>
+메인 개발자로서 프로젝트 구조 설계 및 각종 컴포넌트 개발을 담당했습니다.
+
+<!-- 초기 개발 환경 구축 ( Vite / Pinia, Router )<br>
+차트 구현 ( Highcharts )<br>
+이용권 상태에 따른 페이지별 접근 권한 구현<br>
+이용권 구매 페이지 구현 -->
+
+:::
+
 ### 클럽 페이지 <span class="text-sm"> ( 2023-05 ~ 2023-12 ) </span>
 
 <div class="mt-8">
@@ -87,28 +109,6 @@ AccountLayout, DashboardLayout 구현<br>
 회원가입/ 로그인 로직 구현<br>
 핀 포지션 위치 조회, 수정 화면 구현 ( Canvas + Composable )<br>
 차트 구현 ( Highcharts ) -->
-
-:::
-
-### 조인/양도 매니저 관리자 <span class="text-sm"> ( 2023-12 ~ 2024-03 ) </span>
-
-<div class="mt-8">
-  <Badge type='info' text='Vite'/>
-  <Badge type='info' text='Vue3'/>
-  <Badge type='info' text='VueUse'/>
-  <Badge type='info' text='Pinia'/>
-</div>
-
-:::details 상세 {open}
-
-부킹 매니저들을 위한 페이지입니다. <br>
-조인과 양도를 손쉽게 관리할 수 있는 서비스를 제공합니다. <br>
-메인 개발자로서 프로젝트 구조 설계 및 각종 컴포넌트 개발을 담당했습니다.
-
-<!-- 초기 개발 환경 구축 ( Vite / Pinia, Router )<br>
-차트 구현 ( Highcharts )<br>
-이용권 상태에 따른 페이지별 접근 권한 구현<br>
-이용권 구매 페이지 구현 -->
 
 :::
 
