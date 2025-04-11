@@ -80,6 +80,10 @@ const linksPages = {
           link: "/posts/links/react",
         },
         {
+          text: "AI",
+          link: "/posts/links/ai",
+        },
+        {
           text: "IOS",
           link: "/posts/links/ios",
         },

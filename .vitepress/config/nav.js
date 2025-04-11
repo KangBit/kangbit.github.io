@@ -36,6 +36,9 @@ const linkMenu = {
       ],
     },
     {
+      items: [{ text: "AI", link: "/posts/links/ai" }],
+    },
+    {
       items: [{ text: "IOS", link: "/posts/links/ios" }],
     },
     {
