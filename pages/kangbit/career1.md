@@ -7,7 +7,9 @@ prev: false
 next: false
 ---
 
-## 아이앤비앰 ( 2019-06 ~ 2022-03 )
+# 아이앤비앰 ( 2019-06 ~ 2022-03 )
+
+<br>
 
 <Badge type='tip' text='React' />
 <Badge type='tip' text='MobX' />
@@ -15,7 +17,6 @@ next: false
 <Badge type='tip' text='Swift' />
 <Badge type='tip' text='Java (Android)' />
 <br>
-
 <Badge type='info' text='ejs' />
 <Badge type='info' text='jquery' /> 
 <Badge type='info' text='amCharts4' /> 
@@ -44,7 +45,7 @@ Swift와 Java를 이용해 네이티브 앱 개발을, Express를 이용해 백�
 
 :::
 
-### Fantoo <span class="text-sm"> ( 2019-06 ~ 2021-04) </span>
+## Fantoo <span class="text-sm"> ( 2019-06 ~ 2021-04) </span>
 
 <div class="mt-8">
   <Badge type='tip' text='React' />
@@ -55,6 +56,7 @@ Swift와 Java를 이용해 네이티브 앱 개발을, Express를 이용해 백�
   <Badge type='tip' text='Opentok' />
   <Badge type='info' text='Express' />
   <Badge type='info' text='MongoDB' />
+  <Badge type='info' text='i18n' />
 </div>
 
 :::details 상세 {open}
@@ -69,7 +71,7 @@ Sendbird를 활용해 채팅을, OpenTok(Vonage)을 활용해 라이브 방송�
 백엔드에서는 필요한 API를 직접 개발했습니다.
 :::
 
-### OASIS <span class="text-sm"> ( 2020-10 ~ 2021-02 ) </span>
+## OASIS <span class="text-sm"> ( 2020-10 ~ 2021-02 ) </span>
 
 <div class="mt-8">
   <Badge type='tip' text='React' />
@@ -86,7 +88,7 @@ Sendbird를 활용해 채팅을, OpenTok(Vonage)을 활용해 라이브 방송�
 Dragable Node를 표현하여 프로세스 다이어그램 에디터를 구현했습니다.
 :::
 
-### Water Gauge <span class="text-sm"> ( 2020-07 ~ 2020-07 ) </span>
+## Water Gauge <span class="text-sm"> ( 2020-07 ~ 2020-07 ) </span>
 
 <div class="mt-8">
   <Badge type='tip' text='React' />
@@ -109,7 +111,7 @@ React 프로젝트에서 Apex Chart와 Fusion Chart를 이용해 수위를 실�
 iOS 앱의 로그인과 알림, 웹뷰 또한 구현했습니다.
 :::
 
-### SAFEON <span class="text-sm"> ( 2022-02 ~ 2022-03 ) </span>
+## SAFEON <span class="text-sm"> ( 2022-02 ~ 2022-03 ) </span>
 
 <div class="mt-8">
   <Badge type='info' text='ejs' />
@@ -129,7 +131,7 @@ iOS 앱의 로그인과 알림, 웹뷰 또한 구현했습니다.
 
 :::
 
-### GEONE <span class="text-sm"> ( 2021-05 ~ 2022-02 ) </span>
+## GEONE <span class="text-sm"> ( 2021-05 ~ 2022-02 ) </span>
 
 <div class="mt-8">
   <Badge type='info' text='ejs' />
