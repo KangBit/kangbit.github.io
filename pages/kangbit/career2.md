@@ -51,7 +51,7 @@ Vue를 이용해 웹/ 앱 서비스의 프론트엔드를 개발했습니다.
 
 :::details 골프매거진 {open}
 
--골프매거진코리아 컨텐츠 노출<br> -가속합성으로 인한 화면 깜빡임 이슈 해결 ( [링크](http://localhost:5173/posts/hardware-acceleration/) )
+-골프매거진코리아 컨텐츠 노출<br> -가속합성으로 인한 화면 깜빡임 이슈 해결 ( [링크](https://kangbit.github.io/posts/hardware-acceleration/) )
 :::
 
 :::details 라이브커머스 {open}
