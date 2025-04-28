@@ -9,6 +9,8 @@ next: false
 
 ## 기타 링크 저장소
 
+[You Are Not Google](https://blog.bradfieldcs.com/you-are-not-google-84912cf44afb)
+
 [The Future of Front-End Development: Trends to Watch in 2025](https://medium.com/@all.technology.stories/9ae18ef06ab2)
 
 [Plain Vanilla](https://plainvanillaweb.com/index.html)
