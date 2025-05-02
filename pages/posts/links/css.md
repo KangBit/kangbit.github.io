@@ -32,3 +32,5 @@ next: false
 [css-grid-area](https://ishadeed.com/article/css-grid-area)
 
 [css loaders](https://cssloaders.github.io/)
+
+[OKLCH](https://siosio3103.medium.com/왜-우리는-rgb와-hsl에서-oklch로-전환했을까요-329816984db5)

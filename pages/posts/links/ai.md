@@ -7,6 +7,8 @@ prev: false
 next: false
 ---
 
+[HUGGINGFACE](https://huggingface.co/)
+
 [프롬프트 엔지니어링 가이드](https://www.promptingguide.ai/kr)
 
 ['프롬프트 최적화'의 핵심](https://yozm.wishket.com/magazine/detail/3036/)
