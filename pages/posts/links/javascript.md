@@ -22,3 +22,5 @@ next: false
 [es6 cheatsheet](https://github.com/DrkSephy/es6-cheatsheet/tree/master)
 
 [Advanced JavaScript Functions to Improve Code Quality](https://www.paulsblog.dev/advanced-javascript-functions-to-improve-code-quality/)
+
+[2025년에 모든 JavaScript 개발자가 알아야 할 몇 가지 기능](https://waspdev.com/articles/2025-04-06/features-that-every-js-developer-must-know-in-2025#some_features_that_every_javascript_developer_should_know_in_2025)

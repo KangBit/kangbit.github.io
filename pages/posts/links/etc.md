@@ -17,6 +17,10 @@ next: false
 
 [Plain Vanilla](https://plainvanillaweb.com/index.html)
 
+[번들 크기를 30% 줄이는 방법](https://www.frontendjoy.com/p/how-i-reduced-my-react-bundle-size-by-30-with-real-examples)
+
+[웹페이지 인쇄 최적화: 종이에서도 잘 보이게 만드는 방법](https://piccalil.li/blog/printing-the-web-making-webpages-look-good-on-paper/)
+
 [How To Create An NPM Package](https://www.totaltypescript.com/how-to-create-an-npm-package#11-initialize-the-repo)
 
 [앱 ・ 웹 사이트 레퍼런스 어디서 찾을까?](https://brunch.co.kr/@fall-spring/21?utm_source=oneoneone)
