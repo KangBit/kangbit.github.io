@@ -7,14 +7,26 @@ prev: false
 next: false
 ---
 
-<div style="display:flex; gap: 12px; flex-wrap:wrap;">
-  <img src="/assets/images/smartscore/002.jpg" width="32%" alt="Smartscore App "></img>
-  <img src="/assets/images/smartscore/003.jpg" width="32%" alt="Smartscore App "></img>
-  <img src="/assets/images/smartscore/008.jpg" width="32%" alt="Smartscore App "></img>
-  <img src="/assets/images/smartscore/009.jpg" width="32%" alt="Smartscore App "></img>
-  <img src="/assets/images/smartscore/004.jpg" width="32%" alt="Smartscore App "></img>
-  <img src="/assets/images/smartscore/005.jpg" width="32%" alt="Smartscore App "></img>
-  <img src="/assets/images/smartscore/006.jpg" width="32%" alt="Smartscore App "></img>
-  <img src="/assets/images/smartscore/007.jpg" width="32%" alt="Smartscore App "></img>
-  <img src="/assets/images/smartscore/010.jpg" width="32%" alt="Smartscore App "></img>
-</div>
+<script setup>
+import CarouselContainer from "@/components/CarouselContainer.vue";
+import CarouselItem from '@/components/CarouselItem.vue'
+
+const smartscoreAppImages = [
+  "/assets/images/smartscore/smartscoreapp001.png",
+  "/assets/images/smartscore/smartscoreapp011.png",
+  "/assets/images/smartscore/smartscoreapp021.png",
+  "/assets/images/smartscore/smartscoreapp0302.png",
+];
+</script>
+
+## 스마트스코어 앱
+
+<CarouselContainer :images="smartscoreAppImages">
+  <CarouselItem
+    v-for="(image, i) in smartscoreAppImages"
+    :key="image"
+    style="width: 60%; scrollSnapStop: always"
+  >
+    <img :src="image" :alt="`image-${i}`" />
+  </CarouselItem>
+</CarouselContainer>
