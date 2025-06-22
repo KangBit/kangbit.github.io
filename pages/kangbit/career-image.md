@@ -14,6 +14,7 @@ import CarouselItem from '@/components/CarouselItem.vue'
 const smartscoreAppImages = [
   "/assets/images/smartscore/smartscoreapp001.png",
   "/assets/images/smartscore/smartscoreapp011.png",
+  "/assets/images/smartscore/smartscoreapp012.png",
   "/assets/images/smartscore/smartscoreapp021.png",
   "/assets/images/smartscore/smartscoreapp0302.png",
 ];
