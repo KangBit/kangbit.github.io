@@ -45,7 +45,7 @@ const props = defineProps({
     border-radius: 50%;
     border: 2px solid #999;
 
-    margin: 5px;
+    margin: 10px;
   }
 
   &::scroll-button(left) {
@@ -56,6 +56,18 @@ const props = defineProps({
   &::scroll-button(right) {
     position-area: inline-end center;
     content: "⮕" / "Scroll Right";
+  }
+
+  &::scroll-button(*):hover:not(:disabled),
+  &::scroll-button(*):focus:not(:disabled) {
+    transition: all 0.3s ease;
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
+  &::scroll-button(*):disabled {
+    background-color: transparent;
+    cursor: unset;
   }
 }
 </style>
