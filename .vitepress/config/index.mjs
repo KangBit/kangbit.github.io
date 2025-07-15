@@ -17,6 +17,13 @@ export default defineConfig({
         "@": path.resolve(__dirname, "../../"),
       },
     },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: "modern-compiler", // Sass의 모던 API 사용을 강제
+        },
+      },
+    },
   },
 
   // https://vitepress.dev/reference/default-theme-config
