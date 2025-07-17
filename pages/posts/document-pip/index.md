@@ -12,6 +12,7 @@ comment: true
 import ButtonPipOpen from '@/pages/posts/document-pip/ButtonPipOpen.vue'
 import ButtonPipToggle from '@/pages/posts/document-pip/ButtonPipToggle.vue'
 import ContentsPip from '@/pages/posts/document-pip/ContentsPip.vue'
+import ContentsPipCss from '@/pages/posts/document-pip/ContentsPipCss.vue'
 </script>
 
 # Document Picture In Picture
@@ -246,4 +247,41 @@ function onClosePip(event) {
 
 ## PIP 창에 스타일 적용하기
 
-## PIP 창의 이벤트 처리하기
+스타일을 적용하기 위해서 CSS 파일을 PIP Window에 복사합니다.
+
+::: code-group
+
+<!-- prettier-ignore -->
+```js [index.js]
+async function openPip() {
+  const pipWindow = await window.documentPictureInPicture.requestWindow({
+    // ...
+  });
+
+  //...
+  copyStyles(pipWindow); // [!code highlight]
+}
+
+const copyStyles = (pipWindow) => {  // [!code highlight]
+  [...document.styleSheets].forEach((styleSheet) => {  // [!code highlight]
+    try {  // [!code highlight]
+      const cssRules = [...styleSheet.cssRules]  // [!code highlight]
+        .map((rule) => rule.cssText)  // [!code highlight]
+        .join("");  // [!code highlight]
+      const style = document.createElement("style");  // [!code highlight]
+      style.textContent = cssRules;  // [!code highlight]
+      pipWindow.document.head.appendChild(style);  // [!code highlight]
+    } catch (e) {  // [!code highlight]
+      const link = document.createElement("link");  // [!code highlight]
+      link.rel = "stylesheet";  // [!code highlight]
+      link.type = styleSheet.type;  // [!code highlight]
+      link.media = styleSheet.media;  // [!code highlight]
+      link.href = styleSheet.href;  // [!code highlight]
+      pipWindow.document.head.appendChild(link);  // [!code highlight]
+    }  // [!code highlight]
+  });  // [!code highlight]
+};  // [!code highlight]
+```
+
+:::
+<ContentsPipCss/>
