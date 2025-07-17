@@ -27,31 +27,33 @@ Document Picture in Picture API는 아직 실험적 기능입니다. ( 2025-07 )
 
 :::
 
-## Picture In Picture 란?
+## Picture In Picture란?
 
 <img src="/assets/images/document-pip/video-pip.jpg" width="80%" class="mb-0"></img>
 
-PIP는 화면을 작은 팝업 창으로 띄워, 화면을 보면서 다른 작업을 동시에 할 수 있도록 하는 기능입니다.
+**Picture in Picture** (**PIP**)는 사용자가 다른 작업을 수행하면서도 특정 콘텐츠를 계속 볼 수 있도록 도와주는 기능입니다.
 
-이 팝업 창은 항상 다른 창 위에 표시되며, 영상 재생에 사용되어 왔습니다.
+기존에는 주로 동영상 재생 시에 활용되어, 사용자가 웹 서핑이나 문서 작업을 하면서도 영상을 계속 시청할 수 있게 해주었습니다. 이 작은 팝업 창은 항상 다른 창들 위에 떠 있어서 필요한 정보를 지속적으로 제공합니다.
 
 ## Document Picture In Picture
 
-Document PIP API를 활용하면 웹 문서도 작은 창으로 분리할 수 있습니다.
+**Document PIP API**의 등장으로 이제는 **웹 문서 전체를 작은 창으로 분리**할 수 있게 되었습니다. 이는 단순한 비디오 재생을 넘어서, 채팅창, 대시보드, 문서 편집기 등 다양한 웹 애플리케이션을 독립적인 창으로 분리하여 멀티태스킹을 극대화할 수 있게 해줍니다.
 
-표시할 콘텐츠를 PIP로 이동하고,
-
-스타일시트를 복사하여 콘텐츠의 스타일이 기본 창에 있을 때와 동일하게 적용되도록 할 수 있습니다.
+Document PIP의 핵심은 **콘텐츠의 완전한 이동**과 **스타일의 완벽한 복사**에 있습니다. 사용자가 보고 있던 화면의 특정 부분을 그대로 PIP 창으로 이동시키고, 모든 스타일시트를 복사하여 원본과 동일한 모습을 유지할 수 있습니다.
 
 ## PIP 창 열기
 
-API 를 지원하는지 확인하고,
+### 브라우저 지원 확인
+
+먼저 브라우저가 Document PIP API를 지원하는지 확인해야 합니다.
 
 ```js
 const isPipSupported = "documentPictureInPicture" in window;
 ```
 
-API를 지원할 경우 requestWindow를 통해 PIP를 띄워줍니다.
+### PIP 창 생성하기
+
+API를 지원하는 경우, `requestWindow` 메서드를 통해 PIP 창을 생성할 수 있습니다.
 
 ::: code-group
 
@@ -75,8 +77,7 @@ if (!isPipSupported) {
   togglePipButton.style.display = "block";
 }
 
-// Open Pip Window
-async function openPip() {
+async function openPip() { // [!code highlight]
   const pipWindow = await window.documentPictureInPicture.requestWindow({ // [!code highlight]
     width: 300, // [!code highlight]
     height: 300, // [!code highlight]
@@ -97,24 +98,29 @@ async function openPip() {
 
 :::
 
-아래 버튼을 클릭하면, PIP가 잘 나타나는 것을 볼 수 있습니다.
+아래 버튼을 클릭해보시면 PIP 창이 어떻게 나타나는지 직접 확인할 수 있습니다.
+
 <ButtonPipOpen/>
 
-## PIP 닫기
+## PIP 창 제어하기
 
-PIP를 닫을 때는 반환받은 `pipWindow`를 이용하거나, window에 접근해서 닫을 수 있습니다.
+### PIP 창 닫기
+
+PIP 창을 닫기 위해서 반환받은 `pipWindow` 객체를 이용하거나 `documentPictureInPicture` 객체를 통해 접근합니다.
 
 ```js
-// 반환받은 pipWindow 이용
+// 방법 1: 반환받은 pipWindow 이용
 pipWindow.close();
 
-// documentPictureInPicture window 이용
+// 방법 2: documentPictureInPicture window 이용
 if (window.documentPictureInPicture.window) {
   window.documentPictureInPicture.window.close();
 }
 ```
 
-PIP를 토글하도록 버튼 클릭 액션을 수정하겠습니다.
+### 토글 기능 구현
+
+PIP 창을 열고 닫는 토글 기능을 구현해보겠습니다.
 
 ::: code-group
 
@@ -158,21 +164,27 @@ function closePip() { // [!code highlight]
 
 :::
 
+이제 아래 버튼을 클릭하면 PIP 창을 열고 닫을 수 있습니다.
+
 <ButtonPipToggle/>
 
-## PIP 창에 콘텐츠 노출하기
+## 콘텐츠를 PIP 창에 표시하기
 
-콘텐츠를 노출하기 위해서 직접 html 코드를 작성해서 넣을 수 있습니다.
+### 기본적인 콘텐츠 추가
+
+가장 간단한 방법은 PIP 창에 직접 HTML 코드를 작성하는 것입니다.
 
 ```js
 pipWindow.document.body.innerHTML = `
-  <h1> Hello, PIP!</h1>
+  <h1>Hello, PIP!</h1>
 `;
 ```
 
-하지만, PIP는 보통 이미 보고있던 화면을 PIP 화면으로 이동시켜서 보기 위해 사용됩니다.
+하지만 실제 사용 사례에서는 사용자가 보고 있던 특정 부분을 PIP 창으로 이동시키는 것이 일반적입니다.
 
-따라서 일반적인 사용 방법은 콘텐츠를 PIP 윈도우로 이동시키는 것입니다.
+### 기존 요소를 PIP 창으로 이동
+
+이를 통해 원본 페이지에서 보고 있던 영역을 PIP 창에서 볼 수 있습니다.
 
 ::: code-group
 
@@ -206,9 +218,11 @@ async function openPip() {
 
 :::
 
-하지만 이렇게 될 경우, PIP가 종료되어도 콘텐츠가 제자리로 돌아오지 않습니다.
+### PIP 창 닫힐 때 콘텐츠 복원
 
-`pagehide` 이벤트를 청취해서 콘텐츠를 제자리로 돌려두는 작업이 필요합니다.
+PIP 창이 닫힐 때는 콘텐츠를 원래 위치로 복귀시켜야 합니다.
+
+`pagehide` 이벤트를 활용해서 요소를 다시 원래 위치로 가져옵니다.
 
 ::: code-group
 
@@ -234,20 +248,27 @@ function onClosePip(event) {
 ```css [index.css]
 .pip-content {
   color: yellow;
+  padding: 20px;
+  background: #333;
+  border-radius: 8px;
 }
 ```
 
 :::
 
-이렇게 되면 요소는 적절하게 이동됩니다.
+이제 요소가 적절하게 이동하고 복원됩니다.
 
-하지만, 스타일은 PIP에서 적용되지 않고 있습니다.
+하지만 아직 스타일이 PIP 창에 적용되지 않아 콘텐츠가 제대로 표시되지 않는 것을 확인할 수 있습니다.
 
 <ContentsPip/>
 
-## PIP 창에 스타일 적용하기
+## 스타일을 PIP 창에 적용하기
 
-스타일을 적용하기 위해서 CSS 파일을 PIP Window에 복사합니다.
+### 스타일 복사의 중요성
+
+PIP 창에서 콘텐츠가 원본과 동일하게 보이려면 스타일시트를 PIP 창에 복사해야 합니다.
+
+다음과 같은 방법으로 모든 스타일을 PIP 창에 복사할 수 있습니다:
 
 ::: code-group
 
@@ -284,4 +305,19 @@ const copyStyles = (pipWindow) => {  // [!code highlight]
 ```
 
 :::
+
+이 코드는 다음과 같은 작업을 수행합니다:
+
+1. **모든 스타일시트 순회**: `document.styleSheets`를 통해 페이지의 모든 스타일시트에 접근
+2. **내부 스타일시트 처리**: CSS 규칙을 추출하여 새로운 `<style>` 태그로 생성
+3. **외부 스타일시트 처리**: CORS 정책으로 인해 접근할 수 없는 외부 CSS 파일은 `<link>` 태그로 복사
+
+이제 PIP 창에서도 원본과 동일한 스타일이 적용됩니다.
+
 <ContentsPipCss/>
+
+## 참고 자료
+
+- [MDN](https://developer.chrome.com/docs/web-platform/document-picture-in-picture)
+- [Chrome for developers](https://developer.chrome.com/blog/document-pip-use-case?hl=ko)
+- [Can I Use](https://caniuse.com/mdn-api_documentpictureinpicture)
