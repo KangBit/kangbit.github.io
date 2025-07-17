@@ -34,6 +34,10 @@ features:
     details: Chrome135+ 에서 CSS만으로 캐러셀을 만드는 방법을 소개합니다.
     link: "/posts/css-carousel"
 
+  - title: Document PIP
+    details: Document PIP API를 활용하여 문서를 작은 창으로 분리하는 방법을 소개합니다.
+    link: "/posts/document-pip"
+
   - title: Ref vs Reactive
     details: Vue3에서 ref를 사용할지 reactive를 사용할지 생각해봅시다.
     link: "/posts/vue-reactivity"
