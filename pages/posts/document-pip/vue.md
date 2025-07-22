@@ -74,6 +74,8 @@ export const useDocumentPIP = (
 
 ## PIP로 Teleport 하기
 
+### 목표
+
 [Teleport](https://ko.vuejs.org/guide/built-ins/teleport.html)를 이용하면 동일한 인스턴스에서 컴포넌트를 렌더링 할 수 있습니다.
 
 동일한 인스턴스에 존재하기 때문에 Store에도 간단히 접근할 수 있고,
@@ -89,7 +91,7 @@ export const useDocumentPIP = (
 </template>
 ```
 
-재사용성을 위해 DocumentPip 컴포넌트를 만들고, slot을 활용해 PIP 창에 렌더링하겠습니다.
+재사용성을 위해 `DocumentPip` 컴포넌트를 만들고, `slot`을 활용해 PIP 창에 렌더링하겠습니다.
 
 이렇게 사용하는 것이 목표입니다.
 
@@ -101,11 +103,41 @@ export const useDocumentPIP = (
 </template>
 ```
 
-PIP 창을 열기 위해서 props로 전달받은 값을 감시하고,
+### PIP 창 열기
 
-이 값이 `true`일 때 PIP 창을 `pipWindow` `ref`에 저장합니다.
+먼저 PIP 창을 열고 컴포넌트가 `Teleport`될 요소를 준비해야 합니다.
 
-이 때 `computed` `pipRoot`는 컨텐츠가 Teleport 될 PIP 창의 요소를 가져옵니다.
+```vue
+<script setup lang="ts">
+const openPIPWindow = async () => {
+  const pip = await window.documentPictureInPicture.requestWindow({
+    width: 500,
+    height: 200,
+  });
+
+  const rootDiv = pip.document.createElement("div");
+  rootDiv.id = "pip-root";
+  pip.document.body.appendChild(rootDiv);
+
+  const pipRoot = pip.document.getElementById("pip-root"); // Teleport Target
+};
+</script>
+```
+
+우리는 이 pip 창이 열렸을 때 다음과 같이 컴포넌트를 조건부로 렌더링해야 합니다.
+
+```vue
+<template>
+  <slot v-if="!pipRoot"></slot>
+  <Teleport v-else :to="pipRoot">
+    <slot></slot>
+  </Teleport>
+</template>
+```
+
+`pipRoot`가 변경되었을 때 컴포넌트가 다시 렌더링되어야 합니다.
+
+다음과 같이 수정하겠습니다.
 
 ```vue
 <script setup lang="ts">
@@ -114,44 +146,51 @@ const pipRoot = computed(() => {
   return pipWindow.value?.document.getElementById("pip-root") || null;
 });
 
-watch(
-  () => props.isPipOpen,
-  (newVal: boolean) => {
-    if (newVal) {
-      openPIPWindow();
-    }
-  }
-);
-
 const openPIPWindow = async () => {
-  const { width = 0, height = 0 } = props.size || {};
   const pip = await window.documentPictureInPicture.requestWindow({
-    width,
-    height,
+    width: 500,
+    height: 200,
   });
 
-  if (props.copyAllStyles) {
-    copyStyles(pip);
-  }
-
-  pip.document.body.innerHTML = '<div id="pip-root"></div>';
-  pip.addEventListener("pagehide", onClosePIPWindow, { once: true });
+  const rootDiv = pip.document.createElement("div");
+  rootDiv.id = "pip-root";
+  pip.document.body.appendChild(rootDiv);
 
   pipWindow.value = pip;
 };
 </script>
 ```
 
-`pipRoot`의 존재 여부에 따라 컨텐츠를 기존 위치에 렌더링하거나 PIP 창에 렌더링합니다.
+이제 props의 변화를 감지하고, 그 값에 따라 PIP 창을 열고 닫습니다.
 
 ```vue
-<template>
-  <slot v-if="!pipRoot"></slot>
+<script setup lang="ts">
+// ...
 
-  <Teleport v-else="pipRoot" :to="pipRoot">
-    <slot ref="pipContent"></slot>
-  </Teleport>
-</template>
+watch(
+  () => props.isPipOpen,
+  (newVal: boolean) => {
+    togglePictureInPicture(newVal);
+  }
+);
+
+const togglePictureInPicture = (isPipOpen: boolean) => {
+  if (isPipOpen) {
+    openPIPWindow();
+  } else {
+    closePIPWindow();
+  }
+};
+
+const openPIPWindow = async () => {
+  // ...
+};
+
+const closePIPWindow = () => {
+  pipWindow.value.close();
+  pipWindow.value = null;
+};
+</script>
 ```
 
 전체 코드는 [Github](https://github.com/KangBit/vue-document-pip/blob/main/src/components/DocumentPIP.vue)에서 확인할 수 있습니다.

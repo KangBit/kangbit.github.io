@@ -264,6 +264,8 @@ function onClosePip(event) {
 
 ## 스타일을 PIP 창에 적용하기
 
+### 모든 스타일을 PIP 창에 복사하기
+
 PIP 창에서 콘텐츠가 원본과 동일하게 보이려면 스타일시트를 PIP 창에 복사해야 합니다.
 
 다음과 같은 방법으로 모든 스타일을 PIP 창에 복사할 수 있습니다:
@@ -313,6 +315,27 @@ const copyStyles = (pipWindow) => {  // [!code highlight]
 이제 PIP 창에서도 원본과 동일한 스타일이 적용됩니다.
 
 <ContentsPipCss/>
+
+### Tailwind CSS 적용하기
+
+Tailwind CSS를 사용하고 있다면 모든 스타일을 복사하는 대신 다음과 같이 간단하게 적용할 수 있습니다.
+
+```js
+async function openPip() {
+  const pipWindow = await window.documentPictureInPicture.requestWindow({
+    // ...
+  });
+
+  // ...
+  setTailwindCSS(pipWindow);
+}
+
+function setTailwindCSS(pipWindow) {
+  const script = pipWindow.document.createElement("script");
+  script.src = "https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4";
+  pipWindow.document.head.appendChild(script);
+}
+```
 
 ### PIP에 다른 스타일 적용하기
 
