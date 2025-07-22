@@ -145,6 +145,28 @@ const updatesPages = {
   ],
 };
 
+const documentPipPages = {
+  "/posts/document-pip/": [
+    {
+      text: "Document PIP",
+      items: [
+        {
+          text: "HTML PIP",
+          link: "/posts/document-pip/html",
+        },
+        {
+          text: "Vue PIP",
+          link: "/posts/document-pip/vue",
+        },
+        {
+          text: "React PIP",
+          link: "/posts/document-pip/react",
+        },
+      ],
+    },
+  ],
+};
+
 export default {
   ...vitePressPages,
   ...bitPages,
@@ -152,4 +174,5 @@ export default {
   ...snippetPages,
   ...componentPages,
   ...updatesPages,
+  ...documentPipPages,
 };

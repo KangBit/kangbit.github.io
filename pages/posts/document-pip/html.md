@@ -4,7 +4,7 @@ description: Document Picture-in-Picture API를 활용하여 웹 문서를 작�
 head:
   - - meta
     - name: keywords
-      content: document pip, document picture-in-picture, picture-in-picture, pip api, 크롬 pip, 웹 api, 브라우저 pip, pip 활용, pip 예제
+      content: document-pip, document pip, document picture-in-picture, picture-in-picture
 comment: true
 ---
 
@@ -264,8 +264,6 @@ function onClosePip(event) {
 
 ## 스타일을 PIP 창에 적용하기
 
-### 스타일 복사의 중요성
-
 PIP 창에서 콘텐츠가 원본과 동일하게 보이려면 스타일시트를 PIP 창에 복사해야 합니다.
 
 다음과 같은 방법으로 모든 스타일을 PIP 창에 복사할 수 있습니다:
@@ -315,6 +313,12 @@ const copyStyles = (pipWindow) => {  // [!code highlight]
 이제 PIP 창에서도 원본과 동일한 스타일이 적용됩니다.
 
 <ContentsPipCss/>
+
+### PIP에 다른 스타일 적용하기
+
+PIP 창에만 별도의 스타일을 적용하고 싶다면 `@media (display-mode: picture-in-picture)` 미디어 쿼리를 활용할 수 있습니다.
+
+이 미디어 쿼리는 PIP 창에서만 적용되는 CSS를 지정할 수 있어, 원본 문서와는 다른 레이아웃이나 UI를 손쉽게 구현할 수 있습니다.
 
 ## 참고 자료
 
