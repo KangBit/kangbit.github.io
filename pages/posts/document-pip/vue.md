@@ -58,8 +58,12 @@ export const useDocumentPIP = (
       height,
     });
 
+    const appDiv = pip.document.createElement('div');
+    appDiv.id = 'pip-app';
+    pip.document.body.appendChild(appDiv);
+
     const pipApp = createApp(component);
-    pipApp.mount(pip.document.body);
+    pipApp.mount(pip.document.getElementById("pip-app")!);
   };
 
   return {
@@ -70,7 +74,7 @@ export const useDocumentPIP = (
 
 이 방법으로도 어떤 컴포넌트에서는 충분할 것 같습니다.
 
-하지만 Props나 Emit이 필요하고, Store에 영향을 받는 컴포넌트라면 머리가 아파옵니다.
+하지만 외부 상태에 영향을 받는 컴포넌트라면 다음 방법을 사용하는 것이 나을 것 같습니다.
 
 ## PIP로 Teleport 하기
 
