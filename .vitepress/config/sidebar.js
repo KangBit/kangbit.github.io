@@ -45,6 +45,10 @@ const bitPages = {
           text: "2019~",
           link: "/kangbit/career1",
         },
+        {
+          text: "개인 프로젝트",
+          link: "/kangbit/my-project",
+        },
         // {
         //   text: "프로젝트 이미지",
         //   link: "/kangbit/career-image",
