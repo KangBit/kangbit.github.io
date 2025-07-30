@@ -86,3 +86,5 @@ next: false
 [모노레포 인사이트: Nx, Turborepo 그리고 PNPM](https://velog.io/@tap_kim/translate-monorepo-insights-nx-turborepo-and-pnpm#%EB%AA%A8%EB%93%88%ED%99%94-%EB%B0%8F-%EC%BD%94%EB%93%9C-%EA%B3%B5%EC%9C%A0)
 
 [언제, 어떤 DB를 써야 할까? 데이터베이스 개념 정리](https://yozm.wishket.com/magazine/detail/2972/)
+
+[Frontend Performance Checklist](https://crystallize.com/blog/frontend-performance-checklist)
