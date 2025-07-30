@@ -28,6 +28,8 @@ Document Picture in Picture API는 아직 실험적 기능입니다. ( 2025-07 )
 
 [Document PIP - HTML](https://kangbit.github.io/posts/document-pip/html.html)를 먼저 읽어주세요.
 
+[react-document-pip](https://www.npmjs.com/package/react-document-pip)를 이용하면, 구현된 컴포넌트를 쉽게 사용할 수 있습니다.
+
 ## React에서의 Document PIP
 
 <img src="/assets/images/document-pip/video-pip.jpg" width="80%" class="mb-0"></img>
@@ -214,7 +216,148 @@ function DocumentPIP({ children, isPipOpen }) {
 }
 ```
 
-전체 코드는 [Github](https://github.com/KangBit/react-document-pip/blob/main/src/components/DocumentPIP.jsx)에서 확인할 수 있습니다.
+## Styled Component 사용하기
+
+`styled-components`를 사용하고 있다면, 전체 스타일을 `pipWindow`로 복사하지 않아도 됩니다.
+
+`StyleSheetManager`를 이용해 `pipWindow`에 스타일을 주입할 수 있습니다.
+
+```jsx
+import { StyleSheetManager } from "styled-components";
+
+const pipContent = () => {
+  // ...
+
+  return createPortal(
+    <StyleSheetManager target={pipWindow?.document.head}>
+      {children}
+    </StyleSheetManager>,
+    pipRoot
+  );
+};
+```
+
+## 전체 코드
+
+:::details 전체 코드
+
+:::code-group
+
+```jsx [DocumentPIP.jsx]
+import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
+import { StyleSheetManager } from "styled-components";
+
+import copyStyles from "@/utils/copyStyles";
+
+import type { DocumentPIPProps } from "@/types/pip";
+
+const isPIPSupported = "documentPictureInPicture" in window;
+
+export default function DocumentPIP({
+  children,
+  isPipOpen,
+  size,
+  mode = "transfer",
+  copyAllStyles = true,
+  useStyledComponents = false,
+  disallowReturnToOpener = false,
+  preferInitialWindowPlacement = false,
+  onClose,
+}: DocumentPIPProps) {
+  const [pipWindow, setPipWindow] = (useState < Window) | (null > null);
+
+  // Effects
+  useEffect(() => {
+    togglePictureInPicture(isPipOpen);
+
+    return () => {
+      togglePictureInPicture(false);
+    };
+  }, [isPipOpen]);
+
+  // Methods
+  const togglePictureInPicture = (open: boolean) => {
+    if (!isPIPSupported) {
+      console.warn(
+        "Document Picture-in-Picture API is not supported in this browser"
+      );
+      return;
+    }
+
+    if (open) {
+      openPIPWindow();
+    } else {
+      closePIPWindow();
+    }
+  };
+
+  const openPIPWindow = async () => {
+    const pip = await window.documentPictureInPicture.requestWindow({
+      width: size?.width || 0,
+      height: size?.height || 0,
+      disallowReturnToOpener,
+      preferInitialWindowPlacement,
+    });
+
+    if (copyAllStyles) {
+      copyStyles(pip);
+    }
+
+    const root = pip.document.createElement("div");
+    root.id = "pip-root";
+    pip.document.body.appendChild(root);
+
+    pip.addEventListener("pagehide", onClosePIPWindow, { once: true });
+
+    setPipWindow(pip);
+  };
+
+  const closePIPWindow = () => {
+    if (!pipWindow) {
+      return;
+    }
+
+    pipWindow.close();
+    setPipWindow(null);
+  };
+
+  const onClosePIPWindow = () => {
+    closePIPWindow();
+
+    if (isPipOpen) {
+      onClose();
+    }
+  };
+
+  const pipContent = () => {
+    const pipRoot = pipWindow?.document.getElementById("pip-root");
+    if (!pipRoot || !isPipOpen) {
+      return children;
+    }
+
+    return (
+      <>
+        {mode === "clone" ? children : null}
+        {createPortal(
+          useStyledComponents ? (
+            <StyleSheetManager target={pipWindow?.document.head}>
+              {children}
+            </StyleSheetManager>
+          ) : (
+            children
+          ),
+          pipRoot
+        )}
+      </>
+    );
+  };
+
+  return pipContent();
+}
+```
+
+:::
 
 ## 참고 자료
 
