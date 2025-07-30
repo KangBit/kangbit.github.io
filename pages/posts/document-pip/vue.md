@@ -203,7 +203,204 @@ const closePIPWindow = () => {
 </script>
 ```
 
-전체 코드는 [Github](https://github.com/KangBit/vue-document-pip/blob/main/src/components/DocumentPIP.vue)에서 확인할 수 있습니다.
+## 전체 코드
+
+:::details 전체 코드
+
+:::code-group
+
+```vue [DocumentPIP.vue]
+<script setup lang="ts">
+import { ref, watch, onBeforeUnmount, computed } from "vue";
+import loadCDNScripts from "@/utils/loadCDNScripts";
+import copyStyles from "@/utils/copyStyles";
+
+import type {
+  DocumentPIPProps as Props,
+  DocumentPIPEmits as Emits,
+} from "@/types/pip";
+
+// Variables
+const isPIPSupported = "documentPictureInPicture" in window;
+
+// Props & Emits
+const props = withDefaults(defineProps<Props>(), {
+  mode: "transfer",
+  copyAllStyles: true,
+  disallowReturnToOpener: false,
+  preferInitialWindowPlacement: false,
+});
+const emit = defineEmits<Emits>();
+
+// Refs
+const pipWindow = ref<Window | null>(null);
+
+// Computed
+const pipRoot = computed(() => {
+  return pipWindow.value?.document.getElementById("pip-root") || null;
+});
+
+const requestWindowParams = computed(() => {
+  return {
+    width: props.size?.width || 0,
+    height: props.size?.height || 0,
+    disallowReturnToOpener: props.disallowReturnToOpener,
+    preferInitialWindowPlacement: props.preferInitialWindowPlacement,
+  };
+});
+
+// Methods
+const togglePictureInPicture = (open: boolean) => {
+  if (!isPIPSupported) {
+    console.warn(
+      "Document Picture-in-Picture API is not supported in this browser"
+    );
+    return;
+  }
+
+  if (open) {
+    openPIPWindow();
+  } else {
+    closePIPWindow();
+  }
+};
+
+const openPIPWindow = async () => {
+  const pip = await window.documentPictureInPicture.requestWindow(
+    requestWindowParams.value
+  );
+
+  if (props.copyAllStyles) {
+    copyStyles(pip);
+  }
+  if (props.cdnScripts && props.cdnScripts.length > 0) {
+    await loadCDNScripts(pip, props.cdnScripts);
+  }
+
+  const root = pip.document.createElement("div");
+  root.id = "pip-root";
+  pip.document.body.appendChild(root);
+
+  pip.addEventListener("pagehide", onClosePIPWindow, { once: true });
+
+  pipWindow.value = pip;
+};
+
+const closePIPWindow = () => {
+  if (!pipWindow.value) {
+    return;
+  }
+
+  pipWindow.value.close();
+  pipWindow.value = null;
+};
+
+const onClosePIPWindow = () => {
+  closePIPWindow();
+  if (props.isPipOpen) {
+    emit("onClose");
+  }
+};
+
+// Watches
+watch(
+  () => props.isPipOpen,
+  (newVal: boolean) => {
+    togglePictureInPicture(newVal);
+  }
+);
+
+// LifeCycle
+onBeforeUnmount(() => {
+  closePIPWindow();
+});
+</script>
+
+<template>
+  <slot v-if="!pipRoot || mode === 'clone'"></slot>
+
+  <Teleport v-if="pipRoot" :to="pipRoot">
+    <slot></slot>
+  </Teleport>
+</template>
+
+<style scoped></style>
+```
+
+```ts [pip.ts]
+export type PIPMode = "clone" | "transfer";
+export type PIPWindowSize = { width: number; height: number };
+
+export type DocumentPIPProps = {
+  size?: Partial<PIPWindowSize>;
+  mode?: PIPMode;
+  copyAllStyles?: boolean;
+  isPipOpen: boolean;
+  cdnScripts?: string[];
+  disallowReturnToOpener?: boolean; // '탭으로 돌아가기' 버튼 숨기기
+  preferInitialWindowPlacement?: boolean; // 항상 초기 위치에 설정 크기로 열림 (Chrome 130+)
+};
+export type DocumentPIPEmits = {
+  (e: "onClose"): void;
+};
+```
+
+```ts [copyStyles.ts]
+/**
+ * Copy styles from the main window to the PIP window
+ * @param targetWindow - The window to copy styles to
+ */
+const copyStyles = (targetWindow: Window) => {
+  [...document.styleSheets].forEach((styleSheet) => {
+    try {
+      const cssRules = [...styleSheet.cssRules]
+        .map((rule) => rule.cssText)
+        .join("");
+      const style = document.createElement("style");
+      style.textContent = cssRules;
+      targetWindow.document.head.appendChild(style);
+    } catch (error) {
+      console.warn("Error copying styles: ", error);
+
+      const link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.type = styleSheet.type;
+      link.media = styleSheet.media.toString();
+      link.href = styleSheet.href ?? "";
+      targetWindow.document.head.appendChild(link);
+    }
+  });
+};
+
+export default copyStyles;
+```
+
+```ts [loadCDNScripts.ts]
+/**
+ * Load CDN scripts into a target window
+ * @param targetWindow - The window to load scripts into
+ * @param scriptUrls - Array of CDN script URLs to load
+ */
+const loadCDNScripts = async (targetWindow: Window, scriptUrls: string[]) => {
+  const loadScript = (url: string): Promise<void> => {
+    return new Promise((resolve, reject) => {
+      const script = targetWindow.document.createElement("script");
+      script.src = url;
+      script.onload = () => resolve();
+      script.onerror = () => reject(new Error(`Failed to load script: ${url}`));
+      targetWindow.document.head.appendChild(script);
+    });
+  };
+
+  try {
+    await Promise.all(scriptUrls.map(loadScript));
+  } catch (error) {
+    console.warn("Error loading CDN scripts:", error);
+  }
+};
+
+export default loadCDNScripts;
+```
 
 ## 참고 자료
 
