@@ -21,3 +21,16 @@ next: false
 Picture-in-Picture 창을 생성하는 Vue 3 컴포넌트 라이브러리입니다.
 
 :::
+
+## [react-document-pip](https://www.npmjs.com/package/react-document-pip)
+
+<Badge type='info' text='document picture-in-picture' />
+<Badge type='info' text='React' />
+<Badge type='info' text='typescript' />
+<Badge type='info' text='npm' />
+
+:::details 상세 {open}
+
+Picture-in-Picture 창을 생성하는 React 컴포넌트 라이브러리입니다.
+
+:::
