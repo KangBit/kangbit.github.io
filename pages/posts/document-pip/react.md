@@ -190,11 +190,13 @@ function DocumentPIP({ children, isPipOpen }) {
   // ...
 
   useEffect(() => {
-    togglePictureInPicture(isPipOpen);
-
     return () => {
-      togglePictureInPicture(false);
+      closePIPWindow();
     };
+  }, []);
+
+  useEffect(() => {
+    togglePictureInPicture(isPipOpen);
   }, [isPipOpen]);
 
   const togglePictureInPicture = (open: boolean) => {
@@ -269,11 +271,13 @@ export default function DocumentPIP({
 
   // Effects
   useEffect(() => {
-    togglePictureInPicture(isPipOpen);
-
     return () => {
-      togglePictureInPicture(false);
+      closePIPWindow();
     };
+  }, []);
+
+  useEffect(() => {
+    togglePictureInPicture(isPipOpen);
   }, [isPipOpen]);
 
   // Methods
