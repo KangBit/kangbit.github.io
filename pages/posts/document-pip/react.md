@@ -190,12 +190,6 @@ function DocumentPIP({ children, isPipOpen }) {
   // ...
 
   useEffect(() => {
-    return () => {
-      closePIPWindow();
-    };
-  }, []);
-
-  useEffect(() => {
     togglePictureInPicture(isPipOpen);
   }, [isPipOpen]);
 
