@@ -20,17 +20,33 @@ https://www.buildyourstory.kr/writing-selfintroduction-letter5/
 → 내가 앞으로 다가올 문제도 잘 해결해줄 수 있는 존재라는 걸 보여준다.
 -->
 
+<script setup>
+import dayjs from 'dayjs';
+
+const firstJobFrom = [dayjs('2019-06'), dayjs('2022-03')];
+const secondJobFrom = [dayjs('2022-08'), dayjs()];
+
+const firstJobMonth = firstJobFrom[1].diff(firstJobFrom[0], 'month');
+const secondJobMonth = secondJobFrom[1].diff(secondJobFrom[0], 'month');
+
+const totalJobMonth = firstJobMonth + secondJobMonth;
+
+const [year, month] = [Math.floor(totalJobMonth / 12), totalJobMonth % 12];
+
+console.log(`2019-06 ~ 2022-03: ${firstJobMonth}개월`);
+console.log(`2022-08 ~ ${dayjs().format('YYYY-MM')}: ${secondJobMonth}개월`);
+console.log(`총 경력: ${year}년 ${month}개월`);
+</script>
+
 ## 소개
 
 컴퓨터공학 전공으로 학사 학위를 취득했으며, 약 6년의 경력을 보유하고 있습니다.
 
-프론트엔드 개발과 네이티브 앱 개발, Node 백엔드 개발 경험이 있습니다.
-
-지금은 프론트엔드 개발에 집중하고 있습니다.
-
-문제를 해결하는 데서 오는 성취감을 좋아하고, 빠르게 학습하고 활용할 수 있는 능력을 지니고 있습니다.
+프론트엔드 개발에 집중하고 있지만, 네이티브 앱 개발과 Node 백엔드 개발 경험도 있습니다.
 
 개발 프로세스 전반에 대한 이해도를 바탕으로 원활한 커뮤니케이션이 가능합니다.
+
+문제를 해결하는 데서 오는 성취감을 좋아하고, 빠르게 학습하고 활용할 수 있는 능력을 지니고 있습니다.
 
 ## 경력
 
