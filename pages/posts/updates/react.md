@@ -10,6 +10,18 @@ comment: true
 
 # React Updates
 
+## React 19.2 (2025년 10월)
+
+[React v19.2](https://react.dev/blog/2025/10/01/react-19-2)
+
+- \<Activity /\>
+- useEffectEvent
+- cacheSignal
+- Performance Tracks
+- Partial Pre-rendering ( 부분 사전 렌더링 )
+- Batching Suspense Boundaries for SSR ( 서버 사이드 렌더링에서 Suspense 경계의 노출을 배치 처리 )
+- SSR: Web Streams support for Node ( SSR: Node.js용 Web Streams 지원 )
+
 ## React 19 (2024년 12월)
 
 [React v19.0](https://react.dev/blog/2024/12/05/react-19)
