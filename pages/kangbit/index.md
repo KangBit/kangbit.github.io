@@ -23,19 +23,37 @@ https://www.buildyourstory.kr/writing-selfintroduction-letter5/
 <script setup>
 import dayjs from 'dayjs';
 
-const firstJobFrom = [dayjs('2019-06'), dayjs('2022-03')];
-const secondJobFrom = [dayjs('2022-08'), dayjs()];
+const firstJobFrom = [dayjs('2019-06-26'), dayjs('2022-03-26')];
+const secondJobFrom = [dayjs('2022-08-16'), dayjs()];
 
-const firstJobMonth = firstJobFrom[1].diff(firstJobFrom[0], 'month');
-const secondJobMonth = secondJobFrom[1].diff(secondJobFrom[0], 'month');
+const firstJobDays = firstJobFrom[1].diff(firstJobFrom[0], 'days');
+const secondJobDays = secondJobFrom[1].diff(secondJobFrom[0], 'days');
+const totalJobDays = firstJobDays + secondJobDays;
 
-const totalJobMonth = firstJobMonth + secondJobMonth;
+const firstJob = {
+  month: Math.floor(firstJobDays / 30),
+  day: firstJobDays % 30,
+}
+const secondJob = {
+  month: Math.floor(secondJobDays / 30),
+  day: secondJobDays % 30,
+}
+const totalJob = {
+  year: Math.floor(totalJobDays / 365),
+  month: Math.floor(totalJobDays % 365 / 30),
+  day: totalJobDays % 30,
+}
 
-const [year, month] = [Math.floor(totalJobMonth / 12), totalJobMonth % 12];
+console.log(`총 경력 : ${totalJob.year}년 ${totalJob.month}개월 ${totalJob.day}일`);
+console.log(`2019-06-26 ~ 2022-03-26 : ${firstJob.month}개월 ${firstJob.day}일`);
+console.log(`2022-08-16 ~ ${dayjs().format('YYYY-MM-DD')} : ${secondJob.month}개월 ${secondJob.day}일`);
 
-console.log(`2019-06 ~ 2022-03: ${firstJobMonth}개월`);
-console.log(`2022-08 ~ ${dayjs().format('YYYY-MM')}: ${secondJobMonth}개월`);
-console.log(`총 경력: ${year}년 ${month}개월`);
+console.log(`========================================`);
+console.log(`군 복무 : 2012-04 ~ 2014-01`);
+
+console.log(`========================================`);
+console.log(`대학 재학 : 2011-02 ~ 2017-07`);
+console.log(`고등학교 재학 : 2008-03 ~ 2011-02`);
 </script>
 
 ## 소개
