@@ -11,8 +11,10 @@ next: false
 
 ## [pip-tools](https://www.pip-tools.com/tools)
 
-<Badge type='info' text='nextjs' />
+<Badge type='tip' text='Next 16' />
+<Badge type='tip' text='React 19' />
 <Badge type='info' text='typescript' />
+<Badge type='info' text='Tailwind CSS' />
 
 :::details 상세 {open}
 
@@ -32,7 +34,7 @@ Color Picker가 다른 윈도우 위에 항상 떠있었으면 좋겠다는 생�
 
 ## [vue-pip](https://www.npmjs.com/package/vue-pip)
 
-<Badge type='info' text='Vue3' />
+<Badge type='tip' text='Vue3' />
 <Badge type='info' text='typescript' />
 
 :::details 상세 {open}
@@ -43,7 +45,7 @@ Document PIP 창을 쉽게 띄울 수 있도록 해주는 Vue 3 컴포넌트 라
 
 ## [react-document-pip](https://www.npmjs.com/package/react-document-pip)
 
-<Badge type='info' text='React' />
+<Badge type='tip' text='React 18' />
 <Badge type='info' text='typescript' />
 
 :::details 상세 {open}
