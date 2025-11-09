@@ -7,21 +7,23 @@ hero:
   text: "BitPage"
   tagline: ""
   actions:
-    - theme: alt
+    - theme: brand
       text: HTML
-    - theme: alt
+    - theme: brand
       text: CSS
-    - theme: alt
+    - theme: brand
       text: Javascript
-    - theme: alt
+    - theme: brand
       text: Vue
-    - theme: alt
+    - theme: brand
       text: React
+    - theme: alt
+      text: 정보처리기사
 ---
 
 <div style="font-size:1.2rem; color:var(--vp-c-text-2); margin-bottom:64px">
   <p>안녕하세요. 개발자 강빛찬입니다.</p>
-  <p>컴퓨터공학 전공으로 학사 학위를 취득했으며, 약 6년의 경력을 보유하고 있습니다.</p>
+  <p>컴퓨터공학 전공으로 학사 학위를 취득했으며, 6년의 경력을 보유하고 있습니다.</p>
   <p>프론트엔드 개발과 네이티브 앱 개발, Node 백엔드 개발 경험이 있습니다.</p>
   <p>지금은 프론트엔드 개발에 집중하고 있습니다.</p>
   <br>
