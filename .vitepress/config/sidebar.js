@@ -171,6 +171,28 @@ const documentPipPages = {
   ],
 };
 
+const chromeAiPages = {
+  "/posts/chrome-ai/": [
+    {
+      text: "Chrome AI",
+      items: [
+        {
+          text: "시작하기",
+          link: "/posts/chrome-ai/index",
+        },
+        {
+          text: "Translater",
+          link: "/posts/chrome-ai/translater",
+        },
+        {
+          text: "Language Detector",
+          link: "/posts/chrome-ai/language-detector",
+        },
+      ],
+    },
+  ],
+};
+
 export default {
   ...vitePressPages,
   ...bitPages,
@@ -179,4 +201,5 @@ export default {
   ...componentPages,
   ...updatesPages,
   ...documentPipPages,
+  ...chromeAiPages,
 };
