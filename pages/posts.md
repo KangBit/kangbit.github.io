@@ -22,6 +22,10 @@ features:
     details: Mac의 FolderAction을 이용해 이미지에 자동으로 워터마크 적용하기
     link: "/posts/watermark-folderaction"
 
+  - title: Ref vs Reactive
+    details: Vue3에서 ref를 사용할지 reactive를 사용할지 생각해봅시다.
+    link: "/posts/vue-reactivity"
+
   - title: Marquee
     details: marquee에 대해 소개하고, 구현 방법을 설명합니다.
     link: "/posts/marquee"
@@ -38,7 +42,7 @@ features:
     details: Document PIP API를 활용하여 문서를 작은 창으로 분리하는 방법을 소개합니다.
     link: "/posts/document-pip/html.html"
 
-  - title: Ref vs Reactive
-    details: Vue3에서 ref를 사용할지 reactive를 사용할지 생각해봅시다.
-    link: "/posts/vue-reactivity"
+  - title: Chrome Built-in AI
+    details: Chrome Built-in AI API를 활용하여 AI 기능을 구현하는 방법을 소개합니다.
+    link: "/posts/chrome-ai"
 ---

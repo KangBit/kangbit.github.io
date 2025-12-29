@@ -177,16 +177,16 @@ const chromeAiPages = {
       text: "Chrome AI",
       items: [
         {
-          text: "시작하기",
+          text: "소개",
           link: "/posts/chrome-ai/index",
-        },
-        {
-          text: "Translater",
-          link: "/posts/chrome-ai/translater",
         },
         {
           text: "Language Detector",
           link: "/posts/chrome-ai/language-detector",
+        },
+        {
+          text: "Translater",
+          link: "/posts/chrome-ai/translater",
         },
       ],
     },

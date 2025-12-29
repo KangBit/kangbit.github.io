@@ -1,6 +1,6 @@
 ---
 title: Chrome Built-in AI -  Language Detector
-description: Chrome 내장 AI API인 Language Detector를 사용하는 방법을 소개합니다.
+description: Chrome 내장 AI API인 Language Detector로 텍스트의 언어를 감지하는 방법을 소개합니다.
 head:
   - - meta
     - name: keywords
@@ -12,25 +12,27 @@ comment: true
 이 포스트는 작성중입니다.
 :::
 
-::: tip
-[@types/dom-chromium-ai](https://www.npmjs.com/package/@types/dom-chromium-ai) npm 패키지를 사용하여 TypeScript 타이핑을 가져오세요.
-:::
-
 # Language Detector
 
-입력 텍스트의 언어를 감지하여 확률이 가장 높은 언어부터 가장 낮은 언어 순으로 반환합니다.
+Language Detector는 입력 텍스트의 언어를 감지하여 확률이 높은 언어부터 낮은 언어 순으로 반환합니다.
 
 이를 이용해 Translator API에 번역할 텍스트의 입력 언어를 전달할 수 있습니다.
 
-## 시작하기
+## 0. 준비
 
-### 1. 브라우저가 Language Detector API를 지원하는지 확인
+> [!IMPORTANT] 브라우저 지원 현황을 확인하세요
+> [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Translator_and_Language_Detector_APIs#browser_compatibility) 에서 브라우저별 지원 현황을 확인할 수 있습니다.
+
+> [!TIP] Typescript를 사용한다면
+> [@types/dom-chromium-ai](https://www.npmjs.com/package/@types/dom-chromium-ai) npm 패키지를 사용하여 TypeScript 타이핑을 가져오세요.
+
+## 1. 브라우저가 Language Detector API를 지원하는지 확인
 
 ```js
 const isBrowserSupported = "LanguageDetector" in self;
 ```
 
-### 2. API가 준비되었는지 확인
+## 2. API가 준비되었는지 확인
 
 API가 준비되었는지 확인하려면 비동기 `availability()` 함수를 호출합니다.
 
@@ -47,13 +49,14 @@ const availability = await LanguageDetector.availability({
 - `downloadable` : 모델을 다운로드 할 수 있습니다.
 - `unavailable` : 지원되지 않습니다. 기기의 전원이나 디스크 공간이 부족할 수 있습니다.
 
-### 3. 모델 다운로드 및 인스턴스 생성
+## 3. 모델 다운로드 및 인스턴스 생성
 
 모델 다운로드 및 인스턴스 생성을 위해 `create()` 함수를 호출합니다.
 
 이 때 예상 언어를 전달하거나, 작업을 중단하기 위한 시그널을 전달할 수 있습니다.
 
 ```ts
+const abortController = new AbortController();
 const detector = await LanguageDetector.create({
   expectedInputLanguages: languages,
   monitor(m) {
@@ -61,11 +64,11 @@ const detector = await LanguageDetector.create({
       console.log(`Downloaded ${e.loaded * 100}%`);
     });
   },
-  signal: signal,
+  signal: abortController.signal,
 });
 ```
 
-### 4. 언어 감지
+## 4. 언어 감지
 
 언어 감지를 위해 `detect()` 함수를 호출합니다.
 
@@ -88,3 +91,72 @@ const detectedLanguages = await detector.detect(text);
   ...
 ]
 ```
+
+## 5. 인스턴스 삭제
+
+작업이 완료되면 인스턴스를 삭제합니다.
+
+```ts
+detector.destroy();
+```
+
+## React 예제
+
+사용자의 상호작용 없이 AI 모델을 다운로드하려고 하면 에러가 발생할 수 있습니다.
+
+따라서 컴포넌트가 마운트되었을 때 인스턴스를 생성하는 것보다는
+
+사용자의 상호작용이 있을 때 인스턴스를 생성할 수 있도록 유틸 함수를 작성합니다.
+
+::: code-group
+
+```ts [languageDetector.ts]
+export const getLanguageDetector = async (languages: string[], signal: AbortSignal) => {
+  const isBrowserSupported = "LanguageDetector" in self;
+  if (!isBrowserSupported) {
+    throw new Error("Language Detector is not supported in this browser");
+  }
+
+  const availability = await LanguageDetector.availability({
+    expectedInputLanguages: languages,
+  });
+
+  if (availability === "unavailable") {
+    throw new Error("Language Detector is not available in this browser");
+  }
+
+  if (availability === "downloading") {
+    throw new Error("Language Detector is downloading");
+  }
+
+  // availability === "downloadable" || availability === "available"
+  return LanguageDetector.create({
+    expectedInputLanguages: languages,
+    monitor(m) {
+      m.addEventListener("downloadprogress", (e) => {
+        console.log(`Downloaded ${e.loaded * 100}%`);
+      });
+    },
+    signal: signal,
+  });
+```
+
+:::
+
+::: code-group
+
+```tsx [LanguageDetector.tsx]
+import { useEffect, useState } from "react";
+import { getLanguageDetector } from "@/utils/languageDetector";
+
+export const LanguageDetector = () => {
+  const detectorRef = useRef<LanguageDetector | null>(null);
+  const abortControllerRef = useRef<AbortController | null>(null);
+
+  const handleClick = () => {};
+
+  return <button onClick={handleClick}>Detect</button>;
+};
+```
+
+:::
