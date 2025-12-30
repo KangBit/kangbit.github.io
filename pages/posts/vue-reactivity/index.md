@@ -36,11 +36,11 @@ Vue3의 Composition Api에서 반응형 상태를 선언하는 방법은 `ref`�
 
 `ref` 객체는 `value` 속성을 갖습니다.
 
-``` js
-const count = ref(0)
+```js
+const count = ref(0);
 
-console.log(count) // { value: 0 }
-console.log(count.value) // 0
+console.log(count); // { value: 0 }
+console.log(count.value); // 0
 ```
 
 이 때문에 반응성 값임을 쉽게 확인할 수 있어서 선호한다는 의견이 있는 반면,
@@ -49,9 +49,9 @@ console.log(count.value) // 0
 
 확실히 다음과 같은 코드는 상당히 부자연스러워 보일 수 있습니다.
 
-``` js
-const arr = ref([1,2,3]);
-arr.value.push(4)
+```js
+const arr = ref([1, 2, 3]);
+arr.value.push(4);
 ```
 
 ### 2. 깊은 반응성
@@ -60,12 +60,12 @@ arr.value.push(4)
 
 중첩된 객체나 배열이 변경되어도 적절하게 변경을 감지합니다.
 
-다음과 같이 `isReactive`를 통해 확인해 보면, 
+다음과 같이 `isReactive`를 통해 확인해 보면,
 
 객체 내부의 속성중 객체 유형은 `reactive`를 통해 Proxy 객체로 반환되는 것을 확인할 수 있습니다.
 
-``` js
-const obj = ref({property: [1,2,3], property2: 4});
+```js
+const obj = ref({ property: [1, 2, 3], property2: 4 });
 
 console.log(isReactive(obj)); // false
 console.log(isReactive(obj.value)); // true
@@ -89,23 +89,23 @@ console.log(isReactive(obj.value.property2)); // false
 
 다음과 같이 객체 전체를 대체하려고 하면 `reactive` 객체에 대한 반응성이 끊기게 됩니다.
 
-``` js
-let user = reactive({ name: 'Kim', age: 30 });
-user = reactive({ name: 'Kim', age: 30 });
+```js
+let user = reactive({ name: "Kim", age: 30 });
+user = reactive({ name: "Kim", age: 30 });
 ```
 
 따라서, 전체 객체를 대체해야 할 필요가 있는 경우에 다음과 같이 사용하게 되는데,
 
-``` js
-const data = reactive({ user: { name: 'Kim', age: 30 } });
-data.user = { name: 'Kim', age: 30 } ;
+```js
+const data = reactive({ user: { name: "Kim", age: 30 } });
+data.user = { name: "Kim", age: 30 };
 ```
 
 `ref`를 사용하는 게 더 나아 보입니다.
 
-``` js
-const user = ref({ name: 'Kim', age: 30 });
-user.value = { name: 'Kim', age: 30 };
+```js
+const user = ref({ name: "Kim", age: 30 });
+user.value = { name: "Kim", age: 30 };
 ```
 
 ### 4. 분해 할당에 친화적이지 않음
@@ -116,7 +116,7 @@ user.value = { name: 'Kim', age: 30 };
 
 다음 예제를 통해 살펴보겠습니다.
 
-``` vue
+```vue
 <script setup>
 import { ref, reactive } from "vue";
 
@@ -135,17 +135,17 @@ const incrementValues = () => {
 </script>
 
 <template>
-<div class="example">
-  <div>
-    <button @click="incrementValues">Increment Values</button>
+  <div class="example">
+    <div>
+      <button @click="incrementValues">Increment Values</button>
+    </div>
+    <p>ref: {{ refData }}, refNumber: {{ refNumber }}</p>
+    <p>reactive: {{ reactiveData }}, reactiveNumber: {{ reactiveNumber }}</p>
   </div>
-  <p>ref: {{ refData }}, refNumber: {{ refNumber }}</p>
-  <p>reactive: {{ reactiveData }}, reactiveNumber: {{ reactiveNumber }}</p>
-</div>
 </template>
 ```
 
-<style >
+<style scoped>
   .example {
     padding: 1rem;
     border: 1px solid;
@@ -200,7 +200,7 @@ const incrementValues = () => {
 
 다만, `ref`와 `reactive` 모두 `toRefs`를 통해 반응성을 유지할 수 있습니다.
 
-``` js
+```js
 // const refNumber = toRef(refData.value, "number"); // 반응성 유지
 const { number: refNumber } = toRefs(refData.value); // 반응성 유지
 const { number: reactiveNumber } = toRefs(reactiveData); // 반응성 유지
@@ -212,7 +212,7 @@ const { number: reactiveNumber } = toRefs(reactiveData); // 반응성 유지
 
 나만의 규칙을 만들어 보세요.
 
-- 공식문서에서 제안하고 있으니 `ref`를 기본으로 사용하고  특수한 상황에서만 `reactive`를 사용한다.
+- 공식문서에서 제안하고 있으니 `ref`를 기본으로 사용하고 특수한 상황에서만 `reactive`를 사용한다.
 
 - 원시 타입에만 `ref`를 사용하고 객체 유형은 `reactive`를 사용한다.
 
@@ -232,9 +232,8 @@ const { number: reactiveNumber } = toRefs(reactiveData); // 반응성 유지
 
 새로운 기술 도입이 우리 조직과 프로젝트에 적합한지를 판단하는 기준까지 깊이 있는 고민이 필요합니다.
 
-코드의 중복을 어느 선까지 허용할지, 
+코드의 중복을 어느 선까지 허용할지,
 
 낮은 결합도를 위해 의도적으로 중복을 허용하는 때는 언제일지 고민해야 합니다.
 
 이런 기준들을 세우고 제시할 수 있게 되는 것이 개발자로서 성장하는 길 중 하나가 아닐까 합니다.
-

@@ -8,15 +8,28 @@ head:
 comment: true
 ---
 
-::: warning 작성중
-이 포스트는 작성중입니다.
-:::
-
 # Language Detector
+
+Chrome 브라우저에는 AI가 내장되어 있으며, API를 통해 AI 기반 작업을 실행할 수 있도록 지원합니다.
 
 Language Detector는 입력 텍스트의 언어를 감지하여 확률이 높은 언어부터 낮은 언어 순으로 반환합니다.
 
 이를 이용해 Translator API에 번역할 텍스트의 입력 언어를 전달할 수 있습니다.
+
+<script setup>
+import LanguageDetector from "@/components/LanguageDetector.vue";
+</script>
+
+<div class="example">
+  <LanguageDetector />
+</div>
+
+<style scoped>
+.example {
+  padding: 1rem;
+  border: 1px solid;
+}
+</style>
 
 ## 0. 준비
 
@@ -108,9 +121,9 @@ detector.destroy();
 
 사용자의 상호작용이 있을 때 인스턴스를 생성할 수 있도록 유틸 함수를 작성합니다.
 
-::: code-group
+::: details getLanguageDetector.ts {open}
 
-```ts [languageDetector.ts]
+```ts
 export const getLanguageDetector = async (languages: string[], signal: AbortSignal) => {
   const isBrowserSupported = "LanguageDetector" in self;
   if (!isBrowserSupported) {
@@ -122,14 +135,9 @@ export const getLanguageDetector = async (languages: string[], signal: AbortSign
   });
 
   if (availability === "unavailable") {
-    throw new Error("Language Detector is not available in this browser");
+    throw new Error("Model is not available for the given languages");
   }
 
-  if (availability === "downloading") {
-    throw new Error("Language Detector is downloading");
-  }
-
-  // availability === "downloadable" || availability === "available"
   return LanguageDetector.create({
     expectedInputLanguages: languages,
     monitor(m) {
@@ -143,9 +151,13 @@ export const getLanguageDetector = async (languages: string[], signal: AbortSign
 
 :::
 
-::: code-group
+컴포넌트가 유지되는 동안은 Language Detector 인스턴스가 유지되도록 작성했습니다.
 
-```tsx [LanguageDetector.tsx]
+클린업도 신경써주도록 합니다.
+
+::: details LanguageDetector.tsx {open}
+
+```tsx
 import { useEffect, useState } from "react";
 import { getLanguageDetector } from "@/utils/languageDetector";
 
@@ -153,9 +165,54 @@ export const LanguageDetector = () => {
   const detectorRef = useRef<LanguageDetector | null>(null);
   const abortControllerRef = useRef<AbortController | null>(null);
 
-  const handleClick = () => {};
+  const [isLoading, setIsLoading] = useState(false);
+  const [detectedLanguage, setDetectedLanguage] = useState<
+    LanguageDetectionResult[]
+  >([]);
 
-  return <button onClick={handleClick}>Detect</button>;
+  useEffect(() => {
+    return () => {
+      abortControllerRef.current?.abort();
+      detectorRef.current?.destroy();
+      detectorRef.current = null;
+    };
+  }, []);
+
+  const detectLanguage = async (e: React.FormEvent<HTMLFormElement>) => {
+    const formData = new FormData(e.target as HTMLFormElement);
+    const text = formData.get("text") as string;
+
+    try {
+      setIsLoading(true);
+      if (!detectorRef.current) {
+        abortControllerRef.current = new AbortController();
+        detectorRef.current = await getDetector(
+          ["en"],
+          abortControllerRef.current.signal
+        );
+      }
+
+      const results = (await detectorRef.current?.detect(text)) ?? [];
+      setDetectedLanguage(results);
+    } catch (error) {
+      console.error("Error detecting language", error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+  return (
+    <div>
+      <form onSubmit={detectLanguage}>
+        <input type="text" name="text" />
+        <button type="submit">Detect</button>
+      </form>
+      {detectedLanguage.map((language) => (
+        <div key={language.detectedLanguage}>
+          {language.detectedLanguage}: {language.confidence}
+        </div>
+      ))}
+    </div>
+  );
 };
 ```
 
