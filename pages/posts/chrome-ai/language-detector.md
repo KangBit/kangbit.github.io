@@ -14,8 +14,6 @@ Chrome 브라우저에는 AI가 내장되어 있으며, API를 통해 AI 기반 
 
 Language Detector는 입력 텍스트의 언어를 감지하여 확률이 높은 언어부터 낮은 언어 순으로 반환합니다.
 
-이를 이용해 Translator API에 번역할 텍스트의 입력 언어를 전달할 수 있습니다.
-
 <script setup>
 import LanguageDetector from "@/components/LanguageDetector.vue";
 </script>
@@ -24,12 +22,7 @@ import LanguageDetector from "@/components/LanguageDetector.vue";
   <LanguageDetector />
 </div>
 
-<style scoped>
-.example {
-  padding: 1rem;
-  border: 1px solid;
-}
-</style>
+이를 이용해 Translator API에 번역할 텍스트의 입력 언어를 전달할 수 있습니다.
 
 ## 0. 준비
 

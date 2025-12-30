@@ -170,3 +170,8 @@ img {
 .mt-8 {
   margin-top: 8px;
 }
+
+.example {
+  padding: 1rem;
+  border: 1px solid;
+}

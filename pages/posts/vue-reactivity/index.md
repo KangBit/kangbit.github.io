@@ -146,29 +146,25 @@ const incrementValues = () => {
 ```
 
 <style scoped>
-  .example {
-    padding: 1rem;
-    border: 1px solid;
-
-    
-    button {
-      background-color: #007bff;
-      color: #ffffff;
-      padding: 8px 16px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #0056b3;
-    }
-
-    button:active {
-      background-color: #004494;
-    }
+.example {
+  button {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
   }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  button:active {
+    background-color: #004494;
+  }
+}
 </style>
 
 <div class="example">
