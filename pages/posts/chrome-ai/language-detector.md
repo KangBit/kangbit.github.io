@@ -98,12 +98,20 @@ const detectedLanguages = await detector.detect(text);
 ]
 ```
 
-## 5. 인스턴스 삭제
+## 5. 인스턴스 해제
 
-작업이 완료되면 인스턴스를 삭제합니다.
+작업이 완료되면 인스턴스를 해제합니다.
 
 ```ts
 detector.destroy();
+```
+
+`create()` 를 호출할 때 전달하는 `signal`을 통해서 작업을 중단해도 같은 효과를 얻을 수 있습니다
+
+( `create()` 가 완료되기 전에 `abort`할 경우에는 `create` 작업이 취소됩니다. )
+
+```ts
+abortController.abort();
 ```
 
 ## React 예제
@@ -148,6 +156,8 @@ export const getLanguageDetector = async (languages: string[], signal: AbortSign
 
 클린업도 신경써주도록 합니다.
 
+`abortController.abort()` 로 작업을 중단했을 때는
+
 ::: details LanguageDetector.tsx {open}
 
 ```tsx
@@ -166,12 +176,13 @@ export const LanguageDetector = () => {
   useEffect(() => {
     return () => {
       abortControllerRef.current?.abort();
-      detectorRef.current?.destroy();
       detectorRef.current = null;
     };
   }, []);
 
   const detectLanguage = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
     const formData = new FormData(e.target as HTMLFormElement);
     const text = formData.get("text") as string;
 
