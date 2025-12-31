@@ -1,10 +1,10 @@
 ---
-title: Chrome Built-in AI -  Language Detector
+title: Chrome Built-in AI - Language Detector
 description: Chrome 내장 AI API인 Language Detector로 텍스트의 언어를 감지하는 방법을 소개합니다.
 head:
   - - meta
     - name: keywords
-      content: Chrome, AI, Language Detector, Chrome AI, Built-in AI, Chrome Language Detector
+      content: Chrome, AI, Web API, Language Detector, Language Detector API, Chrome AI, Built-in AI, Chrome Language Detector
 comment: true
 ---
 
@@ -15,7 +15,7 @@ Chrome 브라우저에는 AI가 내장되어 있으며, API를 통해 AI 기반 
 Language Detector는 입력 텍스트의 언어를 감지하여 확률이 높은 언어부터 낮은 언어 순으로 반환합니다.
 
 <script setup>
-import LanguageDetector from "@/components/LanguageDetector.vue";
+import LanguageDetector from "@/components/chrome-ai/LanguageDetector.vue";
 </script>
 
 <div class="example">
@@ -38,7 +38,7 @@ import LanguageDetector from "@/components/LanguageDetector.vue";
 const isBrowserSupported = "LanguageDetector" in self;
 ```
 
-## 2. API가 준비되었는지 확인
+## 2. AI 모델이 준비되었는지 확인
 
 API가 준비되었는지 확인하려면 비동기 `availability()` 함수를 호출합니다.
 
@@ -122,7 +122,7 @@ abortController.abort();
 
 사용자의 상호작용이 있을 때 인스턴스를 생성할 수 있도록 유틸 함수를 작성합니다.
 
-::: details getLanguageDetector.ts {open}
+::: details languageDetector.ts {open}
 
 ```ts
 export const getLanguageDetector = async (languages: string[], signal: AbortSignal) => {
@@ -156,8 +156,6 @@ export const getLanguageDetector = async (languages: string[], signal: AbortSign
 
 클린업도 신경써주도록 합니다.
 
-`abortController.abort()` 로 작업을 중단했을 때는
-
 ::: details LanguageDetector.tsx {open}
 
 ```tsx
@@ -176,7 +174,6 @@ export const LanguageDetector = () => {
   useEffect(() => {
     return () => {
       abortControllerRef.current?.abort();
-      detectorRef.current = null;
     };
   }, []);
 
