@@ -188,6 +188,10 @@ const chromeAiPages = {
           text: "Translater",
           link: "/posts/chrome-ai/translater",
         },
+        {
+          text: "Summarizer",
+          link: "/posts/chrome-ai/summarizer",
+        },
       ],
     },
   ],
