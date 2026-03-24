@@ -11,10 +11,7 @@ const devMenu = {
   text: "개발",
   items: [
     {
-      items: [
-        { text: "Whats New In", link: "/posts/updates" },
-        { text: "Component", link: "/posts/component" },
-      ],
+      items: [{ text: "Whats New In", link: "/posts/updates" }],
     },
   ],
 };

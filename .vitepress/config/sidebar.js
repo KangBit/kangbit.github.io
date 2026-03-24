@@ -100,15 +100,6 @@ const linksPages = {
   ],
 };
 
-const componentPages = {
-  "/posts/component/": [
-    {
-      text: "Components",
-      items: [],
-    },
-  ],
-};
-
 const updatesPages = {
   "/posts/updates/": [
     {
@@ -183,7 +174,6 @@ export default {
   ...vitePressPages,
   ...bitPages,
   ...linksPages,
-  ...componentPages,
   ...updatesPages,
   ...documentPipPages,
   ...chromeAiPages,
