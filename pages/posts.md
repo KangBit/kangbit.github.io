@@ -1,6 +1,10 @@
 ---
 titleTemplate: Post 목록
 layout: home
+head:
+  - - meta
+    - name: keywords
+      content: BitPage, 개발 포스트, Vue, React, VitePress, Chrome AI
 
 hero:
   name: ""
@@ -40,7 +44,7 @@ features:
 
   - title: Document PIP
     details: Document PIP API를 활용하여 문서를 작은 창으로 분리하는 방법을 소개합니다.
-    link: "/posts/document-pip/html.html"
+    link: "/posts/document-pip/html"
 
   - title: Chrome Built-in AI
     details: Chrome Built-in AI API를 활용하여 AI 기능을 구현하는 방법을 소개합니다.

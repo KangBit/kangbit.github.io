@@ -1,5 +1,11 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
+title: BitPage
+description: 프론트엔드와 웹 기술, 실무 경험을 정리한 강빛찬의 개발 블로그입니다.
+head:
+  - - meta
+    - name: keywords
+      content: 프론트엔드, Vue, React, JavaScript, CSS, VitePress, 개발 블로그
 layout: home
 
 hero:
