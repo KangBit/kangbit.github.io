@@ -1,7 +1,7 @@
 const vitePressPages = {
   "/posts/vitepress/": [
     {
-      text: "VitePres + Github Pages",
+      text: "VitePress + Github Pages",
       items: [
         {
           text: "왜 VitePress인가",
