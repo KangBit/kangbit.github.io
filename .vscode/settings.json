@@ -9,7 +9,7 @@
     "FIG_NEW_SESSION": "1"
   },
   "terminal.integrated.fontFamily": "d2coding",
-  "workbench.colorTheme": "Default Dark+",
+  "workbench.colorTheme": "Cursor Dark",
   "workbench.iconTheme": "material-icon-theme",
   "prettier.useEditorConfig": false,
   "editor.codeActionsOnSave": {},
