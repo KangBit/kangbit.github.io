@@ -100,24 +100,6 @@ const linksPages = {
   ],
 };
 
-const snippetPages = {
-  "/posts/snippet/": [
-    {
-      text: "Snippets",
-      items: [
-        {
-          text: "Vue",
-          link: "/posts/snippet/vue",
-        },
-        {
-          text: "Markdown",
-          link: "/posts/snippet/markdown",
-        },
-      ],
-    },
-  ],
-};
-
 const componentPages = {
   "/posts/component/": [
     {
@@ -201,7 +183,6 @@ export default {
   ...vitePressPages,
   ...bitPages,
   ...linksPages,
-  ...snippetPages,
   ...componentPages,
   ...updatesPages,
   ...documentPipPages,

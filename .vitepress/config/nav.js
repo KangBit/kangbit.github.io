@@ -14,7 +14,6 @@ const devMenu = {
       items: [
         { text: "Whats New In", link: "/posts/updates" },
         { text: "Component", link: "/posts/component" },
-        { text: "Snippet", link: "/posts/snippet" },
       ],
     },
   ],
