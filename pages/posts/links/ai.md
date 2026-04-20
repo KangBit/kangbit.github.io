@@ -16,3 +16,5 @@ next: false
 [AI 시대에 기술 쇠퇴를 피는 방법](https://addyo.substack.com/p/avoiding-skill-atrophy-in-the-age)
 
 [나날이 발전하고픈 개발자를 위한 AI 활용법](https://www.stdy.blog/how-to-use-ai-for-developers-who-want-to-develop-everyday/)
+
+[Claude Code Harness](https://claude-code-harness-ko.vercel.app/)
