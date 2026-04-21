@@ -170,6 +170,24 @@ const chromeAiPages = {
   ],
 };
 
+const codexAppPages = {
+  "/posts/codex-app/": [
+    {
+      text: "Codex App",
+      items: [
+        {
+          text: "플러그인 114선",
+          link: "/posts/codex-app/plugins",
+        },
+        {
+          text: "스킬 37선",
+          link: "/posts/codex-app/skills",
+        },
+      ],
+    },
+  ],
+};
+
 export default {
   ...vitePressPages,
   ...bitPages,
@@ -177,4 +195,5 @@ export default {
   ...updatesPages,
   ...documentPipPages,
   ...chromeAiPages,
+  ...codexAppPages,
 };

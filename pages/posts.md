@@ -10,9 +10,9 @@ hero:
   name: ""
 
 features:
-  - title: Codex App 플러그인 114선
-    details: Codex App 공식 마켓플레이스 플러그인 114개를 도메인별로 짧게 소개합니다.
-    link: "/posts/codex-plugins"
+  - title: Codex App 플러그인·스킬 정리
+    details: Codex App의 공식 플러그인 114개와 스킬 37개를 정리했습니다.
+    link: "/posts/codex-app/plugins"
 
   - title: VitePress + Github Pages로 블로그 만들기
     details: VitePress를 이용해 블로그 홈페이지를 생성하는 방법을 소개합니다.
