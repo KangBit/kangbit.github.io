@@ -10,8 +10,8 @@ hero:
   name: ""
 
 features:
-  - title: Codex App 플러그인·스킬 정리
-    details: Codex App의 공식 플러그인 114개와 스킬 37개를 정리했습니다.
+  - title: Codex App 플러그인·스킬
+    details: Codex App의 공식 플러그인과 스킬을 소개합니다.
     link: "/posts/codex-app/plugins"
 
   - title: VitePress + Github Pages로 블로그 만들기
