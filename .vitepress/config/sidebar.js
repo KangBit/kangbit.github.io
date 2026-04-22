@@ -180,7 +180,7 @@ const codexAppPages = {
           link: "/posts/codex-app/plugins",
         },
         {
-          text: "스킬 40선",
+          text: "스킬 8선",
           link: "/posts/codex-app/skills",
         },
       ],
