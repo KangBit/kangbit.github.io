@@ -9,6 +9,8 @@ next: false
 
 ## 기타 링크 저장소
 
+[Laws of Software Engineering](https://lawsofsoftwareengineering.com/)
+
 [개발자를 위한 글쓰기 기본기](https://technical-writing.dev/)
 
 [You Are Not Google](https://blog.bradfieldcs.com/you-are-not-google-84912cf44afb)
