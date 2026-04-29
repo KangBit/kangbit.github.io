@@ -122,6 +122,44 @@ const updatesPages = {
   ],
 };
 
+const eslintPages = {
+  "/posts/eslint/": [
+    {
+      text: "ESLint",
+      items: [
+        {
+          text: "eslint",
+          link: "/posts/eslint/settings",
+        },
+        {
+          text: "@stylistic/eslint-plugin",
+          link: "/posts/eslint/stylistic",
+        },
+        {
+          text: "typescript-eslint",
+          link: "/posts/eslint/typescript",
+        },
+        {
+          text: "eslint-plugin-react",
+          link: "/posts/eslint/react",
+        },
+        {
+          text: "eslint-plugin-react-hooks",
+          link: "/posts/eslint/react-hooks",
+        },
+        {
+          text: "@next/eslint-plugin-next",
+          link: "/posts/eslint/next",
+        },
+        {
+          text: "eslint-plugin-vue",
+          link: "/posts/eslint/vue",
+        },
+      ],
+    },
+  ],
+};
+
 const documentPipPages = {
   "/posts/document-pip/": [
     {
@@ -193,6 +231,7 @@ export default {
   ...bitPages,
   ...linksPages,
   ...updatesPages,
+  ...eslintPages,
   ...documentPipPages,
   ...chromeAiPages,
   ...codexAppPages,
