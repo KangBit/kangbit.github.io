@@ -13,7 +13,7 @@ const devMenu = {
     {
       items: [
         { text: "Whats New In", link: "/posts/updates" },
-        { text: "eslint/js", link: "/posts/eslint/settings" },
+        { text: "ESLint", link: "/posts/eslint/settings" },
       ],
     },
   ],
