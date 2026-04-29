@@ -1,22 +1,22 @@
 ---
-title: eslint
-description: ESLint 코어 규칙을 한국어로 정리합니다.
+title: "eslint/js"
+description: "@eslint/js 코어 규칙을 한국어로 정리합니다."
 head:
   - - meta
     - name: keywords
-      content: ESLint, ESLint Rules, JavaScript, Lint
+      content: "@eslint/js, ESLint, ESLint Rules, JavaScript, Lint"
 comment: true
 ---
 
-# eslint
+# eslint/js
 
 ::: info
 이 문서는 ChatGPT 5.5를 통해 작성되었습니다.
 :::
 
 기준일: 2026-04-29  
-기준 버전: `eslint@10.2.1`  
-출처: [ESLint Rules Reference](https://eslint.org/docs/latest/rules/), [npm eslint package](https://www.npmjs.com/package/eslint)
+기준 버전: `@eslint/js@10.2.1`  
+출처: [ESLint Rules Reference](https://eslint.org/docs/latest/rules/)
 
 ## Possible Problems
 

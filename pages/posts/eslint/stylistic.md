@@ -1,5 +1,5 @@
 ---
-title: "@stylistic/eslint-plugin"
+title: "stylistic/eslint-plugin"
 description: "@stylistic/eslint-plugin 규칙을 한국어로 정리합니다."
 head:
   - - meta
@@ -8,7 +8,7 @@ head:
 comment: true
 ---
 
-# @stylistic/eslint-plugin
+# stylistic/eslint-plugin
 
 ::: info
 이 문서는 ChatGPT 5.5를 통해 작성되었습니다.

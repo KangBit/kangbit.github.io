@@ -1,5 +1,5 @@
 ---
-title: "@next/eslint-plugin-next"
+title: "next/eslint-plugin-next"
 description: Next.js 공식 ESLint 플러그인 규칙을 한국어로 정리합니다.
 head:
   - - meta
@@ -8,7 +8,7 @@ head:
 comment: true
 ---
 
-# @next/eslint-plugin-next
+# next/eslint-plugin-next
 
 ::: info
 이 문서는 ChatGPT 5.5를 통해 작성되었습니다.

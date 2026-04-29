@@ -128,11 +128,11 @@ const eslintPages = {
       text: "ESLint",
       items: [
         {
-          text: "eslint",
+          text: "eslint/js",
           link: "/posts/eslint/settings",
         },
         {
-          text: "@stylistic/eslint-plugin",
+          text: "stylistic/eslint-plugin",
           link: "/posts/eslint/stylistic",
         },
         {
@@ -148,7 +148,7 @@ const eslintPages = {
           link: "/posts/eslint/react-hooks",
         },
         {
-          text: "@next/eslint-plugin-next",
+          text: "next/eslint-plugin-next",
           link: "/posts/eslint/next",
         },
         {
