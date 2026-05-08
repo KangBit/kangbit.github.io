@@ -1,6 +1,6 @@
 ---
-title: Codex App 플러그인 126선
-description: Codex App 공식 마켓플레이스와 OpenAI 번들 플러그인 126개를 소개합니다.
+title: Codex App 플러그인 122선
+description: Codex App 공식 마켓플레이스 플러그인 122개를 소개합니다.
 head:
   - - meta
     - name: keywords
@@ -12,16 +12,15 @@ comment: true
 이 글은 GPT-5.4 모델을 사용해 작성했습니다.
 :::
 
-# Codex App 플러그인 126선
+# Codex App 플러그인 122선
 
-2026년 5월 8일 기준, `Codex APP`의 공식 마켓플레이스와 OpenAI 번들 플러그인 126개를 정리했습니다.
+2026년 5월 8일 기준, `Codex APP`의 공식 마켓플레이스 플러그인 122개를 정리했습니다.
 
 ## 개발 · 엔지니어링
 
 - **Build iOS Apps**: iOS 앱 개발을 위한 작업 묶음형 플러그인입니다. SwiftUI, App Intents, 시뮬레이터 디버깅 같은 iOS 개발 문맥을 중심으로 구성돼 있습니다.
 - **Build macOS Apps**: macOS 네이티브 앱 개발을 위한 워크플로 플러그인입니다. Xcode, SwiftUI, AppKit 기반 개발 흐름을 다룹니다.
 - **Build Web Apps**: 웹앱 제작 전반을 다루는 빌더형 플러그인입니다. 프론트엔드, 배포, 결제, 데이터 설계 같은 웹 제품 제작 맥락을 담고 있습니다.
-- **Browser**: Codex 안의 인앱 브라우저를 열고 로컬 개발 페이지를 탐색, 클릭, 입력, 캡처하며 테스트하는 OpenAI 번들 플러그인입니다.
 - **ChatGPT Apps**: ChatGPT 안에서 동작하는 앱을 만들고 MCP 기반 도구 연결을 설계하는 개발 플러그인입니다.
 - **CircleCI**: 소프트웨어 빌드와 테스트, 배포 자동화를 위한 대표적인 CI/CD 플랫폼입니다.
 - **Cloudflare**: CDN, DNS, Workers, Pages, 보안 기능까지 제공하는 웹 인프라 플랫폼입니다.
@@ -71,9 +70,7 @@ comment: true
 - **Channel99**: B2B 마케팅 성과와 채널 효율을 측정하는 GTM 인텔리전스 플랫폼입니다.
 - **Circleback**: 회의 내용을 자동 요약하고 액션 아이템을 정리하는 미팅 노트 서비스입니다.
 - **ClickUp**: 작업, 문서, 프로젝트 관리를 한곳에 모은 올인원 협업 툴입니다.
-- **Chrome**: 로그인 상태나 기존 탭처럼 사용자의 Chrome 브라우저 문맥이 필요한 웹 작업을 Codex에서 조작할 수 있게 해주는 OpenAI 번들 플러그인입니다.
 - **Common Room**: 구매자와 커뮤니티 신호를 모아주는 GTM 인텔리전스 플랫폼입니다.
-- **Computer Use**: Codex가 macOS 데스크톱 앱을 화면 기반으로 조작할 수 있게 해주는 OpenAI 번들 플러그인입니다.
 - **Conductor**: SEO와 디지털 가시성 관리에 강한 마케팅 플랫폼입니다.
 - **Coupler.io**: 여러 SaaS 데이터를 연결해 시트나 데이터 저장소로 옮겨주는 데이터 파이프라인 도구입니다.
 - **Coveo**: 기업용 검색과 추천 경험을 제공하는 엔터프라이즈 서치 플랫폼입니다.
@@ -131,7 +128,6 @@ comment: true
 - **Daloopa**: 공시와 IR 자료에서 기초 재무 데이터를 구조화하는 금융 데이터 서비스입니다.
 - **Dow Jones Factiva**: 글로벌 뉴스 아카이브와 프리미엄 기사 검색에 강한 정보 서비스입니다.
 - **GovTribe**: 미국 정부 조달과 계약 정보를 탐색하는 공공 조달 인텔리전스 서비스입니다.
-- **LaTeX Tectonic**: 시스템 TeX 설치 없이 번들된 Tectonic 엔진으로 LaTeX와 TeX 문서를 컴파일하는 OpenAI 번들 플러그인입니다.
 - **Life Science Research**: 생명과학 연구 질의와 근거 수집을 위한 리서치형 플러그인입니다.
 - **Moody's**: 신용평가와 리스크 분석으로 잘 알려진 금융 정보 기업입니다.
 - **Morningstar**: 펀드와 투자 리서치 분야에서 널리 쓰이는 금융 정보 서비스입니다.
