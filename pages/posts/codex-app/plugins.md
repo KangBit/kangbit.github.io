@@ -1,6 +1,6 @@
 ---
-title: Codex App 플러그인 122선
-description: Codex App 공식 마켓플레이스 플러그인 122개를 소개합니다.
+title: Codex App 플러그인 126선
+description: Codex App 공식 마켓플레이스 및 OpenAI 번들 플러그인 126개를 소개합니다.
 head:
   - - meta
     - name: keywords
@@ -12,16 +12,16 @@ comment: true
 이 글은 GPT-5.4 모델을 사용해 작성했습니다.
 :::
 
-# Codex App 플러그인 122선
+# Codex App 플러그인 126선
 
-2026년 5월 8일 기준, `Codex APP`의 공식 마켓플레이스 플러그인 122개를 정리했습니다.
+2026년 5월 12일 기준, `Codex APP`의 공식 마켓플레이스 및 OpenAI 번들 플러그인 126개를 정리했습니다.
 
 ## 개발 · 엔지니어링
 
 - **Build iOS Apps**: iOS 앱 개발을 위한 작업 묶음형 플러그인입니다. SwiftUI, App Intents, 시뮬레이터 디버깅 같은 iOS 개발 문맥을 중심으로 구성돼 있습니다.
 - **Build macOS Apps**: macOS 네이티브 앱 개발을 위한 워크플로 플러그인입니다. Xcode, SwiftUI, AppKit 기반 개발 흐름을 다룹니다.
 - **Build Web Apps**: 웹앱 제작 전반을 다루는 빌더형 플러그인입니다. 프론트엔드, 배포, 결제, 데이터 설계 같은 웹 제품 제작 맥락을 담고 있습니다.
-- **ChatGPT Apps**: ChatGPT 안에서 동작하는 앱을 만들고 MCP 기반 도구 연결을 설계하는 개발 플러그인입니다.
+- **Browser**: Codex 안의 인앱 브라우저를 열고 조작해 로컬 개발 페이지와 파일을 테스트하는 OpenAI 번들 플러그인입니다.
 - **CircleCI**: 소프트웨어 빌드와 테스트, 배포 자동화를 위한 대표적인 CI/CD 플랫폼입니다.
 - **Cloudflare**: CDN, DNS, Workers, Pages, 보안 기능까지 제공하는 웹 인프라 플랫폼입니다.
 - **Cloudinary**: 이미지와 비디오 같은 미디어 자산을 저장, 변환, 최적화하는 클라우드 미디어 플랫폼입니다.
@@ -56,6 +56,7 @@ comment: true
 - **BioRender**: 생명과학 연구자들이 논문용 그림과 과학 도식을 만드는 데 쓰는 디자인 툴입니다.
 - **Canva**: 프레젠테이션, SNS 이미지, 배너 같은 시각 자료를 쉽게 만드는 디자인 플랫폼입니다.
 - **Figma**: UI/UX 디자인과 프로토타이핑, 디자인 시스템 관리에 널리 쓰이는 협업 디자인 툴입니다.
+- **HeyGen**: 아바타 영상과 개인화된 영상 메시지를 만들 수 있는 비디오 제작 플러그인입니다.
 - **HyperFrames by HeyGen**: HTML, CSS, GSAP 기반 컴포지션으로 웹사이트나 구성 요소를 영상으로 렌더링하는 비디오 제작 플러그인입니다.
 - **Remotion**: React 코드로 영상을 만드는 개발자 친화형 비디오 제작 도구입니다.
 
@@ -68,9 +69,11 @@ comment: true
 - **Brex**: 법인카드, 비용 관리, 지출 통제를 제공하는 핀테크 플랫폼입니다.
 - **Carta CRM**: 투자팀과 벤처캐피털 문맥에 맞춘 관계 관리형 CRM 서비스입니다.
 - **Channel99**: B2B 마케팅 성과와 채널 효율을 측정하는 GTM 인텔리전스 플랫폼입니다.
+- **Chrome**: 기존 Chrome 탭과 로그인 세션이 필요한 웹 작업을 Codex에서 다룰 수 있게 해주는 OpenAI 번들 플러그인입니다.
 - **Circleback**: 회의 내용을 자동 요약하고 액션 아이템을 정리하는 미팅 노트 서비스입니다.
 - **ClickUp**: 작업, 문서, 프로젝트 관리를 한곳에 모은 올인원 협업 툴입니다.
 - **Common Room**: 구매자와 커뮤니티 신호를 모아주는 GTM 인텔리전스 플랫폼입니다.
+- **Computer Use**: Codex가 허용된 macOS 앱을 조작해 데스크톱 작업을 수행하도록 돕는 OpenAI 번들 플러그인입니다.
 - **Conductor**: SEO와 디지털 가시성 관리에 강한 마케팅 플랫폼입니다.
 - **Coupler.io**: 여러 SaaS 데이터를 연결해 시트나 데이터 저장소로 옮겨주는 데이터 파이프라인 도구입니다.
 - **Coveo**: 기업용 검색과 추천 경험을 제공하는 엔터프라이즈 서치 플랫폼입니다.
@@ -128,6 +131,7 @@ comment: true
 - **Daloopa**: 공시와 IR 자료에서 기초 재무 데이터를 구조화하는 금융 데이터 서비스입니다.
 - **Dow Jones Factiva**: 글로벌 뉴스 아카이브와 프리미엄 기사 검색에 강한 정보 서비스입니다.
 - **GovTribe**: 미국 정부 조달과 계약 정보를 탐색하는 공공 조달 인텔리전스 서비스입니다.
+- **LaTeX Tectonic**: 시스템 TeX 설치 없이 Tectonic 엔진으로 LaTeX와 TeX 문서를 컴파일하는 OpenAI 번들 플러그인입니다.
 - **Life Science Research**: 생명과학 연구 질의와 근거 수집을 위한 리서치형 플러그인입니다.
 - **Moody's**: 신용평가와 리스크 분석으로 잘 알려진 금융 정보 기업입니다.
 - **Morningstar**: 펀드와 투자 리서치 분야에서 널리 쓰이는 금융 정보 서비스입니다.
