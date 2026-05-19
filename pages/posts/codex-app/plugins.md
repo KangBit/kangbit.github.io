@@ -1,6 +1,6 @@
 ---
-title: Codex App 플러그인 126선
-description: Codex App 공식 마켓플레이스 및 OpenAI 번들 플러그인 126개를 소개합니다.
+title: Codex App 플러그인 128선
+description: Codex App 공식 마켓플레이스 및 OpenAI 번들 플러그인 128개를 소개합니다.
 head:
   - - meta
     - name: keywords
@@ -12,9 +12,9 @@ comment: true
 이 글은 GPT-5.4 모델을 사용해 작성했습니다.
 :::
 
-# Codex App 플러그인 126선
+# Codex App 플러그인 128선
 
-2026년 5월 12일 기준, `Codex APP`의 공식 마켓플레이스 및 OpenAI 번들 플러그인 126개를 정리했습니다.
+2026년 5월 19일 기준, `Codex APP`의 공식 마켓플레이스 및 OpenAI 번들 플러그인 128개를 정리했습니다.
 
 ## 개발 · 엔지니어링
 
@@ -63,6 +63,7 @@ comment: true
 ## 생산성 · 협업
 
 - **Amplitude**: 사용자 행동 데이터와 퍼널 분석에 강한 제품 분석 플랫폼입니다.
+- **Asana**: 작업, 하위 작업, 댓글, 마감일, 프로젝트 정보를 연결해 우선순위와 상태 업데이트를 정리하는 협업 도구입니다.
 - **Atlassian Rovo**: Jira와 Confluence를 중심으로 팀 지식과 프로젝트 문맥을 다루는 Atlassian 계열 서비스입니다.
 - **Attio**: 유연한 데이터 모델을 가진 차세대 CRM으로 자주 언급되는 고객 관계 관리 서비스입니다.
 - **Brand24**: 브랜드 언급량과 온라인 평판을 추적하는 소셜 리스닝 도구입니다.
@@ -121,6 +122,7 @@ comment: true
 - **United Rentals**: 건설과 산업 현장에서 쓰는 장비 대여 서비스입니다.
 - **Waldo**: 에이전시와 브랜드 전략 수립을 돕는 AI 기반 전략 플랫폼입니다.
 - **Windsor.ai**: 여러 마케팅 데이터 소스를 연결해 리포팅하는 데이터 통합 서비스입니다.
+- **Zoom**: 회의 요약, 전사, 녹화, 관련 자산 같은 Zoom 미팅 문맥을 Codex에서 검색하고 활용하는 회의 인텔리전스 플러그인입니다.
 
 ## 리서치 · 인텔리전스
 
@@ -131,7 +133,7 @@ comment: true
 - **Daloopa**: 공시와 IR 자료에서 기초 재무 데이터를 구조화하는 금융 데이터 서비스입니다.
 - **Dow Jones Factiva**: 글로벌 뉴스 아카이브와 프리미엄 기사 검색에 강한 정보 서비스입니다.
 - **GovTribe**: 미국 정부 조달과 계약 정보를 탐색하는 공공 조달 인텔리전스 서비스입니다.
-- **LaTeX Tectonic**: 시스템 TeX 설치 없이 Tectonic 엔진으로 LaTeX와 TeX 문서를 컴파일하는 OpenAI 번들 플러그인입니다.
+- **LaTeX**: 번들 Tectonic을 우선 사용하고 필요하면 TeX Live나 MacTeX로 폴백해 LaTeX 문서를 컴파일하는 OpenAI 번들 플러그인입니다.
 - **Life Science Research**: 생명과학 연구 질의와 근거 수집을 위한 리서치형 플러그인입니다.
 - **Moody's**: 신용평가와 리스크 분석으로 잘 알려진 금융 정보 기업입니다.
 - **Morningstar**: 펀드와 투자 리서치 분야에서 널리 쓰이는 금융 정보 서비스입니다.
