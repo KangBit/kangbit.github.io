@@ -1,6 +1,6 @@
 ---
-title: Codex App 플러그인 131선
-description: Codex App 공식 마켓플레이스 및 OpenAI 번들 플러그인 131개를 소개합니다.
+title: Codex App 플러그인 130선
+description: Codex App 공식 마켓플레이스 및 OpenAI 번들 플러그인 130개를 소개합니다.
 head:
   - - meta
     - name: keywords
@@ -12,9 +12,9 @@ comment: true
 이 글은 GPT-5.4 모델을 사용해 작성했습니다.
 :::
 
-# Codex App 플러그인 131선
+# Codex App 플러그인 130선
 
-2026년 5월 26일 기준, `Codex APP`의 공식 마켓플레이스 및 OpenAI 번들 플러그인 131개를 정리했습니다.
+2026년 5월 26일 기준, `Codex APP`의 공식 마켓플레이스 및 OpenAI 번들 플러그인 130개를 정리했습니다.
 
 ## 개발 · 엔지니어링
 
@@ -134,7 +134,6 @@ comment: true
 - **Daloopa**: 공시와 IR 자료에서 기초 재무 데이터를 구조화하는 금융 데이터 서비스입니다.
 - **Dow Jones Factiva**: 글로벌 뉴스 아카이브와 프리미엄 기사 검색에 강한 정보 서비스입니다.
 - **GovTribe**: 미국 정부 조달과 계약 정보를 탐색하는 공공 조달 인텔리전스 서비스입니다.
-- **LaTeX**: 번들 Tectonic을 우선 사용하고 필요하면 TeX Live나 MacTeX로 폴백해 LaTeX 문서를 컴파일하는 OpenAI 번들 플러그인입니다.
 - **Life Science Research**: 생명과학 연구 질의와 근거 수집을 위한 리서치형 플러그인입니다.
 - **Moody's**: 신용평가와 리스크 분석으로 잘 알려진 금융 정보 기업입니다.
 - **Morningstar**: 펀드와 투자 리서치 분야에서 널리 쓰이는 금융 정보 서비스입니다.
