@@ -1,6 +1,6 @@
 ---
-title: Codex App 플러그인 128선
-description: Codex App 공식 마켓플레이스 및 OpenAI 번들 플러그인 128개를 소개합니다.
+title: Codex App 플러그인 131선
+description: Codex App 공식 마켓플레이스 및 OpenAI 번들 플러그인 131개를 소개합니다.
 head:
   - - meta
     - name: keywords
@@ -12,9 +12,9 @@ comment: true
 이 글은 GPT-5.4 모델을 사용해 작성했습니다.
 :::
 
-# Codex App 플러그인 128선
+# Codex App 플러그인 131선
 
-2026년 5월 19일 기준, `Codex APP`의 공식 마켓플레이스 및 OpenAI 번들 플러그인 128개를 정리했습니다.
+2026년 5월 26일 기준, `Codex APP`의 공식 마켓플레이스 및 OpenAI 번들 플러그인 131개를 정리했습니다.
 
 ## 개발 · 엔지니어링
 
@@ -58,6 +58,7 @@ comment: true
 - **Figma**: UI/UX 디자인과 프로토타이핑, 디자인 시스템 관리에 널리 쓰이는 협업 디자인 툴입니다.
 - **HeyGen**: 아바타 영상과 개인화된 영상 메시지를 만들 수 있는 비디오 제작 플러그인입니다.
 - **HyperFrames by HeyGen**: HTML, CSS, GSAP 기반 컴포지션으로 웹사이트나 구성 요소를 영상으로 렌더링하는 비디오 제작 플러그인입니다.
+- **Presentations**: PPTX와 Google Slides 대상 슬라이드 덱을 만들고 렌더링, 검증, 내보내기까지 다루는 OpenAI 번들 플러그인입니다.
 - **Remotion**: React 코드로 영상을 만드는 개발자 친화형 비디오 제작 도구입니다.
 
 ## 생산성 · 협업
@@ -152,7 +153,9 @@ comment: true
 ## 문서 · 파일 · 워크스페이스
 
 - **Box**: 기업용 클라우드 파일 저장과 문서 협업에 강한 콘텐츠 관리 플랫폼입니다.
+- **Documents**: Word와 Google Docs 대상 문서 아티팩트를 만들고 편집, 렌더링, 검증하는 OpenAI 번들 플러그인입니다.
 - **Google Drive**: Google의 파일 저장소이자 Docs, Sheets, Slides와 연결되는 문서 허브입니다.
+- **Spreadsheets**: XLSX, CSV, TSV와 Google Sheets 대상 스프레드시트를 만들고 분석, 시각화, 내보내기까지 다루는 OpenAI 번들 플러그인입니다.
 
 ## 라이프스타일 · 생활 서비스
 
