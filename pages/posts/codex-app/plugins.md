@@ -1,6 +1,6 @@
 ---
-title: Codex App 플러그인·스킬 183선
-description: Codex App 공식 마켓플레이스, OpenAI 번들 플러그인, 시스템 스킬 183개를 소개합니다.
+title: Codex App 플러그인·스킬 186선
+description: Codex App 공식 마켓플레이스, OpenAI 번들 플러그인, 시스템 스킬 186개를 소개합니다.
 head:
   - - meta
     - name: keywords
@@ -12,9 +12,9 @@ comment: true
 이 글은 GPT-5.4 모델을 사용해 작성했습니다.
 :::
 
-# Codex App 플러그인·스킬 183선
+# Codex App 플러그인·스킬 186선
 
-2026년 6월 5일 기준, `Codex APP`의 공식 마켓플레이스, OpenAI 번들 플러그인, 시스템 스킬 183개를 정리했습니다.
+2026년 6월 9일 기준, `Codex APP`의 공식 마켓플레이스, OpenAI 번들 플러그인, 시스템 스킬 186개를 정리했습니다.
 
 ## 개발 · 엔지니어링
 
@@ -29,6 +29,7 @@ comment: true
 - **Cloudinary**: 이미지와 비디오 같은 미디어 자산을 저장, 변환, 최적화하는 클라우드 미디어 플랫폼입니다.
 - **CodeRabbit**: PR 리뷰와 코드 품질 점검을 돕는 AI 코드 리뷰 서비스입니다.
 - **Codex Security**: 코드베이스와 변경 사항을 대상으로 보안 스캔, 분석, 위협 모델링을 수행하는 보안 워크플로 플러그인입니다.
+- **Catalyst by Zoho**: Zoho Catalyst 기반 앱과 백엔드 개발 흐름을 지원하는 개발 플랫폼 플러그인입니다.
 - **Convex**: JavaScript와 TypeScript 앱에 반응형 데이터베이스, 서버 함수, 백엔드 구조를 붙이는 개발 플랫폼입니다.
 - **Datadog (Preview)**: Codex에서 Datadog 텔레메트리와 운영 워크플로를 조사하도록 돕는 관측성 플러그인입니다.
 - **Expo**: React Native 앱을 더 쉽게 만들고 배포할 수 있게 해주는 모바일 개발 플랫폼입니다.
@@ -37,6 +38,7 @@ comment: true
 - **Hostinger**: 웹호스팅과 사이트 제작 도구를 함께 제공하는 웹 인프라 서비스입니다.
 - **Hugging Face**: AI 모델, 데이터셋, 데모 앱을 공유하는 머신러닝 생태계 플랫폼입니다.
 - **Lovable**: 연결된 워크스페이스 문맥에서 Lovable 앱 프로젝트를 만들고 살펴보는 앱 빌더형 플러그인입니다.
+- **MagicPath**: 개발 워크플로와 프로젝트 문맥을 Codex 안에서 다루도록 돕는 개발 도구 플러그인입니다.
 - **MarcoPolo**: 실제 데이터를 안전한 환경에서 다룰 수 있도록 돕는 컨테이너형 작업 플랫폼입니다.
 - **Neon Postgres**: 서버리스 Postgres를 중심으로 한 클라우드 데이터베이스 플랫폼입니다.
 - **Netlify**: 정적 사이트와 웹앱 배포에 강한 프론트엔드 중심 호스팅 플랫폼입니다.
@@ -84,6 +86,7 @@ comment: true
 - **Atlassian Rovo**: Jira와 Confluence를 중심으로 팀 지식과 프로젝트 문맥을 다루는 Atlassian 계열 서비스입니다.
 - **Attio**: 유연한 데이터 모델을 가진 차세대 CRM으로 자주 언급되는 고객 관계 관리 서비스입니다.
 - **Brand24**: 브랜드 언급량과 온라인 평판을 추적하는 소셜 리스닝 도구입니다.
+- **BrightHire**: 채용 인터뷰와 후보자 평가 문맥을 정리하는 생산성 플러그인입니다.
 - **Brex**: 법인카드, 비용 관리, 지출 통제를 제공하는 핀테크 플랫폼입니다.
 - **Carta CRM**: 투자팀과 벤처캐피털 문맥에 맞춘 관계 관리형 CRM 서비스입니다.
 - **Channel99**: B2B 마케팅 성과와 채널 효율을 측정하는 GTM 인텔리전스 플랫폼입니다.
