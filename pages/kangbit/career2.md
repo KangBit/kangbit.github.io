@@ -13,6 +13,8 @@ next: false
 
 <Badge type='tip' text='Vue2'/>
 <Badge type='tip' text='Vue3' />
+<Badge type='tip' text='Nextjs' />
+<Badge type='tip' text='React' />
 <Badge type='tip' text='Vuex' />
 <Badge type='tip' text='Pinia' />
 <Badge type='info' text='Highcharts' />
@@ -26,6 +28,44 @@ next: false
 
 전국의 골퍼들을 위한 모바일 서비스와 골프장을 위한 솔루션을 개발했습니다.<br>
 Vue를 이용해 웹/ 앱 서비스의 프론트엔드를 개발했습니다.
+
+:::
+
+## 코스관리 <span class="text-sm"> ( 2025-12 ~ 2026-06 ) </span>
+
+<div class="mt-8">
+  <Badge type='info' text='Vite'/>
+  <Badge type='tip' text='Vue3'/>
+  <Badge type='tip' text='Pinia'/>
+  <Badge type='info' text='VueUse'/>
+  <Badge type='info' text='Highcharts'/>
+</div>
+
+:::details 상세 {open}
+
+골프장 코스 운영에 필요한 관리, 방제, 건설, 리뉴얼, 부분 개선 공사를 통합 제공하는 코스 관리 종합 서비스입니다.
+PC 서비스는 골프장별 코스 상태, 작업 현황, 자재 및 장비 사용 내역, 시설 관리 데이터를 통합 관리할 수 있도록 지원하며, 운영자가 전체 코스 관리 흐름을 체계적으로 파악하고 관리할 수 있도록 구성했습니다.
+모바일 서비스는 현장 작업자가 작업 지시 확인, 일일 점검, 이슈 등록, 시설 점검, 사진 업로드, 위치 기반 코스 상태 기록 등을 현장에서 즉시 처리할 수 있도록 지원합니다.
+
+-Vue 3 기반 코스관리 PC/모바일 프론트엔드 주요 화면 개발<br> -작업관리, 작업지시, 작업일보 등 현장 업무 기능 구현 및 개선<br> -지도 기반 코스·홀·구역 선택 및 위치 등록 기능 개선<br> -사진 등록, 권한 처리, 로그인/라우팅/네이티브 연동 흐름 개선<br>
+-Android/iOS UI 이슈, QA, 다국어/i18n, 문구·레이아웃 결함 대응<br>
+
+:::
+
+## 클라우드 <span class="text-sm"> ( 2025-12 ~ 2026-06 ) </span>
+
+<div class="mt-8">
+  <Badge type='tip' text='Next'/>
+  <Badge type='tip' text='React'/>
+</div>
+
+:::details 상세 {open}
+
+클라우드 프로젝트는 사내 서비스(ERP, 클럽페이지, 경기 관제 등)의 개별 인증 프로세스를 통합하여, 하나의 중앙화된 인증 관리 시스템을 제공하는 서비스입니다.
+이를 통해 사용자 계정별로 각 서비스에 접근 권한을 관리하고, 단일 로그인 방식(SSO)을 구현하여 사용자 경험을 개선합니다.
+
+-Next.js 16 마이그레이션 및 운영 안정화<br> -스마트 TV 등 특수 브라우저 환경의 하위 호환성 대응<br> -다국어/글로벌 서비스 연동 대응<br> -계정 신청, 승인/거절, 상태 변경, 삭제 요청 등 관리자 계정 관리 기능 개발<br>
+-ISMS 비밀번호 정책, 비밀번호 검증 regex, 계정 삭제 제한 등 보안/정책성 요구사항 반영<br>
 
 :::
 
