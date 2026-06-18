@@ -110,6 +110,10 @@ const updatesPages = {
           link: "/posts/updates/ecmascript",
         },
         {
+          text: "CSS",
+          link: "/posts/updates/css",
+        },
+        {
           text: "Vue",
           link: "/posts/updates/vue",
         },
