@@ -12,19 +12,20 @@ comment: true
 
 ## ES2023
 
-- Array.prototype.findLast,
+- Array.prototype.findLast
 - Array.prototype.findLastIndex
 - Array.prototype.toSorted
 - Array.prototype.toReversed
 - Array.prototype.toSpliced
-- Symbol Key for WeakMap
+- Array.prototype.with
 
 ## ES2022
 
 - Class 필드 개선 (프라이빗 접근 제어자, 퍼블릭 필드 / 정적필드 선언 방식)
 - 최상위 레벨 await
 - Array.prototype.at
-- Regex flag d
+- Object.hasOwn
+- Error Cause (`new Error(msg, { cause })`)
 
 ## ES2021
 
@@ -38,8 +39,11 @@ comment: true
 - BigInt
 - nullish coalescing
 - Promise.allSettled
-- optional chaning
+- optional chaining
 - globalThis
+- String.prototype.matchAll
+- 동적 import (`import()`)
+- import.meta
 
 ## ES2019
 
@@ -47,12 +51,16 @@ comment: true
 - String trim
 - Array.prototype.flat
 - Array.prototype.flatMap
+- Optional catch binding
 
 ## ES2018
 
 - Object Rest/Spread
 - Promise finally
 - Async iteration
+- RegExp 명명 캡처 그룹 `(?<name>...)`
+- RegExp Lookbehind `(?<=...)`
+- RegExp `s`(dotAll) flag
 
 ## ES2017
 
