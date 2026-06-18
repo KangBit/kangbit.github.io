@@ -10,6 +10,20 @@ comment: true
 
 # ECMAScript
 
+## ES2025
+
+- Set 메서드 (intersection / union / difference / ...)
+- Iterator helpers (map / filter / take / drop ...)
+- Import Attributes (`with { type: "json" }`)
+- JSON Modules
+- Promise.try
+- RegExp.escape
+
+## ES2024
+
+- Object.groupBy / Map.groupBy
+- Promise.withResolvers
+
 ## ES2023
 
 - Array.prototype.findLast
