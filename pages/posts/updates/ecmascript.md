@@ -100,3 +100,9 @@ comment: true
 - Enhanced Object Literals
 - Class
 - Module
+- Spread / Rest (배열 · 함수 인자)
+- Generators (`function*` / `yield`)
+- Iterators / `for...of`
+- Map / Set / WeakMap / WeakSet
+- Symbol
+- Proxy / Reflect
