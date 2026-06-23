@@ -1,6 +1,6 @@
 ---
-title: Codex App 플러그인·스킬 191선
-description: Codex App 공식 마켓플레이스, OpenAI 번들 플러그인, 시스템 스킬 191개를 소개합니다.
+title: Codex App 플러그인·스킬 193선
+description: Codex App 공식 마켓플레이스, OpenAI 번들 플러그인, 시스템 스킬 193개를 소개합니다.
 head:
   - - meta
     - name: keywords
@@ -12,9 +12,9 @@ comment: true
 이 글은 GPT-5.4 모델을 사용해 작성했습니다.
 :::
 
-# Codex App 플러그인·스킬 191선
+# Codex App 플러그인·스킬 193선
 
-2026년 6월 22일 기준, `Codex APP`의 공식 마켓플레이스, OpenAI 번들 플러그인, 시스템 스킬 191개를 정리했습니다.
+2026년 6월 23일 기준, `Codex APP`의 공식 마켓플레이스, OpenAI 번들 플러그인, 시스템 스킬 193개를 정리했습니다.
 
 ## 개발 · 엔지니어링
 
@@ -172,6 +172,7 @@ comment: true
 - **Aiera**: 실적 발표, 컨퍼런스 콜, 금융 이벤트 전사와 시장 코멘터리를 제공하는 금융 리서치 플랫폼입니다.
 - **Alpaca**: 주식 거래와 시장 데이터 접근을 제공하는 핀테크 플랫폼입니다.
 - **Binance**: 글로벌 가상자산 거래소이자 암호화폐 생태계 플랫폼입니다.
+- **Boltz**: 생체분자 구조 예측, 분자·단백질 스크리닝, 바인더 설계 워크플로를 지원하는 리서치 플러그인입니다.
 - **CB Insights**: 스타트업, 투자, 산업 동향을 조사하는 시장 인텔리전스 서비스입니다.
 - **Chronograph GP**: 프라이빗 캐피털 GP 팀을 위한 포트폴리오 모니터링, 가치평가, 투자 분석 플랫폼입니다.
 - **Chronograph LP**: 프라이빗 캐피털 LP 팀을 위한 포트폴리오 데이터, 펀드 지표, 성과 분석 플랫폼입니다.
@@ -211,6 +212,7 @@ comment: true
 - **Google Drive**: Google의 파일 저장소이자 Docs, Sheets, Slides와 연결되는 문서 허브입니다.
 - **PDF**: PDF 파일을 읽고 만들며 렌더링과 레이아웃을 검증하는 OpenAI 번들 플러그인입니다.
 - **Spreadsheets**: XLSX, CSV, TSV와 Google Sheets 대상 스프레드시트를 만들고 분석, 시각화, 내보내기까지 다루는 OpenAI 번들 플러그인입니다.
+- **Template Creator**: DOCX, PPTX, XLSX 참조 파일을 재사용 가능한 개인 템플릿 스킬로 만드는 OpenAI 번들 플러그인입니다.
 
 ## 라이프스타일 · 생활 서비스
 
