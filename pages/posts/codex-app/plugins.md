@@ -1,6 +1,6 @@
 ---
-title: Codex App 플러그인·스킬 193선
-description: Codex App 공식 마켓플레이스, OpenAI 번들 플러그인, 시스템 스킬 193개를 소개합니다.
+title: Codex App 플러그인·스킬 195선
+description: Codex App 공식 마켓플레이스, OpenAI 번들 플러그인, 시스템 스킬 195개를 소개합니다.
 head:
   - - meta
     - name: keywords
@@ -12,9 +12,9 @@ comment: true
 이 글은 GPT-5.4 모델을 사용해 작성했습니다.
 :::
 
-# Codex App 플러그인·스킬 193선
+# Codex App 플러그인·스킬 195선
 
-2026년 6월 23일 기준, `Codex APP`의 공식 마켓플레이스, OpenAI 번들 플러그인, 시스템 스킬 193개를 정리했습니다.
+2026년 6월 30일 기준, `Codex APP`의 공식 마켓플레이스, OpenAI 번들 플러그인, 시스템 스킬 195개를 정리했습니다.
 
 ## 개발 · 엔지니어링
 
@@ -32,6 +32,7 @@ comment: true
 - **Catalyst by Zoho**: Zoho Catalyst 기반 앱과 백엔드 개발 흐름을 지원하는 개발 플랫폼 플러그인입니다.
 - **Convex**: JavaScript와 TypeScript 앱에 반응형 데이터베이스, 서버 함수, 백엔드 구조를 붙이는 개발 플랫폼입니다.
 - **Datadog (Preview)**: Codex에서 Datadog 텔레메트리와 운영 워크플로를 조사하도록 돕는 관측성 플러그인입니다.
+- **DigitalOcean**: Droplets, App Platform, 데이터베이스 같은 클라우드 인프라를 Codex에서 다루는 개발 플랫폼 플러그인입니다.
 - **Expo**: React Native 앱을 더 쉽게 만들고 배포할 수 있게 해주는 모바일 개발 플랫폼입니다.
 - **Game Studio**: 브라우저 게임을 설계하고 프로토타이핑하는 흐름에 맞춘 게임 제작형 플러그인입니다.
 - **GitHub**: 코드 저장소, 이슈, PR, 협업 워크플로를 한데 모은 가장 대표적인 개발 플랫폼입니다.
@@ -49,6 +50,7 @@ comment: true
 - **Quicknode**: 블록체인 노드 인프라를 제공하는 Web3 개발 플랫폼입니다.
 - **Render**: 웹 서비스, 백엔드, 데이터베이스를 손쉽게 배포할 수 있는 클라우드 플랫폼입니다.
 - **Replit**: Replit 프로젝트, 앱, 배포, 워크스페이스 문맥을 Codex에서 다루는 개발 플랫폼 플러그인입니다.
+- **Replay.io**: 브라우저 실행 기록과 디버깅 세션을 재생해 웹앱 문제를 추적하는 개발 도구 플러그인입니다.
 - **SendGrid**: 트랜잭션 메일과 대량 이메일 발송을 다루는 이메일 API 서비스입니다.
 - **Sentry**: 에러 추적과 성능 모니터링을 담당하는 대표적인 관측성 플랫폼입니다.
 - **Shopify**: Shopify 앱, 테마, 스토어프론트, GraphQL, Liquid 개발 흐름을 지원하는 개발 플러그인입니다.
