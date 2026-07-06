@@ -230,6 +230,40 @@ const codexAppPages = {
   ],
 };
 
+const devKeywordPages = {
+  "/keyword/": [
+    {
+      text: "개발 키워드",
+      items: [
+        {
+          text: "웹",
+          link: "/keyword/web",
+        },
+        {
+          text: "JS",
+          link: "/keyword/js",
+        },
+        {
+          text: "TS",
+          link: "/keyword/ts",
+        },
+        {
+          text: "Vue",
+          link: "/keyword/vue",
+        },
+        {
+          text: "React",
+          link: "/keyword/react",
+        },
+        {
+          text: "Next",
+          link: "/keyword/next",
+        },
+      ],
+    },
+  ],
+};
+
 export default {
   ...vitePressPages,
   ...bitPages,
@@ -239,4 +273,5 @@ export default {
   ...documentPipPages,
   ...chromeAiPages,
   ...codexAppPages,
+  ...devKeywordPages,
 };
