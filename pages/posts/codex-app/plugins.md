@@ -1,6 +1,6 @@
 ---
-title: Codex App 플러그인·스킬 195선
-description: Codex App 공식 마켓플레이스, OpenAI 번들 플러그인, 시스템 스킬 195개를 소개합니다.
+title: Codex App 플러그인·스킬 197선
+description: Codex App 공식 마켓플레이스, OpenAI 번들 플러그인, 시스템 스킬 197개를 소개합니다.
 head:
   - - meta
     - name: keywords
@@ -12,9 +12,9 @@ comment: true
 이 글은 GPT-5.4 모델을 사용해 작성했습니다.
 :::
 
-# Codex App 플러그인·스킬 195선
+# Codex App 플러그인·스킬 197선
 
-2026년 7월 7일 기준, `Codex APP`의 공식 마켓플레이스, OpenAI 번들 플러그인, 시스템 스킬 195개를 정리했습니다.
+2026년 7월 14일 기준, `Codex APP`의 공식 마켓플레이스, OpenAI 번들 플러그인, 시스템 스킬 197개를 정리했습니다.
 
 ## 개발 · 엔지니어링
 
@@ -54,6 +54,7 @@ comment: true
 - **SendGrid**: 트랜잭션 메일과 대량 이메일 발송을 다루는 이메일 API 서비스입니다.
 - **Sentry**: 에러 추적과 성능 모니터링을 담당하는 대표적인 관측성 플랫폼입니다.
 - **Shopify**: Shopify 앱, 테마, 스토어프론트, GraphQL, Liquid 개발 흐름을 지원하는 개발 플러그인입니다.
+- **Sites**: Codex에서 웹사이트를 만들고 저장, 배포, 접근 제어까지 다루는 OpenAI 번들 플러그인입니다.
 - **Statsig**: 기능 플래그, 실험, 제품 지표 분석을 제공하는 프로덕트 옵스 플랫폼입니다.
 - **Superpowers**: 개발 계획, TDD, 디버깅, 협업 방식을 구조화한 방법론형 플러그인입니다.
 - **Supabase**: Postgres 기반 백엔드와 인증, 데이터베이스, 프로젝트 관리를 Codex에서 다룰 수 있게 해주는 개발 플랫폼 플러그인입니다.
@@ -77,6 +78,7 @@ comment: true
 - **Presentations**: PPTX와 Google Slides 대상 슬라이드 덱을 만들고 렌더링, 검증, 내보내기까지 다루는 OpenAI 번들 플러그인입니다.
 - **Remotion**: React 코드로 영상을 만드는 개발자 친화형 비디오 제작 도구입니다.
 - **Shutterstock**: 라이선스가 있는 스톡 이미지, 영상, 음악, 크리에이티브 자산을 검색하는 콘텐츠 플러그인입니다.
+- **Visualize**: 차트, 지도, 시뮬레이션, 3D 모델, UI 프리뷰를 Codex 안에서 만드는 OpenAI 번들 플러그인입니다.
 
 ## 생산성 · 협업
 
