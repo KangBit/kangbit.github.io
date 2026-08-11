@@ -7,6 +7,87 @@ prev: false
 next: false
 ---
 
+<script setup>
+import ProjectGallery from "@/components/ProjectGallery.vue";
+import appHomeImage from "@/assets/images/career/app_.webp";
+import appForcetellerImage from "@/assets/images/career/app_forceteller.webp";
+import appGiftListImage from "@/assets/images/career/app_gift_1.webp";
+import appGiftDetailImage from "@/assets/images/career/app_gift_2.webp";
+import appGiftPaymentImage from "@/assets/images/career/app_gift_3.webp";
+import appGolfsomeImage from "@/assets/images/career/app_golfsome.webp";
+import appLivescoreListImage from "@/assets/images/career/app_livescore_1.webp";
+import appLivescoreScoreImage from "@/assets/images/career/app_livescore_2.webp";
+import appLivescorePaymentImage from "@/assets/images/career/app_livescore_3.webp";
+import appSpeedgameImage from "@/assets/images/career/app_speedgame.webp";
+import cloudAccountImage from "@/assets/images/career/cloud_account.webp";
+import cloudAccountDetailImage from "@/assets/images/career/cloud_account2.webp";
+import cloudHomeImage from "@/assets/images/career/cloud_home.webp";
+import cloudLoginImage from "@/assets/images/career/cloud_login.webp";
+import cloudMypageImage from "@/assets/images/career/cloud_mypage.webp";
+import clubPageChartImage from "@/assets/images/career/clubpage-chart.webp";
+import clubPageSearchImage from "@/assets/images/career/clubpage-search.webp";
+import clubPageSendImage from "@/assets/images/career/clubpage-send.webp";
+import clubPageDashboardImage from "@/assets/images/career/clubpage_dashboard.webp";
+import courseBudgetImage from "@/assets/images/career/course_budget.webp";
+import courseCalendarImage from "@/assets/images/career/course_calendar.webp";
+import courseCostImage from "@/assets/images/career/course_cost.webp";
+import courseDashboardImage from "@/assets/images/career/course_dashboard.webp";
+import courseMapImage from "@/assets/images/career/course_map.webp";
+import courseMapDrawImage from "@/assets/images/career/course_map_draw.webp";
+import courseMobileHomeImage from "@/assets/images/career/course_mobile.webp";
+import courseMobileCourseImage from "@/assets/images/career/course_mobile_course.webp";
+import courseMobileLoginImage from "@/assets/images/career/course_mobile_login.webp";
+import courseMobileMapImage from "@/assets/images/career/course_mobile_map.webp";
+import courseMobileOrderImage from "@/assets/images/career/course_mobile_order.webp";
+import courseTaskImage from "@/assets/images/career/course_task.webp";
+
+const courseWebImages = [
+  { src: courseDashboardImage, title: "코스관리 대시보드" },
+  { src: courseCalendarImage, title: "작업 일정 캘린더" },
+  { src: courseTaskImage, title: "작업 관리" },
+  { src: courseBudgetImage, title: "예산 관리" },
+  { src: courseCostImage, title: "비용 관리" },
+  { src: courseMapImage, title: "지도 기반 코스 관리" },
+  { src: courseMapDrawImage, title: "지도 영역 편집" },
+];
+
+const courseMobileImages = [
+  { src: courseMobileLoginImage, title: "코스관리 모바일 로그인" },
+  { src: courseMobileHomeImage, title: "코스관리 모바일 홈" },
+  { src: courseMobileCourseImage, title: "모바일 코스 현황" },
+  { src: courseMobileMapImage, title: "모바일 지도" },
+  { src: courseMobileOrderImage, title: "모바일 작업 지시" },
+];
+
+const cloudImages = [
+  { src: cloudLoginImage, title: "클라우드 로그인" },
+  { src: cloudHomeImage, title: "서비스 포털" },
+  { src: cloudAccountImage, title: "계정 신청 관리" },
+  { src: cloudAccountDetailImage, title: "계정 목록 관리" },
+  { src: cloudMypageImage, title: "마이페이지" },
+];
+
+const clubPageImages = [
+  { src: clubPageDashboardImage, title: "클럽페이지 대시보드" },
+  { src: clubPageChartImage, title: "통계 차트" },
+  { src: clubPageSearchImage, title: "대상자 검색" },
+  { src: clubPageSendImage, title: "메시지 발송" },
+];
+
+const smartscoreAppImages = [
+  { src: appHomeImage, title: "스마트스코어 앱 홈" },
+  { src: appForcetellerImage, title: "포스텔러" },
+  { src: appGiftListImage, title: "선물하기 상품 목록" },
+  { src: appGiftDetailImage, title: "선물하기 상품 상세" },
+  { src: appGiftPaymentImage, title: "선물하기 결제" },
+  { src: appGolfsomeImage, title: "골프썸" },
+  { src: appLivescoreListImage, title: "라이브스코어 라운드 목록" },
+  { src: appLivescoreScoreImage, title: "라이브스코어 점수" },
+  { src: appLivescorePaymentImage, title: "라이브스코어 결제" },
+  { src: appSpeedgameImage, title: "스피드게임" },
+];
+</script>
+
 # 스마트스코어 ( 2022-08 ~ )
 
 <br>
@@ -53,6 +134,14 @@ PC 서비스는 골프장별 코스 상태, 작업 현황, 자재 및 장비 사
 -Vue 3 기반 코스관리 PC/모바일 프론트엔드 주요 화면 개발<br> -작업관리, 작업지시, 작업일보 등 현장 업무 기능 구현 및 개선<br> -지도 기반 코스·홀·구역 선택 및 위치 등록 기능 개선<br> -사진 등록, 권한 처리, 로그인/라우팅/네이티브 연동 흐름 개선<br>
 -Android/iOS UI 이슈, QA, 다국어/i18n, 문구·레이아웃 결함 대응<br>
 
+**PC**
+
+<ProjectGallery :images="courseWebImages" />
+
+**모바일**
+
+<ProjectGallery :images="courseMobileImages" layout="portrait" />
+
 :::
 
 ## 클라우드 <span class="text-sm"> ( 2025-12 ~ 2026-06 ) </span>
@@ -69,6 +158,8 @@ PC 서비스는 골프장별 코스 상태, 작업 현황, 자재 및 장비 사
 
 -Next.js 16 마이그레이션 및 운영 안정화<br> -스마트 TV 등 특수 브라우저 환경의 하위 호환성 대응<br> -다국어/글로벌 서비스 연동 대응<br> -계정 신청, 승인/거절, 상태 변경, 삭제 요청 등 관리자 계정 관리 기능 개발<br>
 -ISMS 비밀번호 정책, 비밀번호 검증 regex, 계정 삭제 제한 등 보안/정책성 요구사항 반영<br>
+
+<ProjectGallery :images="cloudImages" />
 
 :::
 
@@ -90,6 +181,8 @@ PC 서비스는 골프장별 코스 상태, 작업 현황, 자재 및 장비 사
 메인 개발자로서 프로젝트 구조 설계 및 각종 컴포넌트 개발을 담당했습니다.
 
 -대시보드 화면 구현<br> -회원가입/ 로그인 로직 구현<br>
+
+<ProjectGallery :images="clubPageImages" />
 
 <!-- 프로젝트 구조 설계 및 각종 컴포넌트 구현 -->
 <!--
@@ -138,6 +231,9 @@ AccountLayout, DashboardLayout 구현<br>
 
 스마트스코어 앱의 웹뷰 프로젝트는 여러 서비스가 모놀리식으로 구성되어 있는 Vue2 프로젝트입니다.<br>
 기존 서비스의 개선/운영 개발과 신규 서비스의 개발/ 운영 개발을 담당했습니다.<br>
+
+<ProjectGallery :images="smartscoreAppImages" layout="portrait" />
+
 :::
 
 :::details 선물하기 {open}
