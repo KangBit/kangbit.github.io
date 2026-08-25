@@ -1,6 +1,6 @@
 ---
-title: Codex App 플러그인·스킬 197선
-description: Codex App 공식 마켓플레이스, OpenAI 번들 플러그인, 시스템 스킬 197개를 소개합니다.
+title: Codex App 플러그인·스킬 199선
+description: Codex App 공식 마켓플레이스, OpenAI 번들 플러그인, 시스템 스킬 199개를 소개합니다.
 head:
   - - meta
     - name: keywords
@@ -12,9 +12,9 @@ comment: true
 이 글은 GPT-5.4 모델을 사용해 작성했습니다.
 :::
 
-# Codex App 플러그인·스킬 197선
+# Codex App 플러그인·스킬 199선
 
-2026년 8월 18일 기준, `Codex APP`의 공식 마켓플레이스, OpenAI 번들 플러그인, 시스템 스킬 197개를 정리했습니다.
+2026년 8월 25일 기준, `Codex APP`의 공식 마켓플레이스, OpenAI 번들 플러그인, 시스템 스킬 199개를 정리했습니다.
 
 ## 개발 · 엔지니어링
 
@@ -96,6 +96,7 @@ comment: true
 - **Carta CRM**: 투자팀과 벤처캐피털 문맥에 맞춘 관계 관리형 CRM 서비스입니다.
 - **Channel99**: B2B 마케팅 성과와 채널 효율을 측정하는 GTM 인텔리전스 플랫폼입니다.
 - **Chrome**: 기존 Chrome 탭과 로그인 세션이 필요한 웹 작업을 Codex에서 다룰 수 있게 해주는 OpenAI 번들 플러그인입니다.
+- **codex-app-tools**: Codex 데스크톱 앱 도구를 로컬 MCP 서버로 노출하는 OpenAI 번들 플러그인입니다.
 - **Calendly**: 미팅 이벤트와 예약 가능 시간을 검색해 일정 조율 문맥을 다루는 스케줄링 플랫폼입니다.
 - **Circleback**: 회의 내용을 자동 요약하고 액션 아이템을 정리하는 미팅 노트 서비스입니다.
 - **ClickUp**: 작업, 문서, 프로젝트 관리를 한곳에 모은 올인원 협업 툴입니다.
@@ -131,6 +132,7 @@ comment: true
 - **KeyBid Puls**: 단기 임대 투자 수익성을 계산하는 부동산 분석 서비스입니다.
 - **Linear**: 빠르고 간결한 UI로 유명한 이슈 및 프로젝트 관리 도구입니다.
 - **Mem**: 개인 메모와 지식을 정리하는 노트/세컨드 브레인 서비스입니다.
+- **Messages**: macOS Messages 앱에서 대화 검색, 메시지 읽기, 전송을 다루는 OpenAI 번들 플러그인입니다.
 - **Meticulate**: 회사 매칭과 기업 속성 조회로 GTM 계정 정보를 정리하는 인텔리전스 도구입니다.
 - **Mixpanel**: 제품 사용 이벤트와 사용자 행동 데이터를 분석하는 프로덕트 애널리틱스 플랫폼입니다.
 - **Mixpanel Headless**: Python SDK와 Codex 스킬로 Mixpanel 데이터를 분석하는 헤드리스 분석 플러그인입니다.
