@@ -1,6 +1,6 @@
 ---
-title: Codex App 플러그인·스킬 199선
-description: Codex App 공식 마켓플레이스, OpenAI 번들 플러그인, 시스템 스킬 199개를 소개합니다.
+title: Codex App 플러그인·스킬 200선
+description: Codex App 공식 마켓플레이스, OpenAI 번들 플러그인, 시스템 스킬 200개를 소개합니다.
 head:
   - - meta
     - name: keywords
@@ -12,9 +12,9 @@ comment: true
 이 글은 GPT-5.4 모델을 사용해 작성했습니다.
 :::
 
-# Codex App 플러그인·스킬 199선
+# Codex App 플러그인·스킬 200선
 
-2026년 9월 1일 기준, `Codex APP`의 공식 마켓플레이스, OpenAI 번들 플러그인, 시스템 스킬 199개를 정리했습니다.
+2026년 9월 8일 기준, `Codex APP`의 공식 마켓플레이스, OpenAI 번들 플러그인, 시스템 스킬 200개를 정리했습니다.
 
 ## 개발 · 엔지니어링
 
@@ -104,6 +104,7 @@ comment: true
 - **Close**: 리드, 기회, 활동, 영업 파이프라인을 관리하는 CRM 플랫폼입니다.
 - **Common Room**: 구매자와 커뮤니티 신호를 모아주는 GTM 인텔리전스 플랫폼입니다.
 - **Computer Use**: Codex가 허용된 macOS 앱을 조작해 데스크톱 작업을 수행하도록 돕는 OpenAI 번들 플러그인입니다.
+- **unified-computer-use**: 브라우저와 앱 자동화를 Codex 앱이 관리하는 런타임으로 연결하는 OpenAI 번들 플러그인입니다.
 - **Conductor**: SEO와 디지털 가시성 관리에 강한 마케팅 플랫폼입니다.
 - **Coupler.io**: 여러 SaaS 데이터를 연결해 시트나 데이터 저장소로 옮겨주는 데이터 파이프라인 도구입니다.
 - **Coveo**: 기업용 검색과 추천 경험을 제공하는 엔터프라이즈 서치 플랫폼입니다.
