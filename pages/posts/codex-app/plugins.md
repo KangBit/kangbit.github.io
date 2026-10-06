@@ -1,6 +1,6 @@
 ---
-title: Codex App 플러그인·스킬 197선
-description: Codex App 공식 마켓플레이스, OpenAI 번들 플러그인, 시스템 스킬 197개를 소개합니다.
+title: Codex App 플러그인·스킬 198선
+description: Codex App 공식 마켓플레이스, OpenAI 번들 플러그인, 시스템 스킬 198개를 소개합니다.
 head:
   - - meta
     - name: keywords
@@ -12,9 +12,9 @@ comment: true
 이 글은 GPT-5.4 모델을 사용해 작성했습니다.
 :::
 
-# Codex App 플러그인·스킬 197선
+# Codex App 플러그인·스킬 198선
 
-2026년 9월 29일 기준, `Codex APP`의 공식 마켓플레이스, OpenAI 번들 플러그인, 시스템 스킬 197개를 정리했습니다.
+2026년 10월 6일 기준, `Codex APP`의 공식 마켓플레이스, OpenAI 번들 플러그인, 시스템 스킬 198개를 정리했습니다.
 
 ## 개발 · 엔지니어링
 
@@ -28,6 +28,7 @@ comment: true
 - **Cloudflare**: CDN, DNS, Workers, Pages, 보안 기능까지 제공하는 웹 인프라 플랫폼입니다.
 - **Cloudinary**: 이미지와 비디오 같은 미디어 자산을 저장, 변환, 최적화하는 클라우드 미디어 플랫폼입니다.
 - **CodeRabbit**: PR 리뷰와 코드 품질 점검을 돕는 AI 코드 리뷰 서비스입니다.
+- **Code Review**: GitHub PR 탐색, 요약, diff, 코멘트, 리뷰·머지 작업을 Codex에서 다루는 OpenAI 번들 플러그인입니다.
 - **Codex Security**: 코드베이스와 변경 사항을 대상으로 보안 스캔, 분석, 위협 모델링을 수행하는 보안 워크플로 플러그인입니다.
 - **Catalyst by Zoho**: Zoho Catalyst 기반 앱과 백엔드 개발 흐름을 지원하는 개발 플랫폼 플러그인입니다.
 - **Convex**: JavaScript와 TypeScript 앱에 반응형 데이터베이스, 서버 함수, 백엔드 구조를 붙이는 개발 플랫폼입니다.
