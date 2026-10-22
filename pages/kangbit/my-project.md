@@ -9,7 +9,7 @@ next: false
 
 # 개인 프로젝트
 
-## [gyeolsori (결소리)](https://gyeolsori.com/)
+## [결소리](https://gyeolsori.com/)
 
 <Badge type='tip' text='React 19' />
 <Badge type='info' text='Vite' />
@@ -54,7 +54,7 @@ Vercel 배포 환경을 활용해 빠르게 실험하고 개선할 수 있는 �
 
 :::
 
-## Vue Document PIP ([vue-pip](https://www.npmjs.com/package/vue-pip))
+## [vue-pip](https://www.npmjs.com/package/vue-pip)
 
 <Badge type='tip' text='Vue3' />
 <Badge type='info' text='typescript' />
