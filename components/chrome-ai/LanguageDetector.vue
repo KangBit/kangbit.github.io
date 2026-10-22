@@ -1,7 +1,11 @@
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 
-const isBrowserSupported = "LanguageDetector" in self;
+const isBrowserSupported = ref(false);
+
+onMounted(() => {
+  isBrowserSupported.value = "LanguageDetector" in self;
+});
 
 const detectedLanguage = ref([]);
 const isLoading = ref(false);
@@ -42,7 +46,7 @@ const detectLanguage = async (e) => {
 };
 
 const getDetector = async (languages, signal) => {
-  if (!isBrowserSupported) {
+  if (!isBrowserSupported.value) {
     throw new Error("Language Detector is not supported in this browser");
   }
 

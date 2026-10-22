@@ -15,7 +15,13 @@
 </template>
 
 <script setup>
-const isPipSupported = "documentPictureInPicture" in window;
+import { ref, onMounted } from "vue";
+
+const isPipSupported = ref(false);
+
+onMounted(() => {
+  isPipSupported.value = "documentPictureInPicture" in window;
+});
 
 const openPip = async () => {
   await window.documentPictureInPicture.requestWindow({

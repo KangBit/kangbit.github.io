@@ -9,6 +9,28 @@ next: false
 
 # 개인 프로젝트
 
+## [gyeolsori (결소리)](https://gyeolsori.com/)
+
+<Badge type='tip' text='React 19' />
+<Badge type='info' text='Vite' />
+<Badge type='info' text='ONNX Runtime Web' />
+<Badge type='info' text='Web Audio API' />
+<Badge type='info' text='WebGPU / WASM' />
+
+:::details 상세 {open}
+
+브라우저에서 음원을 악기별로 분리하고 자동·수동 마스터링할 수 있는 오디오 도구입니다.
+
+보컬·드럼·베이스·피아노·기타·그 외 악기까지 6개 트랙으로 분리하고,
+
+트랙별 재생과 음량 조절, 선택 트랙 믹스와 WAV·ZIP 다운로드를 지원합니다.
+
+ONNX Runtime Web과 WebGPU·WASM을 활용해 음원 파일을 서버에 업로드하지 않고 기기에서 처리합니다.
+
+Web Audio API를 활용한 마스터링과 한국어·영어 지원을 구현했습니다.
+
+:::
+
 ## [pip-tools](https://www.pip-tools.com/tools)
 
 <Badge type='tip' text='Next 16' />

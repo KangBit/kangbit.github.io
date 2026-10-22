@@ -1,6 +1,6 @@
 ---
-title: Codex App 플러그인·스킬 197선
-description: Codex App 공식 마켓플레이스, OpenAI 번들 플러그인, 시스템 스킬 197개를 소개합니다.
+title: Codex App 플러그인·스킬 198선
+description: Codex App 공식 마켓플레이스, OpenAI 번들 플러그인, 시스템 스킬 198개를 소개합니다.
 head:
   - - meta
     - name: keywords
@@ -12,9 +12,9 @@ comment: true
 이 글은 GPT-5.4 모델을 사용해 작성했습니다.
 :::
 
-# Codex App 플러그인·스킬 197선
+# Codex App 플러그인·스킬 198선
 
-2026년 8월 11일 기준, `Codex APP`의 공식 마켓플레이스, OpenAI 번들 플러그인, 시스템 스킬 197개를 정리했습니다.
+2026년 10월 20일 기준, `Codex APP`의 공식 마켓플레이스, OpenAI 번들 플러그인, 시스템 스킬 198개를 정리했습니다.
 
 ## 개발 · 엔지니어링
 
@@ -28,6 +28,7 @@ comment: true
 - **Cloudflare**: CDN, DNS, Workers, Pages, 보안 기능까지 제공하는 웹 인프라 플랫폼입니다.
 - **Cloudinary**: 이미지와 비디오 같은 미디어 자산을 저장, 변환, 최적화하는 클라우드 미디어 플랫폼입니다.
 - **CodeRabbit**: PR 리뷰와 코드 품질 점검을 돕는 AI 코드 리뷰 서비스입니다.
+- **Code Review**: GitHub PR 탐색, 요약, diff, 코멘트, 리뷰·머지 작업을 Codex에서 다루는 OpenAI 번들 플러그인입니다.
 - **Codex Security**: 코드베이스와 변경 사항을 대상으로 보안 스캔, 분석, 위협 모델링을 수행하는 보안 워크플로 플러그인입니다.
 - **Catalyst by Zoho**: Zoho Catalyst 기반 앱과 백엔드 개발 흐름을 지원하는 개발 플랫폼 플러그인입니다.
 - **Convex**: JavaScript와 TypeScript 앱에 반응형 데이터베이스, 서버 함수, 백엔드 구조를 붙이는 개발 플랫폼입니다.
@@ -96,6 +97,7 @@ comment: true
 - **Carta CRM**: 투자팀과 벤처캐피털 문맥에 맞춘 관계 관리형 CRM 서비스입니다.
 - **Channel99**: B2B 마케팅 성과와 채널 효율을 측정하는 GTM 인텔리전스 플랫폼입니다.
 - **Chrome**: 기존 Chrome 탭과 로그인 세션이 필요한 웹 작업을 Codex에서 다룰 수 있게 해주는 OpenAI 번들 플러그인입니다.
+- **codex-app-tools**: Codex 데스크톱 앱 도구를 로컬 MCP 서버로 노출하는 OpenAI 번들 플러그인입니다.
 - **Calendly**: 미팅 이벤트와 예약 가능 시간을 검색해 일정 조율 문맥을 다루는 스케줄링 플랫폼입니다.
 - **Circleback**: 회의 내용을 자동 요약하고 액션 아이템을 정리하는 미팅 노트 서비스입니다.
 - **ClickUp**: 작업, 문서, 프로젝트 관리를 한곳에 모은 올인원 협업 툴입니다.
@@ -103,6 +105,7 @@ comment: true
 - **Close**: 리드, 기회, 활동, 영업 파이프라인을 관리하는 CRM 플랫폼입니다.
 - **Common Room**: 구매자와 커뮤니티 신호를 모아주는 GTM 인텔리전스 플랫폼입니다.
 - **Computer Use**: Codex가 허용된 macOS 앱을 조작해 데스크톱 작업을 수행하도록 돕는 OpenAI 번들 플러그인입니다.
+- **unified-computer-use**: 브라우저와 앱 자동화를 Codex 앱이 관리하는 런타임으로 연결하는 OpenAI 번들 플러그인입니다.
 - **Conductor**: SEO와 디지털 가시성 관리에 강한 마케팅 플랫폼입니다.
 - **Coupler.io**: 여러 SaaS 데이터를 연결해 시트나 데이터 저장소로 옮겨주는 데이터 파이프라인 도구입니다.
 - **Coveo**: 기업용 검색과 추천 경험을 제공하는 엔터프라이즈 서치 플랫폼입니다.
@@ -150,7 +153,6 @@ comment: true
 - **Ranked AI**: SEO와 PPC 운영을 돕는 마케팅 자동화 서비스입니다.
 - **Razorpay**: 인도 시장에서 널리 쓰이는 결제 인프라 플랫폼입니다.
 - **Read AI**: 회의 기록과 요약을 제공하는 미팅 인텔리전스 서비스입니다.
-- **Record & Replay**: Mac에서 수행하는 작업을 녹화해 반복 가능한 스킬로 만드는 OpenAI 번들 플러그인입니다.
 - **Responsive**: 제안서와 RFP 대응 문서를 관리하는 응답 자동화 플랫폼입니다.
 - **Rox**: 매출 조직의 계정 인텔리전스와 세일즈 워크플로 자동화를 지원하는 플랫폼입니다.
 - **Semrush**: SEO, 키워드, 백링크 분석에 강한 대표적 마케팅 도구입니다.
@@ -188,7 +190,6 @@ comment: true
 - **Fiscal AI**: 기업 펀더멘털, 공시, 시장 인사이트를 중심으로 금융 리서치를 지원하는 플러그인입니다.
 - **GovTribe**: 미국 정부 조달과 계약 정보를 탐색하는 공공 조달 인텔리전스 서비스입니다.
 - **Hebbia**: 문서 리서치, 근거 기반 답변, 프로젝트 분석을 지원하는 지식 작업 플랫폼입니다.
-- **LaTeX**: 번들 Tectonic을 우선 사용하고 필요하면 TeX Live나 MacTeX로 폴백해 LaTeX 문서를 컴파일하는 OpenAI 번들 플러그인입니다.
 - **Life Science Research**: 생명과학 연구 질의와 근거 수집을 위한 리서치형 플러그인입니다.
 - **LSEG**: 금융 시장 데이터, 기업 정보, 뉴스 문맥을 제공하는 글로벌 금융 정보 플랫폼입니다.
 - **Midpage**: 판례, 법령, 규정, 인용 기반 메모를 다루는 법률 리서치 플랫폼입니다.
