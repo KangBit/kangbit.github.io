@@ -14,6 +14,7 @@ import CarouselItem from '@/components/CarouselItem.vue'
 
 ## 스마트스코어 앱
 
+<!-- 이미지 노출 숨김
 <CarouselContainer :images="smartscoreAppImages">
   <CarouselItem style="width: 60%; scrollSnapStop: always">
     <img src="/assets/images/smartscore/smartscoreapp001.png"/>
@@ -31,3 +32,4 @@ import CarouselItem from '@/components/CarouselItem.vue'
     <img src="/assets/images/smartscore/smartscoreapp0302.png"/>
   </CarouselItem>
 </CarouselContainer>
+-->

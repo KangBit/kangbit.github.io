@@ -8,6 +8,8 @@ next: false
 ---
 
 <script setup>
+// 이미지 노출 숨김 처리 ( 복구 시 아래 주석 해제 )
+/*
 import ProjectGallery from "@/components/ProjectGallery.vue";
 import appHomeImage from "@/assets/images/career/app_.webp";
 import appForcetellerImage from "@/assets/images/career/app_forceteller.webp";
@@ -86,6 +88,7 @@ const smartscoreAppImages = [
   { src: appLivescorePaymentImage, title: "라이브스코어 결제" },
   { src: appSpeedgameImage, title: "스피드게임" },
 ];
+*/
 </script>
 
 # 스마트스코어 ( 2022-08 ~ )
@@ -139,6 +142,7 @@ PC 서비스는 골프장별 코스 상태, 작업 현황, 자재 및 장비 사
 - 사진 등록, 권한 처리, 로그인/라우팅/네이티브 연동 흐름 개선<br>
 - Android/iOS UI 이슈, QA, 다국어/i18n, 문구·레이아웃 결함 대응<br>
 
+<!-- 이미지 노출 숨김
 **PC**
 
 <ProjectGallery :images="courseWebImages" />
@@ -146,6 +150,7 @@ PC 서비스는 골프장별 코스 상태, 작업 현황, 자재 및 장비 사
 **모바일**
 
 <ProjectGallery :images="courseMobileImages" layout="portrait" />
+-->
 
 :::
 
@@ -167,7 +172,9 @@ PC 서비스는 골프장별 코스 상태, 작업 현황, 자재 및 장비 사
 - 계정 신청, 승인/거절, 상태 변경, 삭제 요청 등 관리자 계정 관리 기능 개발<br>
 - ISMS 비밀번호 정책, 비밀번호 검증 regex, 계정 삭제 제한 등 보안/정책성 요구사항 반영<br>
 
+<!-- 이미지 노출 숨김
 <ProjectGallery :images="cloudImages" />
+-->
 
 :::
 
@@ -194,7 +201,9 @@ PC 서비스는 골프장별 코스 상태, 작업 현황, 자재 및 장비 사
 - 라운드 데이터와 통계를 확인할 수 있는 대시보드 화면 구현<br>
 - 핀 포지션 위치 조회/수정 화면 구현 및 Canvas 로직 분리<br>
 
+<!-- 이미지 노출 숨김
 <ProjectGallery :images="clubPageImages" />
+-->
 
 <!-- 프로젝트 구조 설계 및 각종 컴포넌트 구현 -->
 <!--
@@ -249,7 +258,9 @@ AccountLayout, DashboardLayout 구현<br>
 기획·디자인·백엔드·Android/iOS 개발자와 요구사항을 조율하며 화면 설계, API 연동, WebView 이슈 대응, QA까지 진행했습니다.<br>
 서비스별로 반복되는 UI와 상태 처리 로직은 공통화하고, 실시간 채팅·알림·결제·공유 같은 앱 연동 기능은 Native 동작까지 함께 확인하며 개선했습니다.<br>
 
+<!-- 이미지 노출 숨김
 <ProjectGallery :images="smartscoreAppImages" layout="portrait" />
+-->
 
 :::
 
