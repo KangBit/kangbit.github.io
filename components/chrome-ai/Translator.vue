@@ -1,7 +1,11 @@
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 
-const isBrowserSupported = "Translator" in self;
+const isBrowserSupported = ref(false);
+
+onMounted(() => {
+  isBrowserSupported.value = "Translator" in self;
+});
 
 const translatedText = ref("");
 const isLoading = ref(false);
@@ -43,7 +47,7 @@ const translateText = async (e) => {
 };
 
 const getTranslator = async (sourceLanguage, targetLanguage, signal) => {
-  if (!isBrowserSupported) {
+  if (!isBrowserSupported.value) {
     throw new Error("Translator is not supported in this browser");
   }
 

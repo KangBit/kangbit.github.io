@@ -1,7 +1,11 @@
 <script setup>
-import { ref, onUnmounted } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
 
-const isBrowserSupported = "Summarizer" in self;
+const isBrowserSupported = ref(false);
+
+onMounted(() => {
+  isBrowserSupported.value = "Summarizer" in self;
+});
 
 const summary = ref("");
 const isLoading = ref(false);
@@ -15,7 +19,7 @@ const inputText = ref(
 const summarizerRef = ref(null);
 
 const getSummarizer = async () => {
-  if (!isBrowserSupported) {
+  if (!isBrowserSupported.value) {
     throw new Error("Summarizer API is not supported in this browser");
   }
 

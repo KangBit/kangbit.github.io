@@ -21,9 +21,13 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 
-const isPipSupported = "documentPictureInPicture" in window;
+const isPipSupported = ref(false);
+
+onMounted(() => {
+  isPipSupported.value = "documentPictureInPicture" in window;
+});
 const pipContainer = ref(null);
 const isPipOpen = ref(false);
 
