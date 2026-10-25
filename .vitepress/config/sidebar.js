@@ -265,6 +265,39 @@ const devKeywordPages = {
 };
 
 export default {
+  "/learn/stocks/": [
+    {
+      text: "주식 학습",
+      items: [{ text: "로드맵", link: "/learn/stocks/" }],
+    },
+  ],
+  "/learn/languages/": [
+    {
+      text: "JavaScript",
+      collapsed: true,
+      items: [{ text: "로드맵", link: "/learn/languages/javascript" }],
+    },
+    {
+      text: "TypeScript",
+      collapsed: true,
+      items: [{ text: "로드맵", link: "/learn/languages/typescript" }],
+    },
+    {
+      text: "Python",
+      collapsed: true,
+      items: [{ text: "로드맵", link: "/learn/languages/python" }],
+    },
+    {
+      text: "Java",
+      collapsed: true,
+      items: [{ text: "로드맵", link: "/learn/languages/java" }],
+    },
+    {
+      text: "Go",
+      collapsed: true,
+      items: [{ text: "로드맵", link: "/learn/languages/go" }],
+    },
+  ],
   "/learn/frontend/": [
     {
       text: "프론트엔드 학습",
