@@ -265,6 +265,22 @@ const devKeywordPages = {
 };
 
 export default {
+  "/learn/frontend/": [
+    {
+      text: "프론트엔드 학습",
+      items: [
+        { text: "로드맵", link: "/learn/frontend/" },
+      ],
+    },
+  ],
+  "/learn/backend/": [
+    {
+      text: "백엔드 학습",
+      items: [
+        { text: "로드맵", link: "/learn/backend/" },
+      ],
+    },
+  ],
   ...vitePressPages,
   ...bitPages,
   ...linksPages,

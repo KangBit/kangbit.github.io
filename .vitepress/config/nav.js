@@ -7,6 +7,14 @@ const postMenu = {
   link: "/posts",
 };
 
+const learningMenu = {
+  text: "학습",
+  items: [
+    { text: "프론트엔드", link: "/learn/frontend/" },
+    { text: "백엔드", link: "/learn/backend/" },
+  ],
+};
+
 const devMenu = {
   text: "개발",
   items: [
@@ -46,4 +54,4 @@ const linkMenu = {
   ],
 };
 
-export default [homeMenu, bitMenu, postMenu, devMenu, linkMenu];
+export default [homeMenu, bitMenu, postMenu, learningMenu, devMenu, linkMenu];
