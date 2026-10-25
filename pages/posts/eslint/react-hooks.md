@@ -14,7 +14,7 @@ comment: true
 이 문서는 ChatGPT 5.5를 통해 작성되었습니다.
 :::
 
-기준일: 2026-04-29  
+기준일: 2026-10-25  
 기준 버전: `eslint-plugin-react-hooks@7.1.1`  
 출처: [npm eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks), 패키지 배포본의 `rules` 메타데이터
 

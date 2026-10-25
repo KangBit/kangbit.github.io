@@ -14,9 +14,11 @@ comment: true
 이 문서는 ChatGPT 5.5를 통해 작성되었습니다.
 :::
 
-기준일: 2026-04-29  
-기준 버전: `@eslint/js@10.2.1`  
+기준일: 2026-10-25  
+기준 버전: `eslint@10.13.0`, `@eslint/js@10.0.1`  
 출처: [ESLint Rules Reference](https://eslint.org/docs/latest/rules/)
+
+`@eslint/js`는 ESLint 코어 규칙의 설정 프리셋을 제공합니다. 아래 규칙 목록은 `eslint@10.13.0`을 기준으로 하며, deprecated 규칙은 제외합니다.
 
 ## Possible Problems
 

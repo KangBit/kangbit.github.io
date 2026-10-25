@@ -14,8 +14,8 @@ comment: true
 이 문서는 ChatGPT 5.5를 통해 작성되었습니다.
 :::
 
-기준일: 2026-04-29  
-기준 버전: `typescript-eslint@8.59.1`  
+기준일: 2026-10-25  
+기준 버전: `typescript-eslint@8.72.0`  
 출처: [typescript-eslint Rules](https://typescript-eslint.io/rules/), [typescript-eslint package](https://typescript-eslint.io/packages/typescript-eslint/)
 
 ## 규칙 목록
@@ -64,6 +64,7 @@ comment: true
 | `no-extraneous-class`                          | namespace처럼만 쓰이는 불필요한 클래스를 금지합니다.                                   |
 | `no-floating-promises`                         | 처리되지 않은 Promise를 금지합니다.                                                    |
 | `no-for-in-array`                              | 배열에 `for-in` 루프를 사용하는 실수를 금지합니다.                                     |
+| `no-generated-empty-object-type`                | 타입 연산 결과가 빈 객체 타입(`{}`)이 되는 것을 금지합니다. |
 | `no-implied-eval`                              | `eval()`처럼 동작할 수 있는 함수 사용을 금지합니다.                                    |
 | `no-import-type-side-effects`                  | 타입 전용 import가 런타임 side effect import로 남는 패턴을 방지합니다.                 |
 | `no-inferrable-types`                          | 쉽게 추론 가능한 원시 타입 명시를 금지합니다.                                          |
@@ -103,6 +104,7 @@ comment: true
 | `no-unsafe-assignment`                         | `any` 값을 변수나 속성에 할당하는 것을 금지합니다.                                     |
 | `no-unsafe-call`                               | `any` 타입 값을 함수처럼 호출하는 것을 금지합니다.                                     |
 | `no-unsafe-declaration-merging`                | class와 interface의 위험한 선언 병합을 금지합니다.                                     |
+| `no-unsafe-enum-assignment`                    | enum 타입 위치에 enum이 아닌 값을 할당하는 것을 금지합니다. |
 | `no-unsafe-enum-comparison`                    | enum 값과 enum이 아닌 값을 비교하는 것을 금지합니다.                                   |
 | `no-unsafe-function-type`                      | 너무 넓은 내장 `Function` 타입 사용을 금지합니다.                                      |
 | `no-unsafe-member-access`                      | `any` 값의 멤버 접근을 금지합니다.                                                     |

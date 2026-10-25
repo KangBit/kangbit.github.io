@@ -14,8 +14,8 @@ comment: true
 이 문서는 ChatGPT 5.5를 통해 작성되었습니다.
 :::
 
-기준일: 2026-04-29  
-기준 버전: `eslint-plugin-vue@10.4.0`  
+기준일: 2026-10-25  
+기준 버전: `eslint-plugin-vue@10.11.1`  
 출처: [eslint-plugin-vue Available rules](https://eslint.vuejs.org/rules/), [npm eslint-plugin-vue](https://www.npmjs.com/package/eslint-plugin-vue)
 
 ## Base Rules
@@ -212,6 +212,7 @@ comment: true
 | `no-restricted-v-on` | `v-on`에서 지정한 인자 사용을 금지합니다. |
 | `no-root-v-if` | root element에 `v-if`를 사용하는 것을 금지합니다. |
 | `no-setup-props-reactivity-loss` | `setup`에 전달된 `props`의 반응성을 잃게 만드는 사용을 금지합니다. |
+| `no-shadow-native-events` | 네이티브 웹 이벤트와 이름이 겹치는 커스텀 이벤트 선언을 금지합니다. |
 | `no-static-inline-styles` | 정적 inline `style` attribute 사용을 금지합니다. |
 | `no-template-target-blank` | `target="_blank"` 사용 시 안전한 `rel` 값을 요구합니다. |
 | `no-this-in-before-route-enter` | `beforeRouteEnter` 메서드 안에서 `this` 사용을 금지합니다. |

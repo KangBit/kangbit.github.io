@@ -14,7 +14,7 @@ comment: true
 이 문서는 ChatGPT 5.5를 통해 작성되었습니다.
 :::
 
-기준일: 2026-04-29  
+기준일: 2026-10-25  
 기준 버전: `@stylistic/eslint-plugin@5.10.0`  
 출처: [npm @stylistic/eslint-plugin](https://www.npmjs.com/package/@stylistic/eslint-plugin), 패키지 배포본의 `rules` 메타데이터
 

@@ -14,8 +14,8 @@ comment: true
 이 문서는 ChatGPT 5.5를 통해 작성되었습니다.
 :::
 
-기준일: 2026-04-29  
-기준 버전: `@next/eslint-plugin-next@16.2.4`  
+기준일: 2026-10-25  
+기준 버전: `@next/eslint-plugin-next@16.4.3`  
 출처: [npm @next/eslint-plugin-next](https://www.npmjs.com/package/@next/eslint-plugin-next), 패키지 배포본의 `rules` 메타데이터
 
 ## 규칙 목록
@@ -36,6 +36,7 @@ comment: true
 | `no-head-import-in-document`                    | `pages/_document.js`에서 `next/head`를 사용하지 못하게 합니다.                                    |
 | `no-html-link-for-pages`                        | 내부 Next.js 페이지 이동에 일반 `<a>` 요소를 쓰지 않도록 합니다.                                  |
 | `no-img-element`                                | LCP와 대역폭 최적화를 위해 일반 `<img>` 요소 사용을 경고합니다.                                   |
+| `no-location-assign-relative-destination`       | 내부 Next.js 페이지 이동에 `location.assign()` 또는 `location.href` 대입을 사용하지 못하게 합니다. |
 | `no-page-custom-font`                           | 특정 페이지에만 custom font를 넣는 패턴을 금지합니다.                                             |
 | `no-script-component-in-head`                   | `next/head` 안에서 `next/script`를 사용하지 못하게 합니다.                                        |
 | `no-styled-jsx-in-document`                     | `pages/_document.js`에서 `styled-jsx` 사용을 금지합니다.                                          |
