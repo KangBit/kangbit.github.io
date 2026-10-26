@@ -10,7 +10,7 @@ const postMenu = {
 const learningMenu = {
   text: "학습",
   items: [
-    { text: "언어", link: "/learn/languages/javascript" },
+    { text: "언어", link: "/learn/languages/" },
     { text: "프론트엔드", link: "/learn/frontend/" },
     { text: "백엔드", link: "/learn/backend/" },
     { text: "주식", link: "/learn/stocks/" },
@@ -35,7 +35,7 @@ const linkMenu = {
     {
       items: [
         { text: "JS", link: "/posts/links/javascript" },
-        { text: "CSS", link: "/posts/links/typescript" },
+        { text: "CSS", link: "/posts/links/css" },
       ],
     },
     {

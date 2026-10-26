@@ -273,29 +273,15 @@ export default {
   ],
   "/learn/languages/": [
     {
-      text: "JavaScript",
-      collapsed: true,
-      items: [{ text: "로드맵", link: "/learn/languages/javascript" }],
-    },
-    {
-      text: "TypeScript",
-      collapsed: true,
-      items: [{ text: "로드맵", link: "/learn/languages/typescript" }],
-    },
-    {
-      text: "Python",
-      collapsed: true,
-      items: [{ text: "로드맵", link: "/learn/languages/python" }],
-    },
-    {
-      text: "Java",
-      collapsed: true,
-      items: [{ text: "로드맵", link: "/learn/languages/java" }],
-    },
-    {
-      text: "Go",
-      collapsed: true,
-      items: [{ text: "로드맵", link: "/learn/languages/go" }],
+      text: "언어 학습",
+      items: [
+        { text: "개요", link: "/learn/languages/" },
+        { text: "JavaScript", link: "/learn/languages/javascript" },
+        { text: "TypeScript", link: "/learn/languages/typescript" },
+        { text: "Python", link: "/learn/languages/python" },
+        { text: "Java", link: "/learn/languages/java" },
+        { text: "Go", link: "/learn/languages/go" },
+      ],
     },
   ],
   "/learn/frontend/": [
