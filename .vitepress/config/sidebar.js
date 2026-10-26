@@ -274,27 +274,27 @@ export default {
   "/learn/languages/": [
     {
       text: "JavaScript",
-      collapsed: false,
+      collapsed: true,
       items: [{ text: "로드맵", link: "/learn/languages/javascript" }],
     },
     {
       text: "TypeScript",
-      collapsed: false,
+      collapsed: true,
       items: [{ text: "로드맵", link: "/learn/languages/typescript" }],
     },
     {
       text: "Python",
-      collapsed: false,
+      collapsed: true,
       items: [{ text: "로드맵", link: "/learn/languages/python" }],
     },
     {
       text: "Java",
-      collapsed: false,
+      collapsed: true,
       items: [{ text: "로드맵", link: "/learn/languages/java" }],
     },
     {
       text: "Go",
-      collapsed: false,
+      collapsed: true,
       items: [{ text: "로드맵", link: "/learn/languages/go" }],
     },
   ],
