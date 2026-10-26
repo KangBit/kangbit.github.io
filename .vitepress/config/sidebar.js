@@ -275,7 +275,14 @@ export default {
     {
       text: "JavaScript",
       collapsed: true,
-      items: [{ text: "로드맵", link: "/learn/languages/javascript" }],
+      items: [
+        { text: "로드맵", link: "/learn/languages/javascript/" },
+        { text: "01. 실행 환경과 기본 문법", link: "/learn/languages/javascript/basics" },
+        { text: "02. 함수와 데이터 처리", link: "/learn/languages/javascript/functions" },
+        { text: "03. 스코프와 객체 모델", link: "/learn/languages/javascript/scope" },
+        { text: "04. 비동기 처리", link: "/learn/languages/javascript/async" },
+        { text: "05. 모듈과 검증", link: "/learn/languages/javascript/modules" },
+      ],
     },
     {
       text: "TypeScript",
