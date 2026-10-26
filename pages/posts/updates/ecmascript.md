@@ -10,6 +10,16 @@ comment: true
 
 # ECMAScript
 
+## ES2026
+
+- Array.fromAsync (비동기 이터러블 → 배열)
+- Error.isError (`instanceof Error`보다 안전한 에러 판별)
+- Math.sumPrecise (부동소수점 오차 없는 합계)
+- Uint8Array Base64 / Hex 변환 (`toBase64` / `fromBase64` / `toHex` / `fromHex`)
+- Iterator.concat (이터레이터 이어붙이기)
+- JSON.parse source 접근 (reviver의 `source` / `JSON.rawJSON`)
+- Map / WeakMap getOrInsert (upsert)
+
 ## ES2025
 
 - Set 메서드 (intersection / union / difference / ...)
@@ -18,6 +28,9 @@ comment: true
 - JSON Modules
 - Promise.try
 - RegExp.escape
+- RegExp 인라인 모디파이어 (`(?i:...)` / `(?-i:...)`)
+- RegExp 중복 명명 캡처 그룹 (서로 다른 분기에서 같은 이름 허용)
+- Float16Array / Math.f16round / DataView getFloat16 · setFloat16
 
 ## ES2024
 
