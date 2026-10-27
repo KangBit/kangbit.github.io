@@ -1,6 +1,6 @@
 ---
-title: Codex App 플러그인·스킬 198선
-description: Codex App 공식 마켓플레이스, OpenAI 번들 플러그인, 시스템 스킬 198개를 소개합니다.
+title: Codex App 플러그인·스킬 201선
+description: Codex App 공식 마켓플레이스, OpenAI 번들 플러그인, 시스템 스킬 201개를 소개합니다.
 head:
   - - meta
     - name: keywords
@@ -12,9 +12,11 @@ comment: true
 이 글은 GPT-5.4 모델을 사용해 작성했습니다.
 :::
 
-# Codex App 플러그인·스킬 198선
+# Codex App 플러그인·스킬 201선
 
-2026년 10월 20일 기준, `Codex APP`의 공식 마켓플레이스, OpenAI 번들 플러그인, 시스템 스킬 198개를 정리했습니다.
+2026년 10월 27일 기준, `Codex APP`의 공식 마켓플레이스, OpenAI 번들 플러그인, 시스템 스킬 201개를 정리했습니다.
+
+현재 로컬 메타데이터에는 공식 마켓플레이스 플러그인 180개와 OpenAI 번들·런타임 플러그인 14개가 있습니다. 아래 목록은 기존 Code Review·Sites 항목과 시스템 스킬 5개를 포함해 총 201개이며, Code Review·Sites는 현재 메타데이터에서 확인되지 않아 기존 항목을 유지했습니다.
 
 ## 개발 · 엔지니어링
 
@@ -133,6 +135,7 @@ comment: true
 - **Jam**: 화면 녹화와 버그 리포트를 쉽게 남길 수 있는 협업용 캡처 도구입니다.
 - **KeyBid Puls**: 단기 임대 투자 수익성을 계산하는 부동산 분석 서비스입니다.
 - **Linear**: 빠르고 간결한 UI로 유명한 이슈 및 프로젝트 관리 도구입니다.
+- **Messages**: macOS 메시지 앱에서 대화를 찾고 메시지 기록을 읽거나 검색하며 메시지와 첨부 파일을 보내는 OpenAI 번들 플러그인입니다.
 - **Mem**: 개인 메모와 지식을 정리하는 노트/세컨드 브레인 서비스입니다.
 - **Meticulate**: 회사 매칭과 기업 속성 조회로 GTM 계정 정보를 정리하는 인텔리전스 도구입니다.
 - **Mixpanel**: 제품 사용 이벤트와 사용자 행동 데이터를 분석하는 프로덕트 애널리틱스 플랫폼입니다.
@@ -153,6 +156,7 @@ comment: true
 - **Ranked AI**: SEO와 PPC 운영을 돕는 마케팅 자동화 서비스입니다.
 - **Razorpay**: 인도 시장에서 널리 쓰이는 결제 인프라 플랫폼입니다.
 - **Read AI**: 회의 기록과 요약을 제공하는 미팅 인텔리전스 서비스입니다.
+- **Record & Replay**: Mac에서 수행하는 작업을 기록해 재사용 가능한 자동화 스킬로 만드는 OpenAI 번들 플러그인입니다.
 - **Responsive**: 제안서와 RFP 대응 문서를 관리하는 응답 자동화 플랫폼입니다.
 - **Rox**: 매출 조직의 계정 인텔리전스와 세일즈 워크플로 자동화를 지원하는 플랫폼입니다.
 - **Semrush**: SEO, 키워드, 백링크 분석에 강한 대표적 마케팅 도구입니다.
@@ -215,6 +219,7 @@ comment: true
 - **Box**: 기업용 클라우드 파일 저장과 문서 협업에 강한 콘텐츠 관리 플랫폼입니다.
 - **Documents**: Word와 Google Docs 대상 문서 아티팩트를 만들고 편집, 렌더링, 검증하는 OpenAI 번들 플러그인입니다.
 - **Google Drive**: Google의 파일 저장소이자 Docs, Sheets, Slides와 연결되는 문서 허브입니다.
+- **LaTeX**: 번들 Tectonic이나 TeX Live, MacTeX로 LaTeX 문서를 컴파일하고 로컬 TeX 실행 환경을 점검하는 OpenAI 번들 플러그인입니다.
 - **PDF**: PDF 파일을 읽고 만들며 렌더링과 레이아웃을 검증하는 OpenAI 번들 플러그인입니다.
 - **Spreadsheets**: XLSX, CSV, TSV와 Google Sheets 대상 스프레드시트를 만들고 분석, 시각화, 내보내기까지 다루는 OpenAI 번들 플러그인입니다.
 - **Template Creator**: DOCX, PPTX, XLSX 참조 파일을 재사용 가능한 개인 템플릿 스킬로 만드는 OpenAI 번들 플러그인입니다.
