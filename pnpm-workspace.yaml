@@ -1,3 +1,9 @@
+# vitepress 1.6.4가 고정한 vite 5는 esbuild ^0.21.3을 받는다.
+# GHSA-67mh-4wv8-2f99 패치(0.25.0+)를 받기 위해 강제로 올리며,
+# 0.27 이상은 vite 5의 빌드 타깃에서 destructuring 변환이 깨져 0.26.0이 상한이다.
+overrides:
+  esbuild: 0.26.0
+
 allowBuilds:
   '@parcel/watcher': true
   esbuild: true

@@ -6,10 +6,10 @@
     "preview": "vitepress preview"
   },
   "devDependencies": {
-    "sass": "^1.98.0",
+    "sass": "^1.106.1",
     "vitepress": "1.6.4"
   },
   "dependencies": {
-    "dayjs": "^1.11.20"
+    "dayjs": "^1.11.23"
   }
 }
