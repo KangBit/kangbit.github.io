@@ -49,6 +49,50 @@ POST /api/auth/login
 POST /api/reports/generate
 ```
 
+## 요청이 지나가는 계층
+
+핸들러 하나에 검증, 규칙, 쿼리를 전부 넣으면 금방 길어지고 테스트할 수 없게 됩니다. 역할을 셋으로 나눕니다.
+
+| 계층 | 하는 일 | 모르는 것 |
+| --- | --- | --- |
+| 라우터 (핸들러) | 요청을 읽고 검증, 상태 코드로 응답 | 비즈니스 규칙, SQL |
+| 서비스 | 비즈니스 규칙과 흐름, 트랜잭션 경계 | HTTP, 테이블 구조 |
+| 리포지토리 | 질의와 저장 | HTTP, 비즈니스 규칙 |
+
+```js
+// 라우터 — HTTP만 압니다
+router.post("/", async (req, res) => {
+  const data = createTodoSchema.parse(req.body);
+  const todo = await todoService.create(req.user.id, data);
+
+  res.status(201).location(`/api/todos/${todo.id}`).json(todo);
+});
+```
+
+```js
+// 서비스 — 규칙만 압니다. res도 SQL도 쓰지 않습니다
+async function create(userId, data) {
+  const count = await todoRepo.countByUser(userId);
+  if (count >= 100) throw new AppError(409, "LIMIT_EXCEEDED", "한도를 초과했습니다");
+
+  return todoRepo.insert({ ...data, userId });
+}
+```
+
+```js
+// 리포지토리 — 질의만 압니다
+function insert(todo) {
+  return db.query(
+    "INSERT INTO todos (user_id, title) VALUES ($1, $2) RETURNING *",
+    [todo.userId, todo.title],
+  );
+}
+```
+
+얻는 것은 **바꿀 때의 범위**입니다. 응답 형식을 바꾸면 라우터만, 테이블을 바꾸면 리포지토리만 고칩니다. 서비스는 HTTP를 모르기 때문에 배치 작업이나 스케줄러에서도 같은 함수를 부를 수 있고, 테스트할 때 서버를 띄우지 않아도 됩니다.
+
+처음부터 파일을 셋으로 쪼갤 필요는 없습니다. **서비스가 `res`를 만지지 않는다**는 선 하나만 지켜도 대부분의 이득을 얻습니다. 이어지는 예제에서 `todoService`와 `todoRepo`가 나오면 이 구분을 가리킵니다.
+
 ## CRUD 구현
 
 ```js
@@ -88,7 +132,7 @@ PUT과 PATCH는 의미가 다릅니다. PUT은 **보내지 않은 필드를 비�
 ```http
 PUT /api/todos/1
 {"title":"운동"}
-→ done 필드가 기본값으로 돌아갑니다
+→ status 필드가 기본값으로 돌아갑니다
 
 PATCH /api/todos/1
 {"title":"운동"}
@@ -107,7 +151,7 @@ import { z } from "zod";
 const createTodoSchema = z.object({
   title: z.string().trim().min(1).max(100),
   dueDate: z.coerce.date().optional(),
-  priority: z.enum(["low", "normal", "high"]).default("normal"),
+  status: z.enum(["todo", "doing", "done"]).default("todo"),
 });
 ```
 
@@ -117,7 +161,7 @@ const createTodoSchema = z.object({
 
 ```json
 // 성공
-{ "id": 1, "title": "공부", "done": false }
+{ "id": 1, "title": "공부", "status": "todo" }
 
 // 목록
 { "items": [...], "page": { "cursor": "...", "hasNext": true } }
@@ -251,7 +295,7 @@ function parseSort(input = "-createdAt") {
 
 허용 목록을 **객체 리터럴로 두고 `SORTABLE[key]`로 꺼내면 안 됩니다.** 프로토타입 체인이 걸려서 `sort=constructor`나 `sort=toString`이 `if (!column)`을 통과하고, 함수가 문자열로 변환되어 SQL에 들어갑니다. `Map`을 쓰거나 `Object.hasOwn(SORTABLE, key)`로 확인합니다.
 
-타입도 확인합니다. `?sort[a]=b`로 보내면 `input`이 객체라서 `startsWith`에서 500이 납니다.
+타입도 확인합니다. `?sort[a]=b`로 보내면 `input`이 객체라서 `startsWith`에서 500이 납니다. 인젝션 관점의 설명은 [07. 서버 보안](/learn/backend/security)에 있습니다.
 
 `limit`에는 상한과 하한을 함께 둡니다. `limit=1000000`도, `limit=-1`도 그대로 받으면 안 됩니다.
 
@@ -326,7 +370,7 @@ paths:
               example:
                 id: 1
                 title: "공부"
-                done: false
+                status: "todo"
         "400":
           description: 입력값 오류
 ```

@@ -56,7 +56,7 @@ describe("POST /api/todos", () => {
       .send({ title: "공부" });
 
     expect(res.status).toBe(201);
-    expect(res.body).toMatchObject({ title: "공부", done: false });
+    expect(res.body).toMatchObject({ title: "공부", status: "todo" });
     expect(res.headers.location).toMatch(/^\/api\/todos\/\d+$/);
   });
 
@@ -135,7 +135,7 @@ function createTodo(overrides = {}) {
   return todoRepo.insert({
     userId: 1,
     title: "기본 제목",
-    done: false,
+    status: "todo",
     ...overrides,
   });
 }
@@ -143,8 +143,8 @@ function createTodo(overrides = {}) {
 
 ```js
 it("완료된 항목만 거른다", async () => {
-  await createTodo({ done: true });
-  await createTodo({ done: false });
+  await createTodo({ status: "done" });
+  await createTodo({ status: "todo" });
 
   const res = await request(app).get("/api/todos?status=done");
 
@@ -251,7 +251,7 @@ describe("DELETE /api/todos/:id", () => {
 
 ## 일관된 오류 응답
 
-실패를 던지는 쪽은 의미만 말하고, 변환은 한 곳에서 합니다.
+실패를 던지는 쪽은 의미만 말하고, 변환은 한 곳에서 합니다. [03. API 설계와 구현](/learn/backend/api)에서 본 구조를 테스트 관점에서 다시 봅니다.
 
 ```js
 export class AppError extends Error {

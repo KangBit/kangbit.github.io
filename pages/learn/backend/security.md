@@ -117,7 +117,7 @@ if (!target.startsWith(base + path.sep)) {
 ```js
 const createTodoSchema = z.object({
   title: z.string().trim().min(1).max(100),
-  priority: z.enum(["low", "normal", "high"]).default("normal"),
+  status: z.enum(["todo", "doing", "done"]).default("todo"),
   dueDate: z.coerce.date().optional(),
 });
 
@@ -185,7 +185,7 @@ app.use(
 );
 ```
 
-`Access-Control-Allow-Origin: *`와 쿠키 전송은 함께 쓸 수 없습니다. 요청의 `Origin`을 그대로 반사해 주는 구현은 사실상 전체 허용이므로 피합니다.
+`Access-Control-Allow-Origin: *`와 쿠키 전송은 함께 쓸 수 없습니다. 요청의 `Origin`을 그대로 반사해 주는 구현은 사실상 전체 허용이므로 피합니다. 브라우저 쪽에서 이 규칙이 어떻게 보이는지는 [프런트엔드 07. 보안](/learn/frontend/security)에서 다룹니다.
 
 CSRF는 쿠키 기반 인증일 때만 문제가 됩니다. 브라우저가 쿠키를 **자동으로** 붙이기 때문입니다.
 

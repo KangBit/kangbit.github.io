@@ -223,7 +223,7 @@ process.on("SIGTERM", () => {
 
 컬럼을 지우는 마이그레이션을 배포와 함께 돌리면 롤백할 수 없습니다. 옛 코드가 그 컬럼을 찾기 때문입니다.
 
-## 헬스 체크와 HTTPS 설정
+## 헬스 체크와 버전, HTTPS 설정
 
 살아 있음과 처리 가능함을 나눕니다.
 
@@ -243,6 +243,21 @@ app.get("/health/ready", async (req, res) => {
 `live`가 실패하면 재시작, `ready`가 실패하면 트래픽 차단입니다. 둘을 하나로 두면 DB가 잠깐 끊겼을 때 전체 인스턴스가 재시작되는 사태가 납니다.
 
 헬스 체크는 **가볍게** 유지합니다. 외부 API까지 확인하면 그쪽이 느릴 때 전부 죽습니다.
+
+지금 돌고 있는 것이 어느 커밋인지도 밖에서 물어볼 수 있어야 합니다. 롤백할 버전을 고르거나, 배포가 실제로 반영됐는지 확인할 때 씁니다.
+
+```js
+app.get("/version", (req, res) =>
+  res.json({ version: process.env.GIT_SHA, builtAt: process.env.BUILD_TIME }),
+);
+```
+
+빌드할 때 값을 넣어 둡니다.
+
+```dockerfile
+ARG GIT_SHA
+ENV GIT_SHA=$GIT_SHA
+```
 
 TLS는 보통 로드밸런서나 리버스 프록시에서 끝냅니다.
 

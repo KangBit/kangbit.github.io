@@ -13,9 +13,9 @@ outline: deep
 데이터를 표로 나누어 저장하고, 필요할 때 연결해서 꺼냅니다.
 
 ```sql
-SELECT id, title, done
+SELECT id, title, status
 FROM todos
-WHERE user_id = 1 AND done = false
+WHERE user_id = 1 AND status <> 'done'
 ORDER BY created_at DESC
 LIMIT 20;
 ```
@@ -138,7 +138,7 @@ ALTER TABLE todos ADD COLUMN comment_count INT NOT NULL DEFAULT 0;
 SELECT t.id, t.title, u.email
 FROM todos t
 JOIN users u ON u.id = t.user_id
-WHERE t.done = false;
+WHERE t.status <> 'done';
 ```
 
 | 종류 | 결과 |

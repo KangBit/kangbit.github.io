@@ -31,8 +31,8 @@ WHERE created_at > ...                   -- 사용되지 않습니다
 **구분력이 낮은 컬럼을 앞에 두지 않습니다.** 값이 두세 가지뿐인 컬럼을 선두에 두면 걸러지는 양이 적어 인덱스 효과가 거의 없습니다.
 
 ```sql
--- done은 true/false뿐이라 선두로는 의미가 약합니다
-CREATE INDEX idx_bad ON todos (done, created_at);
+-- status는 값이 세 가지뿐이라 선두로는 의미가 약합니다
+CREATE INDEX idx_bad ON todos (status, created_at);
 
 -- 구분력 높은 컬럼을 앞에
 CREATE INDEX idx_good ON todos (user_id, created_at DESC);
@@ -202,6 +202,8 @@ await db.transaction(async (tx) => {
   await fetch("https://payment.example.com/charge");   // 몇 초가 걸릴 수 있습니다
 });
 ```
+
+외부 호출은 트랜잭션 밖으로 빼고, 타임아웃을 반드시 겁니다. [01. 웹과 HTTP](/learn/backend/http)에서 다뤘습니다.
 
 ## 커넥션 풀과 동시 접속 처리
 

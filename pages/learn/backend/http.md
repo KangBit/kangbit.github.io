@@ -44,7 +44,7 @@ HTTP/1.1 201 Created
 Content-Type: application/json
 Location: /api/todos/1
 
-{"id":1,"title":"공부","done":false}
+{"id":1,"title":"공부","status":"todo"}
 ```
 
 요청은 메서드·경로·헤더·본문, 응답은 상태 코드·헤더·본문으로 이루어집니다.
@@ -117,6 +117,38 @@ HTTP/2는 하나의 연결에서 여러 요청을 동시에 주고받고, 헤더
 // 매 요청마다 새로 만들지 않습니다
 const agent = new https.Agent({ keepAlive: true });
 ```
+
+## 외부 API를 부를 때: 타임아웃과 재시도
+
+서버도 다른 서버의 클라이언트입니다. **응답이 영영 오지 않는 경우**를 대비하지 않으면, 상대가 느려질 때 내 서버가 함께 멈춥니다. 요청을 처리하던 작업자가 전부 대기 상태로 묶이기 때문입니다.
+
+기본 타임아웃이 없거나 지나치게 긴 클라이언트가 많습니다. 직접 정합니다.
+
+```js
+const res = await fetch(url, { signal: AbortSignal.timeout(3000) });
+```
+
+시간은 **내가 응답해야 하는 시간에서 거꾸로** 잡습니다. 내 API가 1초 안에 답해야 한다면 외부 호출에 10초를 줄 수 없습니다.
+
+재시도는 앞에서 본 **멱등** 성질에 기댑니다. GET·PUT·DELETE는 다시 보내도 되지만, POST는 중복 생성이 될 수 있어 그냥 재시도하면 안 됩니다.
+
+```js
+// 500·503·429와 네트워크 오류만, 간격을 늘려 가며
+for (let attempt = 0; attempt < 3; attempt++) {
+  try {
+    const res = await fetch(url, { signal: AbortSignal.timeout(3000) });
+    if (res.status < 500 && res.status !== 429) return res;
+  } catch (error) {
+    if (attempt === 2) throw error;
+  }
+
+  await sleep(2 ** attempt * 200 + Math.random() * 100);
+}
+```
+
+간격을 늘리는 이유는, 모두가 같은 간격으로 재시도하면 회복하려는 서버를 다시 쓰러뜨리기 때문입니다. 무작위 값을 조금 섞어 재시도가 한 시점에 몰리지 않게 합니다.
+
+400대 응답은 재시도하지 않습니다. 같은 요청을 다시 보내도 같은 답이 옵니다.
 
 ## 캐시 헤더와 콘텐츠 협상
 
