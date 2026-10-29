@@ -229,12 +229,19 @@ LIMIT 20;
 필터와 정렬은 **허용 목록**으로 받습니다. 사용자 입력을 그대로 SQL에 넣으면 인젝션이 됩니다.
 
 ```js
-const SORTABLE = { createdAt: "created_at", title: "title" };
+const SORTABLE = new Map([
+  ["createdAt", "created_at"],
+  ["title", "title"],
+]);
 
 function parseSort(input = "-createdAt") {
+  if (typeof input !== "string") {
+    throw new AppError(400, "INVALID_SORT", "정렬 기준이 잘못되었습니다");
+  }
+
   const desc = input.startsWith("-");
   const key = desc ? input.slice(1) : input;
-  const column = SORTABLE[key];
+  const column = SORTABLE.get(key);
 
   if (!column) throw new AppError(400, "INVALID_SORT", "정렬 기준이 잘못되었습니다");
 
@@ -242,11 +249,17 @@ function parseSort(input = "-createdAt") {
 }
 ```
 
-`limit`에도 상한을 둡니다. `limit=1000000`을 그대로 받으면 안 됩니다.
+허용 목록을 **객체 리터럴로 두고 `SORTABLE[key]`로 꺼내면 안 됩니다.** 프로토타입 체인이 걸려서 `sort=constructor`나 `sort=toString`이 `if (!column)`을 통과하고, 함수가 문자열로 변환되어 SQL에 들어갑니다. `Map`을 쓰거나 `Object.hasOwn(SORTABLE, key)`로 확인합니다.
+
+타입도 확인합니다. `?sort[a]=b`로 보내면 `input`이 객체라서 `startsWith`에서 500이 납니다.
+
+`limit`에는 상한과 하한을 함께 둡니다. `limit=1000000`도, `limit=-1`도 그대로 받으면 안 됩니다.
 
 ```js
-const limit = Math.min(Number(req.query.limit) || 20, 100);
+const limit = Math.min(Math.max(Number(req.query.limit) || 20, 1), 100);
 ```
+
+상한만 두면 음수가 지나가 `LIMIT -1`이 됩니다.
 
 ## API 버전 관리와 호환성 유지
 

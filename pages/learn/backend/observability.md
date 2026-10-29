@@ -173,7 +173,7 @@ app.use((req, res, next) => {
   res.on("finish", () => {
     const labels = {
       method: req.method,
-      route: req.route?.path ?? "unknown",
+      route: req.route ? req.baseUrl + req.route.path : "unknown",
       status: res.statusCode,
     };
     requests.inc(labels);
@@ -183,13 +183,17 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get("/metrics", async (req, res) => {
+app.get("/metrics", metricsAuth, async (req, res) => {
   res.set("Content-Type", register.contentType);
   res.end(await register.metrics());
 });
 ```
 
-라벨에 **경로 패턴**(`/api/todos/:id`)을 쓰고, 실제 값(`/api/todos/42`)을 쓰지 않습니다. 값마다 시계열이 생겨 저장소가 터집니다. `userId`를 라벨로 쓰는 것도 같은 이유로 안 됩니다.
+**`/metrics`를 공개해 두지 않습니다.** 엔드포인트 목록, 처리량, 오류 분포가 그대로 드러납니다. 내부 네트워크에서만 닿게 하거나, 별도 포트로 분리하거나, 최소한 토큰을 확인합니다.
+
+라벨은 `req.route.path`만 쓰면 `/:id`가 되어 `/api/todos/:id`와 `/api/users/:id`가 한 시계열로 합쳐집니다. 마운트 경로(`req.baseUrl`)를 붙여야 구분됩니다.
+
+**경로 패턴**(`/api/todos/:id`)을 쓰고, 실제 값(`/api/todos/42`)을 쓰지 않습니다. 값마다 시계열이 생겨 저장소가 터집니다. `userId`를 라벨로 쓰는 것도 같은 이유로 안 됩니다.
 
 애플리케이션 지표도 함께 봅니다. 기술 지표는 정상인데 서비스가 망가진 경우를 잡아 줍니다.
 

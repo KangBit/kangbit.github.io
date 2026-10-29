@@ -41,13 +41,27 @@ prisma.$queryRaw`SELECT * FROM todos WHERE title = ${title}`;             // 안
 **테이블명과 컬럼명은 바인딩할 수 없습니다.** 허용 목록으로 검증합니다.
 
 ```js
-const SORTABLE = { createdAt: "created_at", title: "title" };
+const SORTABLE = new Map([
+  ["createdAt", "created_at"],
+  ["title", "title"],
+]);
 
-const column = SORTABLE[req.query.sort];
+const column = SORTABLE.get(req.query.sort);
 if (!column) throw new AppError(400, "INVALID_SORT", "정렬 기준이 잘못되었습니다");
 
 db.query(`SELECT * FROM todos ORDER BY ${column} DESC`);
 ```
+
+허용 목록을 **객체 리터럴로 두면 안 됩니다.** 프로토타입 체인이 걸려서 목록에 없는 키가 통과합니다.
+
+```js
+const SORTABLE = { createdAt: "created_at", title: "title" };
+
+SORTABLE["constructor"];   // function Object() { ... } — 빈 값이 아닙니다
+SORTABLE["toString"];      // 함수 — 역시 통과합니다
+```
+
+`if (!column)`을 지나쳐 함수가 문자열로 변환된 채 SQL에 들어갑니다. `Map`을 쓰거나 `Object.hasOwn(SORTABLE, key)`로 직접 확인합니다.
 
 ## 명령어 인젝션과 경로 조작
 
@@ -233,20 +247,36 @@ logger.info("요청", { body: sanitize(req.body) });
 
 로그인은 횟수를 제한합니다. 제한이 없으면 비밀번호를 끝없이 시도할 수 있습니다.
 
-```js
-import rateLimit from "express-rate-limit";
+기준을 **두 가지로 나눠** 겹쳐 둡니다.
 
-const loginLimiter = rateLimit({
-  windowMs: 15 * 60 * 1000,
-  max: 5,
-  keyGenerator: (req) => `${req.ip}:${req.body.email}`,
-  message: { code: "TOO_MANY_REQUESTS", message: "잠시 후 다시 시도해 주세요" },
+```js
+import rateLimit, { ipKeyGenerator } from "express-rate-limit";
+
+const window = { windowMs: 15 * 60 * 1000 };
+const tooMany = { code: "TOO_MANY_REQUESTS", message: "잠시 후 다시 시도해 주세요" };
+
+// 한 곳에서 여러 계정을 훑는 것을 막습니다
+const byIp = rateLimit({
+  ...window,
+  max: 50,
+  keyGenerator: (req) => ipKeyGenerator(req.ip),
+  message: tooMany,
 });
 
-router.post("/login", loginLimiter, loginHandler);
+// IP를 바꿔 가며 한 계정을 노리는 것을 막습니다
+const byAccount = rateLimit({
+  ...window,
+  max: 5,
+  keyGenerator: (req) => `account:${req.body.email ?? ""}`,
+  message: tooMany,
+});
+
+router.post("/login", byIp, byAccount, loginHandler);
 ```
 
-IP만으로 제한하면 같은 네트워크의 사용자가 함께 막히고, 공격자는 IP를 바꿔 우회합니다. **계정 단위 제한**을 함께 둡니다.
+하나만 두면 반쪽입니다. IP만으로 제한하면 같은 네트워크의 사용자가 함께 막히고, 공격자는 IP를 바꿔 우회합니다. `${req.ip}:${email}` 같은 **조합 키도 마찬가지입니다.** (IP, 계정) 쌍마다 따로 세기 때문에, IP를 돌리면 한 계정에 사실상 무제한으로 시도할 수 있습니다.
+
+`req.ip`를 그대로 키로 쓰는 것도 피합니다. IPv6에서는 주소 하나하나가 다른 키가 되는데, 공격자는 할당받은 대역 안에서 주소를 바꾸면 그만입니다. `ipKeyGenerator`가 IPv6를 서브넷 단위로 묶어 줍니다.
 
 서버가 여러 대면 카운트를 공유해야 합니다. 메모리에 두면 인스턴스마다 따로 세어 제한이 느슨해집니다. Redis를 씁니다.
 

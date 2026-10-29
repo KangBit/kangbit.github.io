@@ -248,7 +248,8 @@ TLS는 보통 로드밸런서나 리버스 프록시에서 끝냅니다.
 
 ```nginx
 server {
-    listen 443 ssl http2;
+    listen 443 ssl;
+    http2 on;
     server_name api.example.com;
 
     ssl_certificate     /etc/letsencrypt/live/api.example.com/fullchain.pem;
@@ -264,6 +265,8 @@ server {
     }
 }
 ```
+
+`listen` 줄의 `http2` 인자는 nginx 1.25.1부터 폐기됐습니다. 별도 지시어인 `http2 on;`을 씁니다.
 
 프록시 뒤에 있으면 애플리케이션에 알려 줘야 클라이언트 IP와 프로토콜을 제대로 인식합니다.
 

@@ -168,8 +168,8 @@ await db.transaction(async (tx) => {
 
 ```js
 // 두 요청이 동시에 들어오면 둘 다 통과합니다
-const count = await tx.query("SELECT COUNT(*) FROM todos WHERE user_id = $1", [userId]);
-if (count >= 100) throw new Error("한도 초과");
+const [{ count }] = await tx.query("SELECT COUNT(*) FROM todos WHERE user_id = $1", [userId]);
+if (Number(count) >= 100) throw new Error("한도 초과");
 
 await tx.query("INSERT INTO todos ...");
 ```
@@ -255,18 +255,26 @@ db.query("SELECT * FROM todos WHERE title = $1", [title]);
 migrations/
 ├── 001_create_users.sql
 ├── 002_create_todos.sql
-└── 003_add_todos_due_date.sql
+├── 003_add_todos_due_date.sql
+└── 004_index_todos_due_date.sql
 ```
 
 ```sql
 -- 003_add_todos_due_date.sql
 ALTER TABLE todos ADD COLUMN due_date DATE;
+```
+
+```sql
+-- 004_index_todos_due_date.sql
+-- 이 파일은 트랜잭션 밖에서 실행합니다
 CREATE INDEX CONCURRENTLY idx_todos_due_date ON todos (due_date);
 ```
 
+`CREATE INDEX CONCURRENTLY`는 **트랜잭션 안에서 실행할 수 없습니다.** 마이그레이션 도구는 보통 파일 하나를 트랜잭션으로 감싸므로, 다른 변경과 한 파일에 두면 그대로 실패합니다. 파일을 나누고 도구가 제공하는 옵션으로 트랜잭션을 끕니다. 중간에 실패하면 비활성 인덱스가 남으니, 재시도 전에 지워야 한다는 점도 알아 둡니다.
+
 운영 중인 테이블에 거는 작업은 **잠금 시간**을 확인해야 합니다.
 
-- `CREATE INDEX`는 테이블을 잠급니다 → PostgreSQL은 `CONCURRENTLY`를 씁니다
+- `CREATE INDEX`는 테이블의 쓰기를 막습니다 → PostgreSQL은 `CONCURRENTLY`를 씁니다
 - `NOT NULL` 컬럼을 기본값과 함께 추가하면 전체 행을 다시 씁니다
 - 컬럼 타입 변경은 대부분 전체 재작성입니다
 
