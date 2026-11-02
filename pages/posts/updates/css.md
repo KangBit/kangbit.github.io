@@ -1,7 +1,7 @@
 ---
 title: Updates
 titleTemplate: CSS
-description: Baseline 기준으로 연도별 정리한 CSS 주요 기능 업데이트 내역 (2015~2025).
+description: Baseline 기준으로 연도별 정리한 CSS 주요 기능 업데이트 내역 (2015~2026).
 # outline:
 prev: false
 next: false
@@ -12,10 +12,30 @@ comment: true
 
 > 연도 기준: **Baseline** (Chrome · Edge · Firefox · Safari 전부 지원).
 
+## 2026
+
+- `@scope` (스타일 적용 범위 한정)
+- Container Style Queries (`@container style(--theme: dark)`)
+- 이름만 지정하는 컨테이너 쿼리 (`@container card`)
+- `field-sizing: content` (폼 컨트롤 내용 맞춤 크기)
+- `contrast-color()` (배경 대비 전경색 자동 선택)
+- `shape()` (`clip-path`용 선언형 패스)
+- `sibling-index()` / `sibling-count()` (형제 순서 기반 계산)
+- `progress()` (값 범위를 0~1 진행도로 변환)
+- `:open` (열린 상태 선택자 — `details` / `dialog` / `select` / popover)
+- 루트 폰트 상대 단위 (`rch` / `rex` / `ric` / `rcap`)
+- `::highlight()` (Custom Highlight API)
+
 ## 2025
 
-- `@scope`
 - View Transitions (동일 문서)
+- `view-transition-class`
+- `::active-view-transition` (뷰 트랜지션 진행 중 스타일링)
+- `::details-content` (`<details>` 본문 스타일링)
+- `abs()` / `sign()`
+- `scrollbar-color`
+- `print-color-adjust`
+- 맞춤법 / 문법 밑줄 (`text-decoration-line: spelling-error` / `grammar-error`)
 
 ## 2024
 
@@ -23,7 +43,6 @@ comment: true
 - `light-dark()`
 - `@property` (타입 있는 커스텀 속성)
 - `@starting-style` (진입 트랜지션)
-- `transition-behavior: allow-discrete`
 - Relative color syntax (`rgb(from ...)`)
 - `content-visibility`
 
@@ -41,7 +60,7 @@ comment: true
 
 - Cascade Layers (`@layer`)
 - `:focus-visible`
-- `accent-color`
+- CSS Scroll Snap (`scroll-snap-type` / `scroll-snap-align`)
 - 동적 뷰포트 단위 (`dvh` / `svh` / `lvh`)
 
 ## 2021
@@ -57,7 +76,6 @@ comment: true
 
 - `min()` / `max()` / `clamp()`
 - `object-fit` / `object-position`
-- CSS Scroll Snap (`scroll-snap-type` / `scroll-snap-align`)
 - `prefers-color-scheme`
 - `prefers-reduced-motion`
 - `:focus-within`
