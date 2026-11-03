@@ -392,7 +392,22 @@ export default {
   "/learn/devops/": [
     {
       text: "데브옵스 학습",
-      items: [{ text: "로드맵", link: "/learn/devops/" }],
+      items: [
+        { text: "로드맵", link: "/learn/devops/" },
+        { text: "01. Git과 버전 관리", link: "/learn/devops/git" },
+        { text: "02. 프로그래밍 언어 한 가지", link: "/learn/devops/language" },
+        { text: "03. 리눅스와 셸 스크립트", link: "/learn/devops/linux" },
+        { text: "04. 네트워크와 보안 기초", link: "/learn/devops/network" },
+        { text: "05. 서버와 트래픽 처리", link: "/learn/devops/server" },
+        { text: "06. 컨테이너", link: "/learn/devops/container" },
+        { text: "07. 컨테이너 오케스트레이션", link: "/learn/devops/kubernetes" },
+        { text: "08. 코드형 인프라", link: "/learn/devops/iac" },
+        { text: "09. CI/CD", link: "/learn/devops/cicd" },
+        { text: "10. 모니터링과 관측", link: "/learn/devops/monitoring" },
+        { text: "11. 클라우드 제공자 한 곳", link: "/learn/devops/cloud" },
+        { text: "12. 개발 프로세스와 협업", link: "/learn/devops/process" },
+        { text: "보너스. 데브섹옵스", link: "/learn/devops/devsecops" },
+      ],
     },
   ],
   ...vitePressPages,
