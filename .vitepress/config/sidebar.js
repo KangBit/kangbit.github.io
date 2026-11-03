@@ -379,6 +379,12 @@ export default {
       ],
     },
   ],
+  "/learn/devops/": [
+    {
+      text: "데브옵스 학습",
+      items: [{ text: "로드맵", link: "/learn/devops/" }],
+    },
+  ],
   ...vitePressPages,
   ...bitPages,
   ...linksPages,

@@ -13,6 +13,7 @@ const learningMenu = {
     { text: "언어", link: "/learn/languages/javascript/" },
     { text: "프론트엔드", link: "/learn/frontend/" },
     { text: "백엔드", link: "/learn/backend/" },
+    { text: "데브옵스", link: "/learn/devops/" },
     { text: "주식", link: "/learn/stocks/" },
   ],
 };
