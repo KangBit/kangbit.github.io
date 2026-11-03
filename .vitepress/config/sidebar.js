@@ -360,6 +360,16 @@ export default {
         { text: "11. 테스트와 배포", link: "/learn/frontend/testing" },
       ],
     },
+    {
+      text: "프론트엔드 심화",
+      items: [
+        { text: "프레임워크", link: "/learn/frontend/framework" },
+        { text: "렌더링 전략과 인증", link: "/learn/frontend/rendering" },
+        { text: "AI를 활용한 개발", link: "/learn/frontend/ai" },
+        { text: "데이터와 웹 API", link: "/learn/frontend/web-api" },
+        { text: "플랫폼 확장", link: "/learn/frontend/platform" },
+      ],
+    },
   ],
   "/learn/backend/": [
     {
