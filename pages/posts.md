@@ -10,6 +10,10 @@ hero:
   name: ""
 
 features:
+  - title: Modern Web Guidance
+    details: AI 코딩 에이전트에 최신 웹 모범 사례를 주입하는 Modern Web Guidance를 소개합니다.
+    link: "/posts/modern-web-guidance"
+
   - title: VitePress + Github Pages로 블로그 만들기
     details: VitePress를 이용해 블로그 홈페이지를 생성하는 방법을 소개합니다.
     link: "/posts/vitepress/why-vitepress"
