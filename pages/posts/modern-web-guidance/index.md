@@ -13,45 +13,35 @@ comment: true
 
 ## 들어가며
 
-[Modern Web Guidance](https://developer.chrome.com/docs/modern-web-guidance?hl=ko)는 웹 플랫폼 전문 지식, 권장사항, 브라우저 호환성 데이터를 코딩 에이전트에 직접 삽입하는 기술 모음입니다.
+[Modern Web Guidance](https://developer.chrome.com/docs/modern-web-guidance?hl=ko)는 구글 크롬 팀이 만든 도구로
 
-크롬 팀이 만든 도구로, 웹사이트를 만들 때 AI가 최신 방식을 쓰고 권장사항을 따르도록 합니다.
+웹사이트를 만들 때 AI가 최신 방식을 쓰고 권장사항을 따르도록 합니다.
 
-## 왜 낡은 코드가 나올까
+코딩 에이전트에 삽입하는 웹 플랫폼 전문 지식, 권장사항, 브라우저 호환성에 대한 기술 모음입니다.
 
-요즘은 AI에게 "이런 페이지 하나 만들어줘" 라고 하면 뚝딱 코드를 만들어 줍니다.
+## 왜 사용해야 할까
 
-그런데 그 코드를 보면 오래된 방식으로 쓰여 있는 경우가 많습니다.
+요즘은 AI에게 "이런 페이지 하나 만들어줘" 라고 하면 금방 만들어 주지만
 
-AI는 인터넷에 쌓인 코드를 보고 배웠습니다.
+그 코드를 보면 오래된 방식으로 작성된 경우가 많습니다.
 
-그런데 인터넷에는 옛날에 쓰인 코드가 많습니다.
+브라우저는 해마다 새 기능을 넣지만
 
-<br>
+AI가 배운 코드에는 그 기능이 없던 시절의 코드가 더 많습니다.
 
-브라우저는 해마다 새 기능을 넣습니다.
-
-하지만 AI가 배운 코드에는 그 기능이 없던 시절의 글이 훨씬 많습니다.
-
-그래서 AI는 '흔한 방식' 으로 작성합니다.
-
-## 어떻게 해결하나
-
-AI에게 기술 모음을 삽입합니다.
-
-Modern Web Guidance를 설치하면 AI는 코드를 짜기 전에 먼저 이 기술 모음을 펼칩니다.
-
-그리고 거기 적힌 방식대로 코드를 씁니다.
+그래서 AI는 '오래된 흔한 방식' 으로 작성합니다.
 
 <br>
 
-기술 모음에는 100개가 넘는 주제가 들어 있습니다.
+Modern Web Guidance는 AI에게 가이드를 줍니다.
 
-모두 크롬 팀이 직접 쓰고 검증한 내용입니다.
+AI는 코드를 작성하기 전에 가이드를 확인합니다.
 
 ## 설치하기
 
-터미널에 아래 한 줄을 붙여넣으면 끝납니다.
+권장되는 설치 방법은 크롬 팀에서 빌드한 CLI를 사용하는 것입니다.
+
+터미널에 아래 한 줄을 붙여넣으면 됩니다.
 
 ```bash
 npx modern-web-guidance@latest install
@@ -59,89 +49,88 @@ npx modern-web-guidance@latest install
 
 <br>
 
-쓰고 있는 도구에 맞춰 직접 설치할 수도 있습니다.
+사용중인 도구에 맞춰 설치할 수도 있습니다.
 
-| 도구        | 명령어                                                                                                                 |
-| ----------- | ---------------------------------------------------------------------------------------------------------------------- |
-| Claude Code | `claude plugin install modern-web-guidance@claude-plugins-official`                                                    |
-| Codex       | `codex plugin marketplace add GoogleChrome/modern-web-guidance` 후 `codex plugin add modern-web-guidance@googlechrome` |
-| Copilot CLI | `/plugin marketplace add GoogleChrome/modern-web-guidance` 후 `/plugin install modern-web-guidance@googlechrome`       |
-| Gemini CLI  | `gemini extensions install https://github.com/GoogleChrome/modern-web-guidance --auto-update`                          |
+**Claude Code**
 
-## 어디까지 최신 기능을 쓸까
+```bash
+claude plugin marketplace add GoogleChrome/modern-web-guidance
+claude plugin install modern-web-guidance@googlechrome
+```
 
-하지만 최신 기능이 항상 좋은 건 아닙니다.
+앱의 설정 > 플러그인에서 추가할 수도 있습니다.
+
+<img src="/assets/images/modern-web-guidance/claude-plugin.webp" width="100%" alt="Claude 앱 설정의 플러그인 화면에서 Modern Web Guidance를 검색한 모습">
+
+**Codex**
+
+```bash
+codex plugin marketplace add GoogleChrome/modern-web-guidance
+codex plugin add modern-web-guidance@googlechrome
+```
+
+앱의 플러그인 화면에서 추가할 수도 있습니다.
+
+<img src="/assets/images/modern-web-guidance/codex-plugin.webp" width="100%" alt="Codex 앱의 플러그인 화면에서 Modern Web Guidance를 검색한 모습">
+
+## 브라우저 지원
+
+최신 기능이 항상 좋은 건 아닙니다.
 
 크롬에서는 작동하지만 사파리에서는 작동하지 않는 기능이 있습니다.
 
-그래서 웹에는 `Baseline` 이라는 기준이 있습니다.
-
-주요 브라우저에서 똑같이 동작하는지 세 단계로 나눈 것입니다.
-
-| 단계                 | 뜻                                                         |
-| -------------------- | ---------------------------------------------------------- |
-| Limited availability | 아직 일부 브라우저에서만 됩니다                            |
-| Newly available      | 모든 주요 브라우저에서 되기 시작한 지 30개월이 안 됐습니다 |
-| Widely available     | 모든 주요 브라우저에서 된 지 30개월이 넘었습니다           |
+브라우저가 지원하더라도 업데이트하지 않은 사용자가 남아 있습니다.
 
 <br>
 
-어디까지 받아들일지는 `AGENTS.md`나 `CLAUDE.md`에 적어두면 됩니다.
+AI는 이걸 모르는 채로 코드를 작성합니다.
 
-적지 않으면 가장 안전한 `Widely available`이 기본값입니다.
+그냥 써도 되는 기능을 다시 만들거나
+
+최신 기능을 써서 구형 브라우저에서 화면이 망가집니다.
+
+<br>
+
+Modern Web Guidance는 기능마다 브라우저 지원 현황을 같이 넘겨줍니다.
+
+지금 써도 되는 기능인지, 대체 기능이 필요한지 AI가 판단할 수 있습니다.
+
+<br>
+
+어디까지 받아들일지 직접 정할 수도 있습니다.
+
+`AGENTS.md` 나 `CLAUDE.md` 에 한 줄 적어두면 됩니다.
 
 ```md
 This project's Baseline target is Baseline 2024.
 ```
 
-<br>
+`Baseline` 은 브라우저 지원 현황을 정리해둔 웹 표준 기준입니다.
 
-일부 브라우저에서만 동작하는 기능을 써야 한다면 대비책도 함께 알려줍니다.
+## Modern Web Guidance에 무엇이 있나요?
 
-안 되는 브라우저에서는 다르게 보여주거나 ( 폴백 ),
+Modern Web Guidance에는 100개 이상의 웹 개발에 관한 권장사항이 포함되어 있습니다.
 
-부족한 기능을 채우는 코드를 그 브라우저에서만 불러옵니다 ( 폴리필 ).
-
-## 어떤 주제를 다루나
-
-기술 모음에 들어 있는 주제들입니다.
-
-괄호 안은 해당 분야의 기술 이름입니다.
-
-- 화면에 겹쳐 뜨는 것들 : 대화상자, 말풍선, 툴팁 (`<dialog>`, Popover API, CSS Anchor Positioning)
-- 디자인 : 화면 크기에 따라 모양이 바뀌는 배치, 색 표현, 줄바꿈 (컨테이너 쿼리, `oklch`, subgrid, `text-wrap`)
-- 움직임 : 페이지가 넘어갈 때의 전환 효과, 나타나고 사라지는 애니메이션 (View Transitions)
-- 속도 : 눌렀을 때 반응이 굼뜬 문제, 이미지를 불러오는 순서 (INP, `scheduler.yield`)
-- 입력 양식 : 글자에 맞춰 늘어나는 입력칸, 잘못 입력했을 때의 표시 (`field-sizing`, `:user-invalid`)
-- 접근성 : 키보드만으로 쓰는 사람, 스크린리더를 쓰는 사람을 위한 처리
-- 기기 안의 AI : 서버에 보내지 않고 기기에서 바로 번역하거나 요약하는 기능
-- 패스키 : 비밀번호 없이 지문이나 얼굴로 로그인하는 방식
+- 사용자 환경: 뷰 전환, CSS scrollbar-color 스타일 지정, 들어가기 및 나가기 애니메이션
+- CSS: 컨테이너 쿼리, oklch와 같은 최신 색상 공간, CSS 하위 그리드 레이아웃, text-wrap, 서체 줄 높이 자르기
+- 성능: 다음 페인트에 대한 상호작용(INP) 진단, 긴 작업 분할을 위한 scheduler.yield, 백그라운드 작업 예약, 이미지 로드 우선순위 지정
+- 양식: 자동 크기 조절 입력란(field-sizing: content) 및 :user-invalid를 사용한 정확한 유효성 검사 스타일
+- 기본 제공 UI 구성요소: 대화상자 직접 제어, 도움말의 CSS 앵커 포지셔닝, popover
+- 접근성: 액세스 가능한 오류 알림 및 키보드 포커스 관리
+- 내장 AI: 로컬 기기 내 클라이언트 모델(네이티브 언어 감지, 요약, 번역 API)을 사용합니다.
+- 패스키: 패스키 등록, 인증, 관리
 
 <br>
-
-설치하기 전에 기술 모음을 먼저 들춰볼 수도 있습니다.
-
-```bash
-npx modern-web-guidance@latest search "animate a dialog modal backdrop"
-```
-
-검색어에 맞는 항목 목록이 나오고,
-
-그중 하나를 골라 내용을 통째로 볼 수 있습니다.
-
-```bash
-npx modern-web-guidance@latest retrieve "animate-to-from-top-layer"
-```
 
 ## 이미 있는 낡은 코드 손보기
 
-이미 만들어둔 코드를 현대화 할 수도 있습니다.
+이미 만들어둔 코드를 현대화 할 수 있습니다.
 
 ```bash
 npx modern-web-guidance legacy-scan <path> --json
 ```
 
-프롬프트는 이렇게 작성하면 됩니다.
+프롬프트를 이렇게 작성하면 됩니다.
 
 ```
 Modernize this repository using Modern Web Guidance.
@@ -153,3 +142,7 @@ and propose a modernization plan before making any code edits.
 
 - [Modern Web Guidance 문서](https://developer.chrome.com/docs/modern-web-guidance?hl=ko)
 - [GitHub 저장소](https://github.com/GoogleChrome/modern-web-guidance)
+- [Modern Web Guidance 1.0: 코딩 에이전트에 부족한 웹 플랫폼 전문성](https://developer.chrome.com/blog/modern-web-guidance-v1?hl=ko)
+- [웹 개발에서 AI가 잘못하는 10가지](https://developer.chrome.com/blog/top-10-things-ai-gets-wrong-in-web-dev?hl=ko)
+- [기본적으로 교차 브라우저: Modern Web Guidance에서 Baseline 대체가 작동하는 방식](https://developer.chrome.com/blog/cross-browser-by-default?hl=ko)
+- [코딩 에이전트를 위한 로컬 벡터 검색: 507MB에서 7줄 루프로](https://developer.chrome.com/blog/mwg-technical-deep-dive?hl=ko)
